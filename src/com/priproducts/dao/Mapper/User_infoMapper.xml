@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.priproducts.dao.UserDao">
+
+	<insert id="insert" parameterType="com.priproducts.entity.User">
+		insert into user (username,password,email,head_img)
+		values(#{username},#{password},#{email},#{head_img})
+	</insert>
+
+	<select id="findByName" resultType="com.priproducts.entity.User" parameterType="java.lang.String">
+		select * 
+		from user where username = #{0} or email = #{0}
+	</select>
+		
+	<select id="findById" resultType="com.priproducts.entity.User" parameterType="java.lang.String">
+		select * 
+		from user where uid = #{uid}
+	</select>	
+	
+
+	<update id="update" parameterType="com.priproducts.entity.User">
+		update user set username = #{username},password = #{password},status = #{status},reason = #{reason},
+		email = #{email},address = #{address},head_img = #{head_img} where uid = #{uid}
+	</update>	
+    
+    <!--  后台需要的部分   -->
+
+    <sql id="field">
+        u.uid,u.username,u.email,a.address,u.status,u.reason
+     	FROM user u LEFT JOIN address_info a ON u.address = a.aid
+    </sql>
+
+     <select id="findAll" resultType="com.priproducts.entity.Admin" parameterType="com.priproducts.entity.Admin">
+        SELECT 
+        <include refid="field"></include>
+        WHERE 1 = 1
+        <if test="username != null and username != ''">
+        and u.username like #{username}
+        </if>
+        order by u.uid asc limit #{startRow},#{pageSize}
+    </select>
+
+	<select id="queryCount" resultType="java.lang.Long" parameterType="com.priproducts.entity.Admin">
+		select count(uid) from user where 1=1
+		<if test="username != null and username != ''">
+		and username like #{username}
+		</if>
+	</select>
+	
+	<select id="findAdmin_user" resultType="com.priproducts.entity.Admin" parameterType="java.lang.String">
+		 SELECT 
+        <include refid="field"></include>
+        WHERE u.uid = #{uid}
+	</select>
+
+	<update id="updateAdmin_user" parameterType="com.priproducts.entity.Admin">
+		update user 
+		set username = #{username},email = #{email}
+		where uid = #{uid}
+	</update>
+	
+	<delete id="delete" parameterType="java.lang.String">
+		delete from user where uid = #{uid}
+	</delete>
+	
+	<update id="updateStatus" parameterType="com.priproducts.entity.Admin">
+		update user set status = #{status} where uid = #{uid}
+	</update>
+	
+</mapper>

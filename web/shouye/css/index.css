@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f6f6f6;
+    font-size: 12px;
+}
+li{
+    list-style: none;
+}
+img{
+    display: block;
+    border: none;
+}
+label{
+    cursor: pointer;
+}
+input[type='checkbox']{
+    cursor: pointer;
+}
+ /*定宽布局*/
+.w{
+    width: 1080px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;/*超出边界不显示*/
+}
+.large .w{
+    width: 1600px;
+}
+  /*全部通用样式*/
+ /*全部通用样式*/
+.hide{
+    display: none;
+}
+/*超链样式*/
+.link{
+    color: #999;
+    cursor: pointer;
+    text-decoration: none;
+}
+.link:hover{
+    color:  #39BF3E;
+}
+.link-text{
+    color: #999;
+    text-decoration: none;
+}
+/*btn样式*/
+.btn{
+    display: inline-block;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    border: none;
+    background: #39BF3E;
+    font-weight: bold;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-min{
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    padding: 0 10px;
+}
+/*loading*/
+.loading{
+    margin: 10px auto;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: url(../img/den.png) no-repeat;
+    opacity: .6;
+}
+.footer{
+    width: 1350px;
+    height: 289px;
+    background: #333;
+}
+.logzhu{
+    float: right;
+    height: 36px;
+    padding: 0 3px;
+    text-align: center;
+    border-right: 1px solid #f5f5f5;
+    border-left: 1px solid #f5f5f5;
+    line-height: 35px;
+    width: 250px;
+}
+.i-logzhu{
+    font-family: monospace;
+    font-size: x-large;
+    margin-top: 5px;
+}
+.i-logzhu:hover{
+    color: #39BF3E;
+}
