@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.priproducts.dao.XiangqingDao">
+		
+	<select id="findById" resultType="com.priproducts.entity.Xiangqing" parameterType="int">
+		select * 
+		from xiangqing where xid = #{xid}
+	</select>
+
+	<select id="findAllXinagqing" resultType="com.priproducts.entity.Xiangqing" parameterType="String">
+		SELECT
+		*
+		from  xiangqing
+		WHERE 1 = 1
+	</select>
+
+	<select id="findXiangqingTop8" resultType="com.priproducts.entity.Xiangqing">
+		SELECT
+		*
+		from  xiangqing
+		WHERE 1 = 1 ORDER BY x_creattime desc LIMIT 8;
+	</select>
+
+	<select id="queryCount" resultType="java.lang.Long" parameterType="com.priproducts.entity.Xiangqing">
+		select count(xid) from xiangqing where 1=1
+		<if test="x_name != null and x_name != ''">
+		and x_name like #{x_name}
+		</if>
+	</select>
+
+	<select id="query" resultType="com.priproducts.entity.Xiangqing" parameterType="com.priproducts.entity.Xiangqing">
+		select g.xid,g.x_name,g.x_price,g.x_number,g.status,g.x_time,g.x_creattime,g.x_img,g.kname
+		from xiangqing g
+		where 1=1
+		<if test="x_name != null and x_name != ''">and g.x_name like #{x_name}</if>
+		<if test="status != null and status != ''">and g.status like #{status}</if>
+
+		<if test="startRow != null">order by g.x_creattime desc limit #{startRow},#{pageSize}</if>
+
+	</select>
+
+	<delete id="delete" parameterType="java.lang.String">
+		delete from xiangqing where xid = #{xid}
+	</delete>
+
+	<insert id="add" parameterType="com.priproducts.entity.Xiangqing">
+		insert into xiangqing (x_name,x_price,x_number,x_time,x_creattime,x_img,kname,kid, x_leixing, x_qishou,x_huanjing,status
+
+		)
+		values(#{x_name},#{x_price},#{x_number},#{x_time},#{x_creattime},#{x_img},#{kname}, #{kid}, #{x_leixing},#{x_qishou},
+		#{x_huanjing},#{status})
+	</insert>
+
+	<update id="update" parameterType="com.priproducts.entity.Xiangqing">
+		update xiangqing
+		<trim prefix="set" suffixOverrides=",">
+			<if test="x_name != null and x_name != ''">x_name = #{x_name},</if>
+			<if test="x_price != null and x_price != ''">x_price = #{x_price},</if>
+			<if test="x_number != null">x_number = #{x_number},</if>
+			<if test="status != null">status = #{status},</if>
+			<if test="x_time != null and x_time != ''">x_time = #{x_time},</if>
+			<if test="x_img != null and x_img != ''">x_img = #{x_img},</if>
+			<if test="x_time != null">x_time = #{x_time},</if>
+			<if test="kid != null">kid = #{kid},</if>
+			<if test="kname != null">kname = #{kname},</if>
+		</trim>
+		where xid = #{xid}
+	</update>
+</mapper>

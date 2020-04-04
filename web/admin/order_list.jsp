@@ -26,11 +26,11 @@ $(document).ready(function(){
 
 		<div class="pageColumn">
 			<form action="${ctx }/order/list" method="post">
-				<input type="text" class="border" name="ostatus" value="${order.state }" hidden="">
-				订单号：<input type="text" class="border" name="oid" value="${order.oid }">
-				用户名：<input type="text" class="border" name="uusername" value="${order.username }">
-				商品名：<input type="text" class="border" name="gname" value="${order.kname }">
-				状态：   <select class="border" name="ostatus">
+<%--				<input type="text" class="border" name="state" value="${order.state }" hidden="">--%>
+				订单号：<input type="text" class="border" name="ordernumber" value="${order.ordernumber }">
+				用户名：<input type="text" class="border" name="username" value="${order.username }">
+				商品名：<input type="text" class="border" name="x_name" value="${order.x_name }">
+				状态：   <select class="border" name="state">
 							<option value="">---</option>
 							<option value="0" <c:if test="${order.state eq 0 }">selected=""</c:if>>待付款</option>
 							<option value="1" <c:if test="${order.state eq 1 }">selected=""</c:if>>待发货</option>
@@ -47,30 +47,30 @@ $(document).ready(function(){
 			</form>
 		</div>
 		
-		<c:if test="${order.ostatus eq 1 }">
+		<c:if test="${order.state eq 1 }">
 			<div class="pageTitle">
 				<form action="" method="post">
-					<input type="hidden" name="ostatus" value="${order.state }">
+					<input type="hidden" name="state" value="${order.state }">
 					<input type="hidden" name="pageNo" value="${order.pageNo }">
 					<input type="hidden" name="ids">
 					<button class="icons-btn piliang" data-action="${ctx }/order/plfahuo" type="submit"><span class="icons icons-use"></span>批量发货</button> 
 				</form>
 			</div>
 		</c:if>
-		<c:if test="${order.ostatus eq 5 }">
+		<c:if test="${order.state eq 5 }">
 			<div class="pageTitle">
 				<form action="" method="post">
-					<input type="hidden" name="ostatus" value="${order.state }">
+					<input type="hidden" name="state" value="${order.state }">
 					<input type="hidden" name="pageNo" value="${order.pageNo }">
 					<input type="hidden" name="ids">
 					<button class="icons-btn piliang" data-action="${ctx }/order/pltuikuan" type="submit"><span class="icons icons-use"></span>批量退款</button> 
 				</form>
 			</div>
 		</c:if>
-		<c:if test="${order.ostatus eq 6 }">
+		<c:if test="${order.state eq 6 }">
 			<div class="pageTitle">
 				<form action="" method="post">
-					<input type="hidden" name="ostatus" value="${order.state }">
+					<input type="hidden" name="state" value="${order.state }">
 					<input type="hidden" name="pageNo" value="${order.pageNo }">
 					<input type="hidden" name="ids">
 					<button class="icons-btn piliang" data-action="${ctx }/order/pltuikuan" type="submit"><span class="icons icons-use"></span>批量退货退款</button> 
@@ -92,7 +92,7 @@ $(document).ready(function(){
 					<th width="5%">合计</th>
 					<th width="15%">创建时间</th>
 					<th width="5%">状态</th>
-					<c:if test="${order.ostatus eq 1 }">
+					<c:if test="${order.state eq 1 }">
 						<th width="5%">提醒次数</th>
 					</c:if>
 					<th width="10%">备注</th>
@@ -122,8 +122,7 @@ $(document).ready(function(){
 										<c:if test="${item.state eq 7}">已完成退款</c:if>
 										<c:if test="${item.state eq -1}">已失效</c:if>
 									</td>
-									<td>${item.times }</td>
-									<td><textarea class="border" readonly="readonly">${item.tips }</textarea></td>
+									<td><textarea class="border" readonly="readonly">${item.beizhu }</textarea></td>
 									<td>
 									<a class="icons-btn" href="${ctx }/order/showmore?oid=${item.oid}" >查看详情</a>&nbsp;&nbsp;
 									<a class="icons-btn fahuo" href="${ctx }/order/fahuo?oid=${item.oid}" >发货</a>
@@ -132,7 +131,7 @@ $(document).ready(function(){
 							</c:forEach>
 						</c:when>
 							
-						<c:when test="${order.ostatus eq 5 }">
+						<c:when test="${order.state eq 5 }">
 							<c:forEach items="${order_list }" var="item">
 								<tr>
 									<td class="checkBox"><input name="" type="checkbox" value="${item.oid }" class="checkitem" /></td>
@@ -154,7 +153,7 @@ $(document).ready(function(){
 										<c:if test="${item.state eq 7}">已完成退款</c:if>
 										<c:if test="${item.state eq -1}">已失效</c:if>
 									</td>
-									<td><textarea class="border" readonly="readonly">${item.tips }</textarea></td>
+									<td><textarea class="border" readonly="readonly">${item.beizhu }</textarea></td>
 									<td>
 									<a class="icons-btn" href="${ctx }/order/showmore?oid=${item.oid}" >查看详情</a>&nbsp;&nbsp;
 									<a class="icons-btn" href="${ctx }/order/tuikuan?oid=${item.oid}" >退款</a>
@@ -185,7 +184,7 @@ $(document).ready(function(){
 										<c:if test="${item.state eq 7}">已完成退款</c:if>
 										<c:if test="${item.state eq -1}">已失效</c:if>
 									</td>
-									<td><textarea class="border" readonly="readonly">${item.tips }</textarea></td>
+									<td><textarea class="border" readonly="readonly">${item.beizhu }</textarea></td>
 									<td>
 									<a class="icons-btn" href="${ctx }/order/showmore?oid=${item.oid}" >查看详情</a>&nbsp;&nbsp;
 									<a class="icons-btn" href="${ctx }/order/tuikuan?oid=${item.oid}" >退款</a>
@@ -216,7 +215,7 @@ $(document).ready(function(){
 										<c:if test="${item.state eq 7}">已完成退款</c:if>
 										<c:if test="${item.state eq -1}">已失效</c:if>
 									</td>
-									<td><textarea class="border" readonly="readonly">${item.tips }</textarea></td>
+									<td><textarea class="border" readonly="readonly">${item.beizhu }</textarea></td>
 									<td><a class="icons-btn" href="${ctx }/order/showmore?oid=${item.oid}" >查看详情</a></td>
 								</tr>
 							</c:forEach>
@@ -229,7 +228,7 @@ $(document).ready(function(){
 
 		<div class="pageTitle footer_fiexed">
 			<form action="${ctx }/order/list" method="post">
-				<input type="hidden" name="state" value="${order.ostatus }">
+				<input type="hidden" name="state" value="${order.state }">
 				<%@ include file="page.jsp"%>
 			</form>
 		</div>

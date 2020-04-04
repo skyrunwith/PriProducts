@@ -20,7 +20,7 @@ body {
 				<table style="width: 300px;">
 					<tr style="line-height: 50px;">
 						<td style="width: 70px;">种类:</td>
-						<td><input type="text" name="kind" class="border"
+						<td><input type="text" name="kname" class="border"
 							maxlength="10" required="required"></td>
 
 					</tr>

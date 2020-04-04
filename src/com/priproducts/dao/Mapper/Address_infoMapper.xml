@@ -3,7 +3,7 @@
 <mapper namespace="com.priproducts.dao.AddressDao">
 
   <select id="find" parameterType="java.lang.String" resultType="com.priproducts.entity.Address">
-  	select * from address where aid = #{aid}
+  	select * from address where id = #{aid}
   </select>
   
   <select id="findByUid" parameterType="java.lang.String" resultType="com.priproducts.entity.Address">
@@ -11,18 +11,19 @@
   </select>
   
   <insert id="insert" parameterType="com.priproducts.entity.Address">
-  	insert into address (uid,username,telephone,postcode,address)
-  	values(#{uid},#{username},#{telephone},#{postcode},#{address})
+  	insert into address (uid,name,phone,province, city, county, addr)
+  	values(#{uid},#{name},#{phone},#{province},#{city},#{county},#{addr})
   </insert>
   
   <update id="edit" parameterType="com.priproducts.entity.Address">
   	update address
-  	set username = #{username},telephone = #{telephone},postcode = #{postcode},address = #{address}
-  	where aid = #{aid}
+  	set name = #{name},phone = #{phone},province = #{province},
+  	    city = #{city},county = #{county},addr = #{addr}
+  	where id = #{id}
   </update>
   
   <delete id="delete" parameterType="java.lang.String">
-  	delete from address where aid = #{aid}
+  	delete from address where id = #{aid}
   </delete>
   
 </mapper>

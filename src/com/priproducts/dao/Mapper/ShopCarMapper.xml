@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.priproducts.dao.ShopcarDao">
+
+<!-- public void add(Shopping_cart cart);
+	public List<Shopping_cart> findByUid(String uid);
+	public void updateNumbers(String numbers);
+	public void deleteByUid(String uid);
+	public void deleteByGid(String xid);
+	public Long countByUid(String uid); -->
+	
+	<select id="countByUid" parameterType="java.lang.String" resultType="java.lang.Long">
+		select count(sid) from shopcar where uid = #{uid}
+	</select>
+	
+	<select id="findByUid" parameterType="com.priproducts.entity.Shopcar" resultType="com.priproducts.entity.Shopcar">
+		select x.xid,x_name as xname,x_img as cimg,s.number as number,x.x_price as cprice,x.x_number as stock,s.sid,s.uid
+		from shopcar s,xiangqing x
+		where x.xid = s.xid and s.uid = #{uid}
+		<if test="xid != null">and s.xid = #{xid}</if>
+		<if test="startRow != null">order by s.cts desc limit #{startRow},#{pageSize}</if>
+	</select>
+	
+	<select id="findOne" parameterType="com.priproducts.entity.Shopcar" resultType="com.priproducts.entity.Shopcar">
+		select x.xid,x.x_name as xname,x_img as cimg,s.number as number,x.x_price as cprice,x.x_number as stock,s.sid,s.uid
+		from shopcar s,xiangqing x
+		where x.xid = s.xid and uid = #{uid} and s.xid = #{xid}
+	</select>
+	
+	<insert id="add" parameterType="com.priproducts.entity.Shopcar">
+		insert into shopcar (xid,uid,sid,number,cts)
+		values(#{xid},#{uid},#{sid},#{number},#{cts})
+	</insert>
+	
+	<update id="updateNumbers" parameterType="com.priproducts.entity.Shopcar">
+		update shopcar
+		set number = #{number}
+		where xid = #{xid} and uid = #{uid}
+	</update>
+	
+	<delete id="deleteByUid" parameterType="java.lang.String">
+		delete from shopcar
+		where uid = #{uid}
+	</delete>
+	
+	<delete id="deleteByGid" parameterType="com.priproducts.entity.Shopcar">
+		delete from shopcar
+		where xid = #{xid} and uid = #{uid}
+	</delete>
+	
+	<delete id="deleteBySid" parameterType="java.lang.String">
+		delete from shopcar
+		where sid = #{sid}
+	</delete>
+</mapper>

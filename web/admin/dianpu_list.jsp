@@ -21,9 +21,9 @@
             店铺主营：
             <select class="border" name="sid"  >
                 <option value="">---</option>
-                <c:forEach items="${dianpu}" var="kind">
-                    <option value="${dianpu.sname}"
-                </c:forEach>
+<%--                <c:forEach items="${dianpu}" var="kind">--%>
+<%--                    <option value="${dianpu.sname}"--%>
+<%--                </c:forEach>--%>
             </select>
 
             <button class="combtn" type="submit">搜索</button>
@@ -37,9 +37,9 @@
             <input type="hidden" name="pageNo" value="${dianpu.pageNo }">
             <input type="hidden" name="ids">
             <a class="icons-btn" href="${ctx }/dianpu/add"><span class="icons icons-add"></span>添加</a>
-            <button class="icons-btn pilianga" data-action="${ctx }/class/pluse" type="submit"><span class="icons icons-use"></span>批量启用</button>
-            <button class="icons-btn piliang" data-action="${ctx }/class/plnouse" type="submit"><span class="icons icons-no-use"></span>批量禁用</button>
-            <button class="icons-btn piliangd" data-action="${ctx }/class/pldel" type="submit"><span class="icons icons-del"></span>批量删除</button>
+            <button class="icons-btn pilianga" data-action="${ctx}/dianpu/pluse" type="submit"><span class="icons icons-use"></span>批量启用</button>
+            <button class="icons-btn piliang" data-action="${ctx }/dianpu/plnouse" type="submit"><span class="icons icons-no-use"></span>批量禁用</button>
+            <button class="icons-btn piliangd" data-action="${ctx }/dianpu/pldel" type="submit"><span class="icons icons-del"></span>批量删除</button>
         </form>
     </div>
 
@@ -60,8 +60,7 @@
             <tbody>
             <c:forEach items="${dianpu_list }" var="item">
                 <tr style="background: ${item.status eq 0?'#ffd8d8':'' }">
-                    <td class="checkBox"><input name="" type="checkbox" value="${item.cid }" data-status="${item.status }" data-ostatus="${item.kstatus }"
-                                                data-dflag="${item.dflag }"
+                    <td class="checkBox"><input name="" type="checkbox" value="${item.sid }" data-status="${item.status }"
                                                 data-wordsd="含有还有商品的分类，不能批量删除!" data-wordsa="含有一级分类被禁用的分类，不能批量启用!"
                                                 data-words="含有未被禁用的分类，不能批量删除！"
                                                 class="checkitem" /></td>
@@ -75,23 +74,23 @@
 
                     <td>
                         <a class="icons-btn a1" href="${ctx }/dianpu/update"
-                           data-id="${item.sid}" data-ostatus="${item.kstatus }"
+                           data-id="${item.sid}"
                            data-words="对不起，该类的一级种类已经被禁用，不能修改！"
                         ><span
                                 class="icons icons-edit"></span>修改</a>
-                        <c:if test="${item.status eq 0 }">
-                            <a class="icons-btn a1" href="${ctx }/class/isuse"
-                               data-id="${item.sid}" data-ostatus="${item.kstatus }"
+                        <c:if test="${item.status != 1 }">
+                            <a class="icons-btn a1" href="${ctx }/dianpu/isuse"
+                               data-id="${item.sid}"
                                data-words="对不起，该类的一级种类已经被禁用，不能启用！"
                             ><span
                                     class="icons icons-use"></span>启用</a>
-                            <a class="icons-btn subformd" href="${ctx }/class/delete" data-id="${item.cid}"
-                               data-dflag="${item.dflag }" data-words="该分类还存在商品，删除失败！"
+                            <a class="icons-btn subformd" href="${ctx }/dianpu/delete" data-id="${item.sid}"
+                                data-words="该分类还存在商品，删除失败！"
                             ><span
                                     class="icons icons-del"></span>删除</a>
                         </c:if>
                         <c:if test="${item.status eq 1 }">
-                            <a class="icons-btn subform" href="${ctx }/class/isuse" data-id="${item.cid}"><span
+                            <a class="icons-btn subform" href="${ctx }/dianpu/isuse" data-id="${item.sid}"><span
                                     class="icons icons-no-use"></span>禁用</a>
                         </c:if>
                     </td>
@@ -109,8 +108,8 @@
     </div>
 
     <form action="" method="post" id="subform">
-        <input type="hidden" name="cid" value="" id="subformId">
-        <input type="hidden" name="cname" value="${clas.cname }">
+        <input type="hidden" name="sid" value="" id="subformId">
+        <input type="hidden" name="sname" value="${clas.sname }">
         <input type="hidden" name="pageNo" value="${clas.pageNo }">
     </form>
 </div>

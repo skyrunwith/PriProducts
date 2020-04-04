@@ -1,8 +1,8 @@
 package com.priproducts.entity;
 
 public class Address {
-    private int id;
-    private int uid;
+    private Integer id;
+    private Integer uid;
     private String name; //用户名
     private String phone; //电话
     private String province; //省
@@ -28,19 +28,19 @@ public class Address {
         this.isdelete = isdelete;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getUid() {
+    public Integer getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(Integer uid) {
         this.uid = uid;
     }
 

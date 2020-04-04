@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<form  method="post" class="form center">
+<form  method="post" class="form center" id="loginForm">
     <div class="login">
         <div class="login_center">
             <div class="login_top">
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="login_submit">
-                <input class="submit" type="button" name="submit" value="立即登录" >
+                <input class="submit" type="button" id="loginBtn" name="submit" value="立即登录" >
 
             </div>
 
@@ -40,5 +40,7 @@
 <div>
 
 </div>
+<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="./js/login.js"></script>
 </body>
 </html>

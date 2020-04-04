@@ -1,12 +1,17 @@
 package com.priproducts.controller;
 
+import com.priproducts.entity.Page;
+import com.priproducts.entity.User;
+import com.priproducts.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller  //交给spring管理
 @RequestMapping("/user/")
 public class UserController {
-   /*
+/*
     @Autowired
     private UserService userservice;
     Page page=new Page();
@@ -14,7 +19,7 @@ public class UserController {
     @RequestMapping("user_list")
     public String userList(User user, Model model) {
         String str = user.getUsername();
-        user.setUsername(LikeQuery.add(str));
+        user.setUsername(   LikeQuery.add(str));
 
         if(user.getPageNo()==null) user.setPageNo(1);
         if(user.getPageSize()==null) user.setPageSize(Sys.Common.pageSize);

@@ -33,13 +33,13 @@
     <div class="pageTitle"></div>
     <div class="sidebar fleft">
         <div class="btn">
-            <img src="../img/deng.png"  height="80%" width="100%">
+            <img src="/img/deng.png"  height="80%" width="100%">
             <div class="caption">
                 <p style="font-size: xx-large">农惠网后台：</p>
                 <p style="font-size: x-large">欢迎登陆系统!</p>
                 <p style="font-size: large">
-                    <button type="button" class="bu"><a href="../index.jsp"><b>网站首页</b></a></button>
-                    <button type="button" class="bu"><a href="admin/login.jsp"><b>退出系统</b></a></button>
+                    <button type="button" class="bu"><a href="/admin/index.jsp"><b>网站首页</b></a></button>
+                    <button type="button" class="bu"><a href="/admin/login.jsp"><b>退出系统</b></a></button>
                 </p>
             </div>
         </div>

@@ -77,8 +77,8 @@
 		<div class="clear"></div>
 		<div class="subnav">
 			<div class="fright">
-					<a href="./admin/index.jsp" style="font-size: large">首页</a>
-					<a href="./admin/login.jsp" style="font-size: large">退出系统</a>
+					<a href="/admin/index.jsp" style="font-size: large">首页</a>
+					<a href="/admin/login.jsp" style="font-size: large">退出系统</a>
 			</div>
 
 		</div>
@@ -92,28 +92,28 @@
 				<li class="subMenuTitle"><b>后台管理</b></li>
 				<li class="subMenu"><a href="#"><b>用户管理</b></a>
 					<ul>
-						<li><a href="./user_list.jsp">用户信息</a></li>
+						<li><a href="${ctx }/user/user_list">&nbsp;用户列表</a></li>
 					</ul>
 				</li>
 
 
 				<li class="subMenu"><a href="#"><b>商品管理</b></a>
 					<ul>
-						<li><a href="./kind_list.jsp">种类信息</a></li>
-						<li><a href="./goods_list.jsp">商品信息</a></li>
-                        <li><a href="dianpu_list.jsp">店铺信息</a></li>
+						<li><a href="${ctx }/kind/list">种类信息</a></li>
+						<li><a href="${ctx}/xiangqing/list">商品信息</a></li>
+                        <li><a href="${ctx}/dianpu/list">店铺信息</a></li>
 					</ul>
 				</li>
 
 				<li class="subMenu"><a href="#"><b>订单管理</b></a>
 					<ul>
-						<li><a href="./order_list.jsp">所有订单</a></li>
-						<li><a href="./order_list.jsp?ostatus=0">&nbsp;待付款</a></li>
-						<li><a href="./order_list.jsp?ostatus=1">&nbsp;待发货</a></li>
-						<li><a href="./order_list.jsp?ostatus=2">&nbsp;待收货</a></li>
-						<li><a href="./order_list.jsp?ostatus=4">&nbsp;已完成</a></li>
-						<li><a href="./order_list.jsp?ostatus=5">申请信息</a></li>
-						<li><a href="./order_list.jsp?ostatus=7">已退信息</a></li>
+						<li><a href="/admin/order/list">所有订单</a></li>
+						<li><a href="/admin/order/list?state=0">&nbsp;待付款</a></li>
+						<li><a href="/admin/order/list?state=1">&nbsp;待发货</a></li>
+						<li><a href="/admin/order/list?state=2">&nbsp;待收货</a></li>
+						<li><a href="/admin/order/list?state=4">&nbsp;已完成</a></li>
+						<li><a href="/admin/order/list?state=5">申请信息</a></li>
+						<li><a href="/admin/order/list?state=6">已退信息</a></li>
 
 					</ul>
 				</li>

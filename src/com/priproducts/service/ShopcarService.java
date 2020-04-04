@@ -1,11 +1,18 @@
 package com.priproducts.service;
 
 import com.priproducts.dao.ShopcarDao;
+import com.priproducts.entity.Shopcar;
 
 import java.util.List;
 
 public interface ShopcarService {
-    List<ShopcarDao> findAllcars(int uid); //查询
-    boolean delShopcar(int gid); //删除
-    boolean addOneShopcar(ShopcarDao shopcar);//添加
+
+    public void add(Shopcar cart);
+    public List<Shopcar> findByUid(Shopcar cart);
+    public void updateNumbers(Shopcar cart);
+    public void deleteByUid(String uid);
+    public void deleteByGid(Shopcar cart);
+    public Long countByUid(String uid);
+    public Shopcar findOne(Shopcar cart);
+    public void deleteBySid(String sid);
 }

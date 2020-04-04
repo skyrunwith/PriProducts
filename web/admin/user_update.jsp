@@ -27,29 +27,29 @@ body {
 					</tr>
 
 					<tr style="line-height: 30px;">
-						<td style="width: 70px;">用户名:</td>
+						<td style="width: 70px;">密码:</td>
 						<td><input type="password"  name="userpwd" class="border"
-								   required="required"  style="width: 250px;" value="${user.userpwa }" ></td>
+								   required="required"  style="width: 250px;" value="${user.userpwd }" ></td>
 
 					</tr>
 					
 					<tr style="line-height: 30px;">
 						<td style="width:70px;">邮箱:</td>
-						<td><input type="email" name="email" class="border" value="${user.useremail }"
+						<td><input type="email" name="useremail" class="border" value="${user.useremail }"
 							 style="width: 250px;"></td>
 
 					</tr>
 
 					<tr style="line-height: 30px;">
 						<td style="width:70px;">联系电话:</td>
-						<td><input type="tel" name="tel" class="border" value="${user.usetel }"
+						<td><input type="tel" name="usetel" class="border" value="${user.usetel }"
 								   style="width: 250px;"></td>
 
 					</tr>
 
 					<tr style="line-height: 30px;">
 						<td style="width:70px;">联系电话:</td>
-						<td><input type="text" name="address" class="border" value="${user.useraddre }"
+						<td><input type="text" name="useraddre" class="border" value="${user.useraddre }"
 								   style="width: 250px;"></td>
 
 					</tr>

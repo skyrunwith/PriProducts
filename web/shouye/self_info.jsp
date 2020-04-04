@@ -21,7 +21,7 @@
             <div class="ddzx">订单中心</div>
             <div class="subddzx">
                 <ul>
-                    <li><a href="dingdanzhongxin.jsp" >我的订单</a></li>
+                    <li><a href="/shouye/dingdanzhongxin" >我的订单</a></li>
                 </ul>
             </div>
             <div class="ddzx">个人中心</div>

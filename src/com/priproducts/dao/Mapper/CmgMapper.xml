@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.priproducts.dao.CmgDao">
+
+	<sql id="field"> cname,pwd,cid,ts </sql>
+
+	<select id="queryCmg" resultType="com.priproducts.entity.Cmg"
+		parameterType="com.priproducts.entity.Cmg">
+		select
+		<include refid="field"></include>
+		from cmg where cname=#{cname} and pwd=#{pwd}
+	</select>
+
+	<update id="updateTs" >
+		update cmg set ts=#{arg0} where cid=#{arg1}
+	</update>
+
+</mapper>

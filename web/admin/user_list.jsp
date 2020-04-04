@@ -54,7 +54,7 @@ body {
 	<div id="contentWrap">
 		<div class="pageTitle"></div>
 		<div class="pageColumn">
-			<form action="./user_list.jsp" method="post">
+			<form action="/admin/user/user_list" method="post">
 				用户名:<input type="text" class="border" name="username" value="">
 				<button class="combtn" type="submit">搜索</button>
 				<button class="canclebtn" type="clear">清空</button>
@@ -65,7 +65,7 @@ body {
 				<input type="hidden" name="username" value="${user.username }">
 				<input type="hidden" name="pageNo" value="${user.pageNo }">
 				<input type="hidden" name="ids">
-				<a class="icons-btn" href="${ctx }/insert_user.jsp"><span class="icons icons-add"></span>添加</a>
+				<a class="icons-btn" href="/admin/user/add"><span class="icons icons-add"></span>添加</a>
 
 				<button class="icons-btn piliang" data-action="${ctx }/user/pluse" type="submit"><span class="icons icons-use"></span>批量启用</button>
 				<button class="icons-btn piliangb" data-action="${ctx }/user/plnouse" type="submit"><span class="icons icons-no-use"></span>批量禁用</button> 
@@ -90,20 +90,20 @@ body {
 				</thead>
 				<tbody id="tbodyId">
 					<c:forEach items="${user_list }" var="item">
-						<tr style="background: ${item.status eq 0?'#ffd8d8':'' }">
+						<tr style="background: ${item.status != 1?'#ffd8d8':'' }">
 							<td class="checkBox"><input name="" type="checkbox" value="${item.uid }" data-status="${item.status }" data-words="含有未被禁用的用户，不能批量删除!"
 								class="checkitem" /></td>
 							<td>${item.uid }</td>
 							<td>${item.username }</td>
-							<td>${item.userpwd }</td>
-							<td>${item.usertel }</td>
+							<td>*******</td>
+							<td>${item.usetel }</td>
+							<td>${item.status eq 1?'启用':'禁用' }</td>
 							<td>${item.useremail }</td>
 							<td>${item.useraddre }</td>
-							<td>${item.status eq 1?'启用':'禁用' }</td>
 
 							<td><a class="icons-btn" href="${ctx }/user/update?uid=${item.uid}"><span 
 									class="icons icons-edit"></span>修改</a> 
-								<c:if test="${item.status eq 0 }">
+								<c:if test="${item.status != 1 }">
 									<a class="icons-btn subform" href="${ctx }/user/status" data-id="${item.uid}"><span
 										class="icons icons-use"></span>启用</a>
 									<a class="icons-btn subform" href="${ctx }/user/del" data-id="${item.uid}"><span

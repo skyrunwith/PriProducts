@@ -5,23 +5,35 @@ public class Xiangqing {
     private String x_name; //名称
     private String kname; //种类
     private String x_img; //图片
+    private String x_img_small1;
+    private String x_img_small2;
+
     private String x_leixing; //类型
     private String x_qishou; //起售
     private String x_huanjing; //环境
     private String x_price; //单价
-    private String x_number; //库存
-    private int status; //状态
+    private Integer x_number; //库存
+    private Integer status; //状态
     private String x_time; //创建时间
     private String x_creattime; //上架时间
+
+    private int kid;
+
+    private String title1;
+    private String title2;
+    private String title3;
+    private String title4;
 
     public Xiangqing() {
     }
 
-    public Xiangqing(int xid, String x_name, String kname, String x_img, String x_leixing, String x_qishou, String x_huanjing, String x_price, String x_number, int status, String x_time, String x_creattime) {
+    public Xiangqing(int xid, String x_name, String kname, String x_img, String x_img_small1, String x_img_small2, String x_leixing, String x_qishou, String x_huanjing, String x_price, Integer x_number, int status, String x_time, String x_creattime) {
         this.xid = xid;
         this.x_name = x_name;
         this.kname = kname;
         this.x_img = x_img;
+        this.x_img_small1 = x_img_small1;
+        this.x_img_small2 = x_img_small2;
         this.x_leixing = x_leixing;
         this.x_qishou = x_qishou;
         this.x_huanjing = x_huanjing;
@@ -30,6 +42,62 @@ public class Xiangqing {
         this.status = status;
         this.x_time = x_time;
         this.x_creattime = x_creattime;
+    }
+
+    public int getKid() {
+        return kid;
+    }
+
+    public void setKid(int kid) {
+        this.kid = kid;
+    }
+
+    public String getX_img_small2() {
+        return x_img_small2;
+    }
+
+    public void setX_img_small2(String x_img_small2) {
+        this.x_img_small2 = x_img_small2;
+    }
+
+    public String getTitle1() {
+        return title1;
+    }
+
+    public void setTitle1(String title1) {
+        this.title1 = title1;
+    }
+
+    public String getTitle2() {
+        return title2;
+    }
+
+    public void setTitle2(String title2) {
+        this.title2 = title2;
+    }
+
+    public String getTitle3() {
+        return title3;
+    }
+
+    public void setTitle3(String title3) {
+        this.title3 = title3;
+    }
+
+    public String getTitle4() {
+        return title4;
+    }
+
+    public void setTitle4(String title4) {
+        this.title4 = title4;
+    }
+
+    public String getX_img_small1() {
+        return x_img_small1;
+    }
+
+    public void setX_img_small1(String x_img_small1) {
+        this.x_img_small1 = x_img_small1;
     }
 
     public int getXid() {
@@ -96,19 +164,19 @@ public class Xiangqing {
         this.x_price = x_price;
     }
 
-    public String getX_number() {
+    public Integer getX_number() {
         return x_number;
     }
 
-    public void setX_number(String x_number) {
+    public void setX_number(Integer x_number) {
         this.x_number = x_number;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
@@ -144,5 +212,37 @@ public class Xiangqing {
                 ", x_time='" + x_time + '\'' +
                 ", x_creattime='" + x_creattime + '\'' +
                 '}';
+    }
+
+    /*以下是辅助字段,用于分页*/
+    private Integer pageSize;
+    private Integer startRow;
+    private Integer pageNo;
+    public Integer getPageSize() {
+        return pageSize;
+    }
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+    public Integer getStartRow() {
+        return startRow;
+    }
+    public void setStartRow(Integer startRow) {
+        this.startRow = startRow;
+    }
+    public Integer getPageNo() {
+        return pageNo;
+    }
+    public void setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+    }
+
+    /*以下是辅助字段,用于批量*/
+    private String ids;
+    public String getIds() {
+        return ids;
+    }
+    public void setIds(String ids) {
+        this.ids = ids;
     }
 }

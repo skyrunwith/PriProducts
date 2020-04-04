@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.priproducts.dao.DianpuDao">
+		
+	<select id="findById" resultType="com.priproducts.entity.Kind" parameterType="int">
+		select * 
+		from xiangqing where xid = #{xid}
+	</select>
+
+	<select id="findAllDianpu" resultType="com.priproducts.entity.Dianpu" parameterType="int">
+		SELECT
+		*
+		from  dianpu d
+		WHERE 1 = 1
+		<if test="kid != null and kid != ''">
+		 and d.kid = #{kid}
+		</if>
+	</select>
+
+	<insert id="add" parameterType="com.priproducts.entity.Dianpu">
+		insert into dianpu (sname,sdiandengji,saddress,stel,kid,simg,status,time)
+		values(#{sname}, #{sdiandengji}, #{saddress},#{stel}, #{kid},#{simg}, #{status}, #{time})
+	</insert>
+
+	<update id="update" parameterType="com.priproducts.entity.Dianpu">
+		update dianpu set sname = #{sname},sdiandengji = #{sdiandengji},saddress = #{saddress},stel = #{stel},
+		kid = #{kid},simg = #{simg},status = #{status},time = #{time} where sid = #{sid}
+	</update>	
+    
+    <!--  后台需要的部分   -->
+
+    <sql id="field">
+        sid,sname,sdiandengji,saddress,stel,kid,simg,status,time
+    </sql>
+
+	<delete id="deleteById" parameterType="java.lang.String">
+		delete from dianpu where sid = #{sid}
+	</delete>
+
+	<select id="queryAll" resultType="com.priproducts.entity.Dianpu" parameterType="com.priproducts.entity.Dianpu">
+		select *
+		from dianpu
+	</select>
+
+	<select id="findAll" resultType="com.priproducts.entity.Dianpu" parameterType="com.priproducts.entity.Dianpu">
+		select *
+		from dianpu
+	</select>
+
+	<select id="count" resultType="java.lang.Long" parameterType="com.priproducts.entity.Dianpu">
+		select count(d.sid)
+		from dianpu d
+	</select>
+
+	<update id="banStatus" parameterType="com.priproducts.entity.Dianpu">
+    	update dianpu set status = #{status} where sid = #{sid};
+    </update>
+	<select id="queryDianpuById" resultType="com.priproducts.entity.Dianpu"
+			parameterType="java.lang.String">
+		select
+		<include refid="field"></include>
+		from dianpu where sid=#{sid}
+	</select>
+</mapper>

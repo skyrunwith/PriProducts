@@ -1,18 +1,26 @@
 package com.priproducts.controller;
 
+import com.priproducts.entity.Address;
+import com.priproducts.entity.ApiResponse;
 import com.priproducts.entity.User;
+import com.priproducts.service.AddressService;
 import com.priproducts.service.UserService;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.List;
 import java.util.Random;
 
 @Controller
@@ -20,25 +28,69 @@ import java.util.Random;
 public class LoginController {
 
     public final static String SESSION_KEY_IMAGE_CODE = "SESSION_KEY_IMAGE_CODE";
+    public final static String SESSION_REGISTRY_KEY_IMAGE_CODE = "SESSION_REGISTRY_KEY_IMAGE_CODE";
+    public final static String SESSION_USER = "user";
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private AddressService addressService;
 
     @RequestMapping("/login")
     @ResponseBody
-    public User login(String username, String password, String yanzhengma){
+    public ApiResponse login(HttpServletRequest request, String username, String password, String yanzhengma, Model model){
         User user = userService.findByName(username);
-        return new User();
+        if(user == null || !StringUtils.equals(password, user.getUserpwd())){
+            return new ApiResponse(-1, null, "用户名密码错误");
+        }
+        if(!yanzhengma.equals(request.getSession().getAttribute(SESSION_KEY_IMAGE_CODE))){
+            return new ApiResponse(-1, null, "验证码不正确");
+        }
+        List<Address> address_list = addressService.findByUid(String.valueOf(user.getUid()));
+        HttpSession session = request.getSession();
+        if (user.getAid() != null) {
+            Address address = addressService.find(String.valueOf(user.getAid()));
+            session.setAttribute("default_address", address);
+        }
+        session.setAttribute("address_list", address_list);
+
+        request.getSession().setAttribute("user", user);
+        return new ApiResponse(0, user, "登录成功");
+    }
+
+    @RequestMapping("logout")
+    public String logout(HttpSession session, HttpServletRequest request){
+        session.removeAttribute("user");
+        return "redirect:/shouye/index";
+    }
+
+    @RequestMapping("registry/image/yanzhengma")
+    public void registryCode(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        ImageCode imageCode = (ImageCode) request.getSession().getAttribute(LoginController.SESSION_REGISTRY_KEY_IMAGE_CODE);
+        ImageIO.write(imageCode.getBufferedImage(), "jpeg", response.getOutputStream());
+    }
+
+    @RequestMapping("registry")
+    @ResponseBody
+    public ApiResponse registry(HttpServletRequest request, User user, String yanzhengma){
+        User dbUser = userService.findByName(user.getUsername());
+        if(dbUser == null) {
+            userService.insert(user);
+            request.getSession().setAttribute("user", user);
+            return new ApiResponse(0, user, "用户注册成功，即将跳转");
+        }else{
+            return new ApiResponse(-1, null, "用户已存在");
+        }
     }
 
     @RequestMapping("/image/yanzhengma")
     public void createCode(HttpServletRequest request, HttpServletResponse response) throws IOException {
         ImageCode imageCode = createImageCode();
-        request.getSession().setAttribute(LoginController.SESSION_KEY_IMAGE_CODE, imageCode);
+        request.getSession().setAttribute(LoginController.SESSION_KEY_IMAGE_CODE, imageCode.getCode());
         ImageIO.write(imageCode.getBufferedImage(), "jpeg", response.getOutputStream());
     }
 
-    private ImageCode createImageCode() {
+    public static ImageCode createImageCode() {
 
         int width = 100; // 验证码图片宽度
         int height = 36; // 验证码图片长度
@@ -73,7 +125,7 @@ public class LoginController {
         return new ImageCode(image, sRand.toString(), expireIn);
     }
 
-    private Color getRandColor(int fc, int bc) {
+    private static Color getRandColor(int fc, int bc) {
         Random random = new Random();
         if (fc > 255) {
             fc = 255;

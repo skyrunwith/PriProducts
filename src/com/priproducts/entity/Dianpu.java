@@ -6,15 +6,15 @@ public class Dianpu {
     private String sdiandengji; //店铺等级
     private String saddress; //店铺地址
     private String stel; //电话
-    private String kid; //类型
+    private int kid; //类型
     private String simg; //图片
-    private String status; //状态
+    private int status; //状态
     private String time; //创建时间
 
     public Dianpu() {
     }
 
-    public Dianpu(int sid, String sname, String sdiandengji, String saddress, String stel, String kid, String simg, String status, String time) {
+    public Dianpu(int sid, String sname, String sdiandengji, String saddress, String stel, int kid, String simg, int status, String time) {
         this.sid = sid;
         this.sname = sname;
         this.sdiandengji = sdiandengji;
@@ -66,11 +66,11 @@ public class Dianpu {
         this.stel = stel;
     }
 
-    public String getKid() {
+    public int getKid() {
         return kid;
     }
 
-    public void setKid(String kid) {
+    public void setKid(int kid) {
         this.kid = kid;
     }
 
@@ -82,11 +82,11 @@ public class Dianpu {
         this.simg = simg;
     }
 
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
@@ -111,5 +111,37 @@ public class Dianpu {
                 ", status='" + status + '\'' +
                 ", time='" + time + '\'' +
                 '}';
+    }
+
+    /*以下是辅助字段,用于分页*/
+    private Integer pageSize;
+    private Integer startRow;
+    private Integer pageNo;
+    public Integer getPageSize() {
+        return pageSize;
+    }
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+    public Integer getStartRow() {
+        return startRow;
+    }
+    public void setStartRow(Integer startRow) {
+        this.startRow = startRow;
+    }
+    public Integer getPageNo() {
+        return pageNo;
+    }
+    public void setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+    }
+
+    /*以下是辅助字段,用于批量*/
+    private String ids;
+    public String getIds() {
+        return ids;
+    }
+    public void setIds(String ids) {
+        this.ids = ids;
     }
 }

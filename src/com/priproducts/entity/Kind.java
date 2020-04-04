@@ -57,4 +57,37 @@ public class Kind {
                 ", createtime='" + createtime + '\'' +
                 '}';
     }
+
+    /*以下是辅助字段,用于分页*/
+    private Integer pageSize;
+    private Integer startRow;
+    private Integer pageNo;
+    public Integer getPageSize() {
+        return pageSize;
+    }
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+    public Integer getStartRow() {
+        return startRow;
+    }
+    public void setStartRow(Integer startRow) {
+        this.startRow = startRow;
+    }
+    public Integer getPageNo() {
+        return pageNo;
+    }
+    public void setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+    }
+
+    /*以下是辅助字段,用于批量*/
+    private String ids;
+    public String getIds() {
+        return ids;
+    }
+    public void setIds(String ids) {
+        this.ids = ids;
+    }
+
 }

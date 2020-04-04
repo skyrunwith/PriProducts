@@ -16,11 +16,11 @@ body {
 		<div class="pageTitle"></div>
 		<div style="border: 1px solid #bfd9e1; padding: 20px 20px;">
 			<h3>------添加商品------</h3>
-			<form action="${ctx }/goods/added" method="post" enctype="multipart/form-data">
+			<form action="${ctx }/xiangqing/added" method="post" enctype="multipart/form-data">
 				<table style="width: 600px;">
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">商品名称:</td>
-						<td><textarea   name="gname" class="border"
+						<td><textarea  name="x_name" class="border"
 							maxlength="100" required="required"  style="width: 250px;"></textarea></td>
 
 					</tr>
@@ -31,20 +31,38 @@ body {
 
 					</tr>
 					<tr>
-						<td colspan="3"><img id="file_img"></td>
+						<td colspan="3"><img id="file_img" ></td>
 					</tr>
 					<tr style="line-height: 30px;">
 						<td style="width:70px;">现价:</td>
-						<td><input type="text" name="price" class="border"
+						<td><input type="text" name="x_price" class="border"
 							required="required" style="width: 250px;"></td>
+
+					</tr>
+					<tr style="line-height: 30px;">
+						<td style="width:70px;">类型:</td>
+						<td><input type="text" name="x_leixing" class="border"
+								   required="required" style="width: 250px;"></td>
+
+					</tr>
+					<tr style="line-height: 30px;">
+						<td style="width:70px;">起售斤数:</td>
+						<td><input type="text" name="x_qishou" class="border"
+								   required="required" style="width: 250px;"></td>
+
+					</tr>
+					<tr style="line-height: 30px;">
+						<td style="width:70px;">环境:</td>
+						<td><input type="text" name="x_huanjing" class="border"
+								   required="required" style="width: 250px;"></td>
 
 					</tr>
 
 					<tr style="line-height: 30px;">
 						<td style="width:70px;">类别:</td>
 						<td>
-							<c:forEach items="${class_list}" var="item">
-								<input type="radio" required="required" name="cid" value="${item.cid }">${item.cname }
+							<c:forEach items="${kind_list}" var="item">
+								<input type="radio" required="required" name="kid" value="${item.kid }">${item.kname }
 							</c:forEach>
 						</td>
 					</tr>
@@ -52,7 +70,7 @@ body {
 					
 					<tr style="line-height: 30px;">
 						<td style="width:70px;">库存:</td>
-						<td><input type="number" name="stock" class="border"
+						<td><input type="number" name="x_number" class="border"
 							required="required" style="width:  250px;"></td>
 
 					</tr>

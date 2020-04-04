@@ -405,21 +405,21 @@ function getAdds() {
     });
 }
 
-//  添加一个地址
-function addAdd() {
-    $.ajax({
-        type:"post",
-        url:"/woniuShop_war_exploded/controller/user/addAdd",
-        data:{"name":$("#name").val(),"phone":$("#phone").val(),"province":$("#province option:selected").text(),
-        "city":$("#city option:selected").text(),"county":$("#county option:selected").text(),"addr":$("#detail").val()},
-        dataType:"json",
-        success:function (flag) {
-            if (flag){
-                location.replace("order.html");
-            }
-        }
-    })
-}
+// //  添加一个地址
+// function addAdd() {
+//     $.ajax({
+//         type:"post",
+//         url:"/woniuShop_war_exploded/controller/user/addAdd",
+//         data:{"name":$("#name").val(),"phone":$("#phone").val(),"province":$("#province option:selected").text(),
+//         "city":$("#city option:selected").text(),"county":$("#county option:selected").text(),"addr":$("#detail").val()},
+//         dataType:"json",
+//         success:function (flag) {
+//             if (flag){
+//                 location.replace("order.html");
+//             }
+//         }
+//     })
+// }
 
 //删除一个地址
 function delAddr(obj) {

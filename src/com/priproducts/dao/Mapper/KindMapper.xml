@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.priproducts.dao.KindDao">
+		
+	<select id="findById" resultType="com.priproducts.entity.Kind" parameterType="int">
+		select * 
+		from xiangqing where xid = #{xid}
+	</select>
+
+	<select id="findAllKind" resultType="com.priproducts.entity.Kind">
+		SELECT
+		*
+		from  kind
+		WHERE 1 = 1
+	</select>
+
+	<select id="findByName" resultType="com.priproducts.entity.Kind" parameterType="String">
+		SELECT
+		*
+		from  kind k
+		WHERE k.kname like CONCAT('%','${kname}','%' )
+	</select>
+
+
+
+
+	<resultMap id="map" type="com.priproducts.entity.Kind">
+		<id column="kid" property="kid" />
+		<result column="kname" property="kname" />
+		<result column="status" property="status" />
+		<result column="createtime" property="createtime" />
+	</resultMap>
+
+	<insert id="add" parameterType="com.priproducts.entity.Kind">
+		<selectKey ></selectKey>
+		insert into kind (kname,createtime,status)
+		values(#{kname},#{createtime},1)
+	</insert>
+
+	<sql id="field"> kid,kname,status, createtime</sql>
+	<select id="queryList" resultType="com.priproducts.entity.Kind" parameterType="com.priproducts.entity.Kind">
+		select
+		<include refid="field"></include>
+		from kind where 1=1
+		<if test="kname != null and kname != ''">
+			and kname like #{kname}
+		</if>
+		order by createtime desc limit #{startRow},#{pageSize}
+	</select>
+
+	<select id="queryAll" resultType="map">
+		select
+		<include refid="field"></include>
+		from kind
+	</select>
+
+	<select id="queryCount" resultType="java.lang.Long" parameterType="com.priproducts.entity.Kind">
+		select count(kid) from kind where 1=1
+		<if test="kname != null and kname != ''">
+			and kname like #{kname}
+		</if>
+	</select>
+
+	<select id="queryKindById" resultType="com.priproducts.entity.Kind"
+			parameterType="java.lang.String">
+		select
+		<include refid="field"></include>
+		from kind where kid=#{0}
+	</select>
+
+	<update id="update" parameterType="com.priproducts.entity.Kind">
+		update kind
+		<trim prefix="set" suffixOverrides=",">
+			<if test="kname!=null and kname != ''">kname=#{kname},</if>
+			<if test="status!=null">status=#{status},</if>
+		</trim>
+		where kid=#{kid}
+	</update>
+
+	<delete id="deleteById" parameterType="java.lang.String">
+		delete from kind where kid=#{kid}
+	</delete>
+
+	<update id="banStatus" parameterType="com.priproducts.entity.Kind">
+    	update kind set status = #{status} where kid = #{kid};
+    </update>
+</mapper>

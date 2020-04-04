@@ -19,7 +19,7 @@ body {
 
 		<div class="pageColumn">
 			<form action="${ctx }/kind/list" method="post">
-				种类:<input type="text" class="border" name="kind" value="${kind.kind }">
+				种类:<input type="text" class="border" name="kname" value="${kind.kname }">
 				<button class="combtn" type="submit">搜索</button>
 				<button class="canclebtn" type="clear">清空</button>
 			</form>
@@ -27,7 +27,7 @@ body {
 
 		<div class="pageTitle">
 			<form action="" method="post">
-				<input type="hidden" name="kind" value="${kind.kname }">
+				<input type="hidden" name="kname" value="${kind.kname }">
 				<input type="hidden" name="pageNo" value="${kind.pageNo }">
 				<input type="hidden" name="ids">
 				<a class="icons-btn" href="${ctx }/kind/add"><span class="icons icons-add"></span>添加</a> 
@@ -51,24 +51,23 @@ body {
 				<tbody>
 					<c:forEach items="${li }" var="item">
 						<tr style="background: ${item.status eq 0?'#ffd8d8':'' }">
-							<td class="checkBox"><input name="" type="checkbox" value="${item.kid }" data-status="${item.status }" data-dflag="${item.dflag }"
+							<td class="checkBox"><input name="" type="checkbox" value="${item.kid }" data-status="${item.status }"
 							data-words="含有未被禁用的种类，不能批量删除!" data-wordsd="含有还有二级分类的一级分类，不能批量删除!"
 								class="checkitem" /></td>
 							<td>${item.kid }</td>
 							<td>${item.kname }</td>
 							<td>${item.status eq 1?'启用':'禁用' }</td>
-							<td>${item.ksort }</td>
 							<td>${item.createtime }</td>
 
 							<td><a class="icons-btn" href="${ctx }/kind/update?kid=${item.kid}"><span 
 									class="icons icons-edit"></span>修改</a> 
-								<c:if test="${item.status eq 0 }">
+								<c:if test="${item.status != 1 }">
 									<a class="icons-btn subform" href="${ctx }/kind/isuse" data-id="${item.kid}"><span
 										class="icons icons-use"></span>启用</a>
-									<a class="icons-btn subformd" href="${ctx }/kind/del" data-id="${item.kid}"
-										data-dflag="${item.dflag }"
-										data-words="该类还存在二级种类，删除失败！">
-										<span class="icons icons-del"></span>删除</a>
+<%--									<a class="icons-btn subformd" href="${ctx }/kind/del" data-id="${item.kid}"--%>
+<%--										data-dflag="${item.dflag }"--%>
+<%--										data-words="该类还存在二级种类，删除失败！">--%>
+<%--										<span class="icons icons-del"></span>删除</a>--%>
 								</c:if> 
 								<c:if test="${item.status eq 1 }">
 									<a class="icons-btn subform" href="${ctx }/kind/isuse" data-id="${item.kid}"><span
@@ -83,14 +82,14 @@ body {
 
 		<div class="pageTitle footer_fiexed">
 			<form action="${ctx }/kind/list" method="post">
-				<input type="hidden" name="kind" value="${kind.kname }">
+				<input type="hidden" name="kname" value="${kind.kname }">
 				<%@ include file="page.jsp"%>
 			</form>
 		</div>
 		
 		<form action="" method="post" id="subform">
 			<input type="hidden" name="kid" value="" id="subformId">
-			<input type="hidden" name="kind" value="${kind.kind }">
+			<input type="hidden" name="kname" value="${kind.kname }">
 			<input type="hidden" name="pageNo" value="${kind.pageNo }">
 		</form>
 	</div>

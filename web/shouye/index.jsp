@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c"
-           uri="http://java.sun.com/jsp/jstl/fmt" %>
+           uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -26,9 +26,8 @@
             <div data-toggle="arrowdown" id="arrow8" class="search-toggle">
                 农产品<span class="down-icon"></span>
             </div>
-            <input class="search-in" type="text" placeholder="    请输入关键字">
-            <input type="button" class="search-but" value="搜索">
-
+            <input class="search-in" type="text" id="kname" placeholder="    请输入产品种类">
+            <input type="button" class="search-but" id="searchKind" value="搜索">
         </div>
 
         <!--头部导航-->
@@ -43,7 +42,6 @@
             <a href="#">农用机械设备</a>
             <a href="#">谷类作物</a>
             <a href="#">油料作物</a>
-
             <a href="#" class="more-other">更多<i class="fa fa-angle-right"></i></a>
         </div>
     </div>
@@ -785,7 +783,7 @@
             <a id="spe-a1" href="#">首页</a>
 
             <span class="line-a">|</span>
-            <a href="./shangcheng.jsp">购物商城</a>
+            <a href="/shouye/shangcheng">购物商城</a>
             <a href="./tuijian.jsp">推荐中心</a>
             <a href="./zhengce.jsp">相关扶贫政策</a>
             <a href="./hezhuo.jsp">合作联系</a>
@@ -997,256 +995,228 @@
         <div class="main-title">
             <h1>最新供应<span class="show-title">实时掌握最新供应！</span></h1>
         </div>
+        <c:forEach items="${xiangqingList}" var="item">
         <div class="product-box">
             <div class="inner-info">
                 <div>
                     <span class="line-f40">|</span>
-                    <span class="text-title">鹅苗</span>
+                    <span class="text-title">${item.x_name}</span>
                     <span class="share-weitao">
             <span class="line-f40">+</span>
-            <a href="#">添加到购物车</a>
+            <input type="button" class="btn_cart" data-xid="${item.xid }" data-href="/shouye/shoppingcart"
+                   value="${item.x_number eq 0?'暂无库存':'加入购物车' }" <c:if test="${item.status eq 0 or item.x_number eq 0}">disabled=""</c:if> >
           </span>
                 </div>
                 <div class="inner-left">
-                    <a href="xiangqing.jsp">
-                    <img src="img/鹅.jpg" />
+                    <a href="/shouye/${item.xid}">
+                    <img src="${item.x_img}" style="width: 100%; height: 130px;"/>
                     </a>
-                    <h1>大花三鹅苗</h1>
-                    <span>8.05/只(100只起售)</span>
+                    <h1>${item.x_name}</h1>
+                    <span>${item.x_price}</span>
                 </div>
                 <div class="inner-right">
                     <div style="height: 100px">
-                        <img src="img/鹅1.jpg" />
-                        <img src="img/鹅2.jpg" />
+                        <img src="${item.x_img_small1}" />
+                        <img src="${item.x_img_small2}" />
                     </div>
                     <table class="tab-inner">
-                        <tr><td><a href="#">肉鹅:8.7/斤</a></td>
-                            <td><a href="#">小鹅:8/只</a></td>
+                        <tr><td><a href="#">${item.title1}</a></td>
+                            <td><a href="#">${item.title2}</a></td>
                         </tr>
-                        <tr><td><a href="#">鹅苗:28/只</a></td>
-                            <td><a href="#">下蛋鹅:160/个</a></td>
+                        <tr><td><a href="#">${item.title3}</a></td>
+                            <td><a href="#">${item.title4}</a></td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
-        <div class="product-box">
-            <div class="inner-info">
-                <div>
-                    <span class="line-f40">|</span>
-                    <span class="text-title">鸡</span>
-                    <span class="share-weitao">
-            <span class="line-f40">+</span>
-            <a href="#">添加到购物车</a>
-          </span>
-                </div>
-                <div class="inner-left">
-                    <img src="img/鸡.jpg" />
-                    <h1>锦花鸡</h1>
-                    <span>20.5/只(100只起售)</span>
-                </div>
-                <div class="inner-right">
-                    <div style="height: 100px">
-                        <img src="img/鸡1.jpg" />
-                        <img src="img/鸡2.jpg" />
-                    </div>
-                    <table class="tab-inner">
-                        <tr><td><a href="#">芦丁鸡:7/只</a></td>
-                            <td><a href="#">鸡苗:3/只</a></td>
-                        </tr>
-                        <tr><td><a href="#">活土鸡:8/斤</a></td>
-                            <td><a href="#">下单鸡:150/只</a></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="product-box">
-            <div class="inner-info">
-                <div>
-                    <span class="line-f40">|</span>
-                    <span class="text-title">樱桃</span>
-                    <span class="share-weitao">
-            <span class="line-f40">+</span>
-            <a href="#">添加到购物车</a>
-          </span>
-                </div>
-                <div class="inner-left">
-                    <img src="img/樱桃.jpg" />
-                    <h1><a href="#">乌克樱桃</a></h1>
-                    <span>10元/斤(200斤起售)</span>
-                </div>
-                <div class="inner-right">
-                    <div style="height: 100px">
-                        <img src="img/樱桃1.jpg" />
-                        <img src="img/樱桃2.jpg" />
-                    </div>
-                    <table class="tab-inner">
-                        <tr><td><a href="#">大连樱:135/斤</a></td>
-                            <td><a href="#">冠县樱:20/斤</a></td>
-                        </tr>
-                        <tr><td><a href="#">小樱桃:10/斤</a></td>
-                            <td><a href="#">攀枝花:199/件</a></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="product-box">
-            <div class="inner-info">
-                <div>
-                    <span class="line-f40">|</span>
-                    <span class="text-title">大枣</span>
-                    <span class="share-weitao">
-            <span class="line-f40">+</span>
-            <a href="#">添加到购物车</a>
-          </span>
-                </div>
-                <div class="inner-left">
-                    <img src="img/枣.jpg" />
-                    <h1><a href="#">大青枣</a></h1>
-                    <span>5元/斤(200斤起售)</span>
-                </div>
-                <div class="inner-right">
-                    <div style="height: 100px">
-                        <img src="img/枣1.jpg" />
-                        <img src="img/枣2.jpg" />
-                    </div>
-                    <table class="tab-inner">
-                        <tr><td><a href="#">东枣:2/斤</a></td>
-                            <td><a href="#">大青枣:3/斤</a></td>
-                        </tr>
-                        <tr><td><a href="#">枣片:10/袋</a></td>
-                            <td><a href="#">新疆肉枣:15/斤</a></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="product-box">
-            <div class="inner-info">
-                <div>
-                    <span class="line-f40">|</span>
-                    <span class="text-title">肉虾</span>
-                    <span class="share-weitao">
-            <span class="line-f40">+</span>
-            <a href="#">添加到购物车</a>
-          </span>
-                </div>
-                <div class="inner-left">
-                    <img src="img/虾.jpg" />
-                    <h1><a href="#">龙虾</a></h1>
-                    <span>20元/斤(100斤起售)</span>
-                </div>
-                <div class="inner-right">
-                    <div style="height: 100px">
-                        <img src="img/虾1.jpg" />
-                        <img src="img/虾2.jpg" />
-                    </div>
-                    <table class="tab-inner">
-                        <tr><td><a href="#">活龙虾:15/斤</a></td>
-                            <td><a href="#">红虾:19/斤</a></td>
-                        </tr>
-                        <tr><td><a href="#">冻虾:14/斤</a></td>
-                            <td><a href="#">皮皮虾:10/斤</a></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="product-box">
-            <div class="inner-info">
-                <div>
-                    <span class="line-f40">|</span>
-                    <span class="text-title">淡水鱼</span>
-                    <span class="share-weitao">
-            <span class="line-f40">+</span>
-            <a href="#">添加到购物车</a>
-          </span>
-                </div>
-                <div class="inner-left">
-                    <img src="img/鱼.jpg" />
-                    <h1><a href="#">青鱼</a></h1>
-                    <span>5元/斤(100斤起售)</span>
-                </div>
-                <div class="inner-right">
-                    <div style="height: 100px">
-                        <img src="img/鱼1.jpg" />
-                        <img src="img/鱼2.jpg" />
-                    </div>
-                    <table class="tab-inner">
-                        <tr><td><a href="#">草鱼:4/斤</a></td>
-                            <td><a href="#">花鲢鱼:8/斤</a></td>
-                        </tr>
-                        <tr><td><a href="#">鱼苗:0.5/个</a></td>
-                            <td><a href="#">鲫鱼:10/斤</a></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="product-box">
-            <div class="inner-info">
-                <div>
-                    <span class="line-f40">|</span>
-                    <span class="text-title">作物肥料</span>
-                    <span class="share-weitao">
-            <span class="line-f40">+</span>
-            <a href="#">添加到购物车</a>
-          </span>
-                </div>
-                <div class="inner-left">
-                    <img src="img/肥料.jpg" />
-                    <h1><a href="#">肥料</a></h1>
-                    <span>30元/袋(10吨起售)</span>
-                </div>
-                <div class="inner-right">
-                    <div style="height: 100px">
-                        <img src="img/肥料1.jpg" />
-                        <img src="img/肥料2.jpg" />
-                    </div>
-                    <table class="tab-inner">
-                        <tr><td><a href="#">河北料:2400/吨</a></td>
-                            <td><a href="#">多肽料:1500/吨</a></td>
-                        </tr>
-                        <tr><td><a href="#">发酵料:200/吨</a></td>
-                            <td><a href="#">黄腐料:130/袋</a></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="product-box">
-            <div class="inner-info">
-                <div>
-                    <span class="line-f40">|</span>
-                    <span class="text-title">农贸机器</span>
-                    <span class="share-weitao">
-            <span class="line-f40">+</span>
-            <a href="#">添加到购物车</a>
-          </span>
-                </div>
-                <div class="inner-left">
-                    <img src="img/机器.jpg" />
-                    <h1><a href="#">施肥机</a></h1>
-                    <span>300元/台(100件起售)</span>
-                </div>
-                <div class="inner-right">
-                    <div style="height: 100px">
-                        <img src="img/机器1.jpg" />
-                        <img src="img/机器2.jpg" />
-                    </div>
-                    <table class="tab-inner">
-                        <tr><td><a href="#">果树机:100/件</a></td>
-                            <td><a href="#">鱼塘机:270/件</a></td>
-                        </tr>
-                        <tr><td><a href="#">功能机:1300/件</a></td>
-                            <td><a href="#">电动机:200/个</a></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
+        </c:forEach>
+<%--        <div class="product-box">--%>
+<%--            <div class="inner-info">--%>
+<%--                <div>--%>
+<%--                    <span class="line-f40">|</span>--%>
+<%--                    <span class="text-title">樱桃</span>--%>
+<%--                    <span class="share-weitao">--%>
+<%--            <span class="line-f40">+</span>--%>
+<%--            <a href="#">添加到购物车</a>--%>
+<%--          </span>--%>
+<%--                </div>--%>
+<%--                <div class="inner-left">--%>
+<%--                    <img src="img/樱桃.jpg" />--%>
+<%--                    <h1><a href="#">乌克樱桃</a></h1>--%>
+<%--                    <span>10元/斤(200斤起售)</span>--%>
+<%--                </div>--%>
+<%--                <div class="inner-right">--%>
+<%--                    <div style="height: 100px">--%>
+<%--                        <img src="img/樱桃1.jpg" />--%>
+<%--                        <img src="img/樱桃2.jpg" />--%>
+<%--                    </div>--%>
+<%--                    <table class="tab-inner">--%>
+<%--                        <tr><td><a href="#">大连樱:135/斤</a></td>--%>
+<%--                            <td><a href="#">冠县樱:20/斤</a></td>--%>
+<%--                        </tr>--%>
+<%--                        <tr><td><a href="#">小樱桃:10/斤</a></td>--%>
+<%--                            <td><a href="#">攀枝花:199/件</a></td>--%>
+<%--                        </tr>--%>
+<%--                    </table>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <div class="product-box">--%>
+<%--            <div class="inner-info">--%>
+<%--                <div>--%>
+<%--                    <span class="line-f40">|</span>--%>
+<%--                    <span class="text-title">大枣</span>--%>
+<%--                    <span class="share-weitao">--%>
+<%--            <span class="line-f40">+</span>--%>
+<%--            <a href="#">添加到购物车</a>--%>
+<%--          </span>--%>
+<%--                </div>--%>
+<%--                <div class="inner-left">--%>
+<%--                    <img src="img/枣.jpg" />--%>
+<%--                    <h1><a href="#">大青枣</a></h1>--%>
+<%--                    <span>5元/斤(200斤起售)</span>--%>
+<%--                </div>--%>
+<%--                <div class="inner-right">--%>
+<%--                    <div style="height: 100px">--%>
+<%--                        <img src="img/枣1.jpg" />--%>
+<%--                        <img src="img/枣2.jpg" />--%>
+<%--                    </div>--%>
+<%--                    <table class="tab-inner">--%>
+<%--                        <tr><td><a href="#">东枣:2/斤</a></td>--%>
+<%--                            <td><a href="#">大青枣:3/斤</a></td>--%>
+<%--                        </tr>--%>
+<%--                        <tr><td><a href="#">枣片:10/袋</a></td>--%>
+<%--                            <td><a href="#">新疆肉枣:15/斤</a></td>--%>
+<%--                        </tr>--%>
+<%--                    </table>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <div class="product-box">--%>
+<%--            <div class="inner-info">--%>
+<%--                <div>--%>
+<%--                    <span class="line-f40">|</span>--%>
+<%--                    <span class="text-title">肉虾</span>--%>
+<%--                    <span class="share-weitao">--%>
+<%--            <span class="line-f40">+</span>--%>
+<%--            <a href="#">添加到购物车</a>--%>
+<%--          </span>--%>
+<%--                </div>--%>
+<%--                <div class="inner-left">--%>
+<%--                    <img src="img/虾.jpg" />--%>
+<%--                    <h1><a href="#">龙虾</a></h1>--%>
+<%--                    <span>20元/斤(100斤起售)</span>--%>
+<%--                </div>--%>
+<%--                <div class="inner-right">--%>
+<%--                    <div style="height: 100px">--%>
+<%--                        <img src="img/虾1.jpg" />--%>
+<%--                        <img src="img/虾2.jpg" />--%>
+<%--                    </div>--%>
+<%--                    <table class="tab-inner">--%>
+<%--                        <tr><td><a href="#">活龙虾:15/斤</a></td>--%>
+<%--                            <td><a href="#">红虾:19/斤</a></td>--%>
+<%--                        </tr>--%>
+<%--                        <tr><td><a href="#">冻虾:14/斤</a></td>--%>
+<%--                            <td><a href="#">皮皮虾:10/斤</a></td>--%>
+<%--                        </tr>--%>
+<%--                    </table>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <div class="product-box">--%>
+<%--            <div class="inner-info">--%>
+<%--                <div>--%>
+<%--                    <span class="line-f40">|</span>--%>
+<%--                    <span class="text-title">淡水鱼</span>--%>
+<%--                    <span class="share-weitao">--%>
+<%--            <span class="line-f40">+</span>--%>
+<%--            <a href="#">添加到购物车</a>--%>
+<%--          </span>--%>
+<%--                </div>--%>
+<%--                <div class="inner-left">--%>
+<%--                    <img src="img/鱼.jpg" />--%>
+<%--                    <h1><a href="#">青鱼</a></h1>--%>
+<%--                    <span>5元/斤(100斤起售)</span>--%>
+<%--                </div>--%>
+<%--                <div class="inner-right">--%>
+<%--                    <div style="height: 100px">--%>
+<%--                        <img src="img/鱼1.jpg" />--%>
+<%--                        <img src="img/鱼2.jpg" />--%>
+<%--                    </div>--%>
+<%--                    <table class="tab-inner">--%>
+<%--                        <tr><td><a href="#">草鱼:4/斤</a></td>--%>
+<%--                            <td><a href="#">花鲢鱼:8/斤</a></td>--%>
+<%--                        </tr>--%>
+<%--                        <tr><td><a href="#">鱼苗:0.5/个</a></td>--%>
+<%--                            <td><a href="#">鲫鱼:10/斤</a></td>--%>
+<%--                        </tr>--%>
+<%--                    </table>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <div class="product-box">--%>
+<%--            <div class="inner-info">--%>
+<%--                <div>--%>
+<%--                    <span class="line-f40">|</span>--%>
+<%--                    <span class="text-title">作物肥料</span>--%>
+<%--                    <span class="share-weitao">--%>
+<%--            <span class="line-f40">+</span>--%>
+<%--            <a href="#">添加到购物车</a>--%>
+<%--          </span>--%>
+<%--                </div>--%>
+<%--                <div class="inner-left">--%>
+<%--                    <img src="img/肥料.jpg" />--%>
+<%--                    <h1><a href="#">肥料</a></h1>--%>
+<%--                    <span>30元/袋(10吨起售)</span>--%>
+<%--                </div>--%>
+<%--                <div class="inner-right">--%>
+<%--                    <div style="height: 100px">--%>
+<%--                        <img src="img/肥料1.jpg" />--%>
+<%--                        <img src="img/肥料2.jpg" />--%>
+<%--                    </div>--%>
+<%--                    <table class="tab-inner">--%>
+<%--                        <tr><td><a href="#">河北料:2400/吨</a></td>--%>
+<%--                            <td><a href="#">多肽料:1500/吨</a></td>--%>
+<%--                        </tr>--%>
+<%--                        <tr><td><a href="#">发酵料:200/吨</a></td>--%>
+<%--                            <td><a href="#">黄腐料:130/袋</a></td>--%>
+<%--                        </tr>--%>
+<%--                    </table>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <div class="product-box">--%>
+<%--            <div class="inner-info">--%>
+<%--                <div>--%>
+<%--                    <span class="line-f40">|</span>--%>
+<%--                    <span class="text-title">农贸机器</span>--%>
+<%--                    <span class="share-weitao">--%>
+<%--            <span class="line-f40">+</span>--%>
+<%--            <a href="#">添加到购物车</a>--%>
+<%--          </span>--%>
+<%--                </div>--%>
+<%--                <div class="inner-left">--%>
+<%--                    <img src="img/机器.jpg" />--%>
+<%--                    <h1><a href="#">施肥机</a></h1>--%>
+<%--                    <span>300元/台(100件起售)</span>--%>
+<%--                </div>--%>
+<%--                <div class="inner-right">--%>
+<%--                    <div style="height: 100px">--%>
+<%--                        <img src="img/机器1.jpg" />--%>
+<%--                        <img src="img/机器2.jpg" />--%>
+<%--                    </div>--%>
+<%--                    <table class="tab-inner">--%>
+<%--                        <tr><td><a href="#">果树机:100/件</a></td>--%>
+<%--                            <td><a href="#">鱼塘机:270/件</a></td>--%>
+<%--                        </tr>--%>
+<%--                        <tr><td><a href="#">功能机:1300/件</a></td>--%>
+<%--                            <td><a href="#">电动机:200/个</a></td>--%>
+<%--                        </tr>--%>
+<%--                    </table>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
 
     </div>
     <div class="main-right">
@@ -1342,6 +1312,7 @@
 <script src="js/jquery_1.9.js"></script>
 <script src="js/main.js"></script>
 <script src="js/img-show.js"></script>
+<script type="text/javascript" src="js/shouye.js"></script>
 </body>
 
 </html>

@@ -45,8 +45,8 @@
     </div>
 
     <div class="right1">
-        <a href="./index.jsp" class="sa">&nbsp;&nbsp;首页&nbsp;&nbsp;&nbsp;|</a>
-        <a href="./shangcheng.jsp" class="sa">&nbsp;&nbsp;&nbsp;购物商城&nbsp;&nbsp;&nbsp;|</a>
+        <a href="/shouye/index" class="sa">&nbsp;&nbsp;首页&nbsp;&nbsp;&nbsp;|</a>
+        <a href="/shouye/shangcheng" class="sa">&nbsp;&nbsp;&nbsp;购物商城&nbsp;&nbsp;&nbsp;|</a>
         <a href="./tuijian.jsp" class="sa">&nbsp;&nbsp;&nbsp;推荐中心&nbsp;&nbsp;&nbsp;|</a>
         <a href="./zhengce.jsp" class="sa">&nbsp;&nbsp;&nbsp;相关扶贫政策&nbsp;&nbsp;&nbsp;|</a>
         <a href="./hezhuo.jsp" class="sa">&nbsp;&nbsp;&nbsp;合作联系&nbsp;&nbsp;&nbsp;|</a>

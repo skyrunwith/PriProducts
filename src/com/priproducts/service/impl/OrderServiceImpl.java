@@ -1,14 +1,18 @@
 package com.priproducts.service.impl;
 
+import com.priproducts.dao.OrderDao;
 import com.priproducts.entity.Order;
 import com.priproducts.service.OrderService;
 import com.priproducts.util.C3P0Util;
 import com.priproducts.util.SQLAdapter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.sql.*;
 import java.util.Date;
 import java.util.List;
 
+@Service
 public class OrderServiceImpl implements OrderService {
     @Override
     public int addOrder(int uid) {
@@ -76,5 +80,39 @@ public class OrderServiceImpl implements OrderService {
         C3P0Util.close(conn);
         return orders;
     }
+
+    @Autowired
+    private OrderDao orderDao;
+
+    @Override
+    public void insert(Order order) {
+        orderDao.insert(order);
+    }
+
+    @Override
+    public List<Order> findAll(Order order) {
+        return orderDao.findAll(order);
+    }
+
+    @Override
+    public List<Order> findByUid(Order order) {
+        return orderDao.findByUid(order);
+    }
+
+    @Override
+    public void update(Order order) {
+        orderDao.update(order);
+    }
+
+    @Override
+    public Order findOne(String oid) {
+        return orderDao.findOne(oid);
+    }
+
+    @Override
+    public long count(Order order) {
+        return orderDao.count(order);
+    }
+
 }
 

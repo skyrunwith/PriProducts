@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -11,7 +10,7 @@
 <body>
 <!-- start header -->
 <div class="scroll-head">
-    <%@include file="xiaotaitou.jsp"%>
+    <%@include file="xiaotaitou.jsp" %>
 </div>
 <!-- self_info -->
 <div class="grzxbj">
@@ -20,7 +19,7 @@
             <div class="ddzx">订单中心</div>
             <div class="subddzx">
                 <ul>
-                    <li><a href="dingdanzhongxin.jsp" style="color:#ff6700;font-weight:bold;">我的订单</a></li>
+                    <li><a href="/shouye/dingdanzhongxin" style="color:#ff6700;font-weight:bold;">我的订单</a></li>
                 </ul>
             </div>
             <div class="ddzx">个人中心</div>
@@ -33,40 +32,34 @@
         </div>
         <div class="rtcont fr">
             <div class="ddzxbt">交易订单</div>
-            <div class="ddxq">
+            <c:forEach items="${order_list}" var="order">
+                <div class="ddxq">
+                    <div class="ddbh fl">订单号:${order.ordernumber}</div>
+                    <div class="ztxx fr">
+                        <ul>
+                                <%--                        0 未支付、1 已支付、2 已发货、3 已收货、4  已取消、5、退款中、6 已退款--%>
+                            <c:if test="${order.state==0}"><li>未支付</li></c:if>
+                            <c:if test="${order.state==1}"><li>已支付</li></c:if>
+                            <c:if test="${order.state==2}"><li>已发货</li></c:if>
+                            <c:if test="${order.state==3}"><li>已收货</li></c:if>
+                            <c:if test="${order.state==4}"><li>已取消</li></c:if>
+                            <c:if test="${order.state==5}"><li>退款中</li></c:if>
+                            <c:if test="${order.state==6}"><li>已退款</li></c:if>
+                            <li>￥${order.paynumber}</li>
+                            <li>${order.createtime}</li>
 
-                <div class="ddbh fl">订单号:1705205643098724</div>
-                <div class="ztxx fr">
-                    <ul>
-                        <li>已发货</li>
-                        <li>￥30.00</li>
-                        <li>2017/05/20 13:30</li>
-
-                        <div class="clear"></div>
-                    </ul>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
                 </div>
-                <div class="clear"></div>
-            </div>
-            <div class="ddxq">
-
-                <div class="ddbh fl">订单号:170526435444865</div>
-                <div class="ztxx fr">
-                    <ul>
-                        <li>已发货</li>
-                        <li>￥30.00</li>
-                        <li>2017/05/26 14:02</li>
-
-                        <div class="clear"></div>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </div>
+            </c:forEach>
         </div>
         <div class="clear"></div>
     </div>
 </div>
 <!-- self_info -->
 <div>
-    <%@include file="foot.jsp"%>
+    <%@include file="foot.jsp" %>
 </body>
 </html>
