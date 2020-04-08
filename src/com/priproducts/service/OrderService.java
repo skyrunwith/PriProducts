@@ -13,6 +13,6 @@ public interface OrderService {
     public List<Order> findAll(Order order);
     public List<Order> findByUid(Order order);
     public void update(Order order);
-    public Order findOne(String oid);
+    public Order findOneByOrderNumber(String oid);
     public long count(Order order);
 }

@@ -1,14 +1,17 @@
 package com.priproducts.controller.admin;
 import com.priproducts.entity.Dianpu;
+import com.priproducts.entity.Kind;
 import com.priproducts.entity.Order;
 import com.priproducts.entity.Page;
 import com.priproducts.service.DianpuService;
+import com.priproducts.service.KindService;
 import com.priproducts.service.OrderService;
 import com.priproducts.service.XiangqingService;
 import com.priproducts.util.DateUtils;
 import com.priproducts.util.LikeQuery;
 import com.priproducts.util.Sys;
 import com.priproducts.util.UploadFile;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
@@ -27,6 +31,9 @@ public class AdminDianpuController {
 	private DianpuService dianpuService;
 	@Autowired
 	private XiangqingService xiangqingService;
+
+	@Autowired
+	private KindService kindService;
 	
 	Page page = new Page();
 	
@@ -55,7 +62,9 @@ public class AdminDianpuController {
 	}
 
 	@RequestMapping("add")
-	public String add(){
+	public String add(Model model){
+		List<Kind> kindList = kindService.queryAll();
+		model.addAttribute("kind_list", kindList);
 		return Sys.Common.admin+"/dianpu_add";
 	}
 
@@ -63,7 +72,6 @@ public class AdminDianpuController {
 	public String added(@RequestParam(value = "file_img",required = true) MultipartFile file, Dianpu k, Model m, HttpServletRequest request){
 		String simg = UploadFile.upimg(file, request);
 		k.setSimg(simg);
-		k.setKid(0);
 		k.setTime(DateUtils.DateTimeToString(new Date()));
 		dianpuService.add(k);
 		return list(k,m);
@@ -73,11 +81,28 @@ public class AdminDianpuController {
 	public String update(@RequestParam String sid, Model m){
 		Dianpu dianpu=dianpuService.queryDianpuById(sid);
 		m.addAttribute("dianpu", dianpu);
+		List<Kind> kindList = kindService.queryAll();
+		m.addAttribute("kind_list", kindList);
 		return Sys.Common.admin+"/dianpu_update";
 	}
 
 	@RequestMapping("updated")
-	public String updated(Dianpu dianpu, Model m){
+	public String updated(Dianpu dianpu, Model m,  @RequestParam(value="file_img",required=true) MultipartFile file, HttpServletRequest request){
+		String img="";
+		try {
+			if(file!=null&&file.getBytes().length>0){
+				img=UploadFile.upGoodsImg(file, request);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		if(StringUtils.isNotBlank(img)){
+			String oldimg=dianpu.getSimg();
+			UploadFile.deleteFile(request, oldimg);
+			dianpu.setSimg(img);
+		}
+		String date = DateUtils.DateTimeToString(new Date());
+		dianpu.setTime(date);
 		dianpuService.update(dianpu);
 		return list(dianpu, m);
 	}

@@ -25,7 +25,7 @@
     </div>
 
     <div class="jieshao mt20 w">
-        <div class="left fl"><img src="../images/鹅.jpg"></div>
+        <div class="left fl"><img src="${xiangqing.x_img}"></div>
         <div class="right fr">
             <div class="h3 ml20 mt20"> ${xiangqing.x_name}</div>
             <div class="jianjie mr40 ml20 mt10">

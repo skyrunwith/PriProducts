@@ -199,12 +199,4 @@ public class ShopCarController {
         }
         return "redirect:/shouye/dingdanzhongxin?state="+Sys.Ostatus.DFH;
     }
-
-    @RequestMapping("test")
-    public void test(HttpSession session){
-        List<Order> orders = new ArrayList<>();
-        Order order = orderService.findOne("5943885652383492");
-        orders.add(order);
-        session.setAttribute("olist", orders);
-    }
 }

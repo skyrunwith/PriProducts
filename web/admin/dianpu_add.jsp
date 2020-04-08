@@ -24,6 +24,17 @@ body {
 							maxlength="100" required="required"  style="width: 250px;"></textarea></td>
 					</tr>
 					<tr style="line-height: 30px;">
+						<td style="width:70px;">类别:</td>
+						<td>
+							<c:forEach items="${kind_list}" var="item">
+								<input type="radio" required="required" name="kid" value="${item.kid }"
+									   <c:if test="${dianpu.kid eq item.kid }">checked</c:if>
+								>${item.kname }
+							</c:forEach>
+						</td>
+
+					</tr>
+					<tr style="line-height: 30px;">
 						<td style="width:70px;">店铺等级:</td>
 						<td><input type="number" name="sdiandengji" class="border"
 							required="required" style="width: 250px;"></td>

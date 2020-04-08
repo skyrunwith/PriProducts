@@ -1,9 +1,12 @@
 package com.priproducts.controller.admin;
 import com.priproducts.entity.Order;
 import com.priproducts.entity.Page;
+import com.priproducts.entity.Xiangqing;
 import com.priproducts.service.OrderService;
 import com.priproducts.service.XiangqingService;
+import com.priproducts.util.DateUtils;
 import com.priproducts.util.LikeQuery;
+import com.priproducts.util.Sys;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +27,7 @@ public class AdminShoppingController {
 	Page page = new Page();
 	
 	@RequestMapping("list")
-	public String list(HttpServletRequest request, Order order , Model model) {
+	public String list(Order order , Model model) {
 		String ordernumber = order.getOrdernumber();
 		String uusername = order.getUsername();
 		String gname = order.getX_name();
@@ -57,75 +60,76 @@ public class AdminShoppingController {
 		return "admin/order_list";
 	}
 	
-//	@RequestMapping("showmore")
-//	public String showMore(String oid, Model model) {
-//		Order order = oService.findOne(oid);
-//		model.addAttribute("order", order);
-//
-//		return "admin/show_order";
-//	}
-//
-//	@RequestMapping("tips")
-//	public void tips(Order order) {
-//		oService.update(order);
-//	}
-//
-//	@RequestMapping("fahuo")
-//	public String fahuo(Order order, Model model) {
-//		order.setOstatus(Sys.Ostatus.DSH);
-//		order.setFts(DateUtils.DateTimeToString(new Date()));
-//		oService.update(order);
-//		Order o = oService.findOne(order.getOid());
-//
-//		return list(o, model);
-//	}
-//	@RequestMapping("plfahuo")
-//	public String plFahuo(Order order, Model model) {
-//		String ids = order.getIds();
-//		String oid[] = ids.split(",");
-//		for (String id : oid) {
-//			Order o = new Order();
-//			o.setOid(id);
-//			o.setOstatus(Sys.Ostatus.DSH);
-//			o.setFts(DateUtils.DateTimeToString(new Date()));
-//			oService.update(o);
-//		}
-//
-//		return "redirect:/admin/order/list?ostatus="+Sys.Ostatus.DSH;
-//	}
-//
-//	@RequestMapping("tuikuan")
-//	public String tuikuan(Order order, Model model) {
-//		order.setOstatus(Sys.Ostatus.TKCG);
-//		order.setTts(DateUtils.DateTimeToString(new Date()));
-//		oService.update(order);
-//		Order o = oService.findOne(order.getOid());
-//		Goods goods = gService.findById(o.getGid()+"");
-//		goods.setStock(goods.getStock()+o.getNumbers());
-//		gService.update(goods);
-//
-//		return list(o, model);
-//	}
-//
-//	@RequestMapping("pltuikuan")
-//	public String plTuikuan(Order order, Model model) {
-//		String ids = order.getIds();
-//		String oid[] = ids.split(",");
-//		for (String id : oid) {
-//			Order o = new Order();
-//			o.setOid(id);
-//			o.setOstatus(Sys.Ostatus.TKCG);
-//			o.setTts(DateUtils.DateTimeToString(new Date()));
-//			oService.update(o);
-//
-//			Order o2 = oService.findOne(o.getOid());
-//			Goods goods = gService.findById(o2.getGid()+"");
-//			goods.setStock(goods.getStock()+o2.getNumbers());
-//			gService.update(goods);
-//
-//		}
-//
-//		return "redirect:/admin/order/list?ostatus="+Sys.Ostatus.TKCG;
-//	}
+	@RequestMapping("showmore")
+	public String showMore(String oid, Model model) {
+		Order order = orderService.findOneByOrderNumber(oid);
+		model.addAttribute("order", order);
+
+		return "admin/show_order";
+	}
+
+	@RequestMapping("tips")
+	public void tips(Order order) {
+		orderService.update(order);
+	}
+
+	@RequestMapping("fahuo")
+	public String fahuo(Order order, Model model) {
+		order.setState(Sys.Ostatus.DSH);
+		order.setFts(DateUtils.DateTimeToString(new Date()));
+		orderService.update(order);
+		Order o = orderService.findOneByOrderNumber(order.getOrdernumber());
+
+		return list(o, model);
+	}
+	@RequestMapping("plfahuo")
+	public String plFahuo(Order order, Model model) {
+		String ids = order.getIds();
+		String oid[] = ids.split(",");
+		for (String id : oid) {
+			Order o = new Order();
+			o.setOrdernumber(id);
+			o.setState(Sys.Ostatus.DSH);
+			o.setFts(DateUtils.DateTimeToString(new Date()));
+			orderService.update(o);
+		}
+
+		return "redirect:/admin/order_list?ostatus="+Sys.Ostatus.DSH;
+	}
+
+	@RequestMapping("tuikuan")
+	public String tuikuan(Order order, Model model) {
+		order.setState(Sys.Ostatus.THTK);
+		order.setTts(DateUtils.DateTimeToString(new Date()));
+		orderService.update(order);
+		Order o = orderService.findOneByOrderNumber(order.getOrdernumber());
+		Xiangqing xiangqing = xiangqingService.findById(o.getXid());
+		xiangqing.setX_number(xiangqing.getX_number()+o.getNumber());
+		xiangqingService.update(xiangqing);
+
+		return list(o, model);
+	}
+
+	@RequestMapping("pltuikuan")
+	public String plTuikuan(Order order, Model model) {
+		String ids = order.getIds();
+		String oid[] = ids.split(",");
+		for (String id : oid) {
+			Order o = new Order();
+			o.setOid(Integer.parseInt(id));
+			o.setState(Sys.Ostatus.THTK);
+			o.setTts(DateUtils.DateTimeToString(new Date()));
+			orderService.update(o);
+
+			Order o2 = orderService.findOneByOrderNumber(o.getOid()+"");
+			Xiangqing xiangqing = xiangqingService.findById(o2.getXid());
+			xiangqing.setX_number(xiangqing.getX_number()+o2.getNumber());
+			xiangqingService.update(xiangqing);
+
+		}
+		return "redirect:/admin/order_list?ostatus="+Sys.Ostatus.TKCG;
+	}
+
+
 	
 }

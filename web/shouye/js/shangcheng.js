@@ -9,3 +9,6 @@ function findAllDianpu(kid){
         window.location.href = "/shouye/shangcheng";
     }
 }
+function toXiangqing(url) {
+    window.location.href=url;
+}

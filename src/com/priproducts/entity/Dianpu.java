@@ -10,6 +10,15 @@ public class Dianpu {
     private String simg; //图片
     private int status; //状态
     private String time; //创建时间
+    private Integer xid;
+
+    public Integer getXid() {
+        return xid;
+    }
+
+    public void setXid(Integer xid) {
+        this.xid = xid;
+    }
 
     public Dianpu() {
     }

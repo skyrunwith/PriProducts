@@ -91,8 +91,9 @@ public class ShouyeController {
         Order order = new Order();
         order.setState(paramOrder.getState());
         order.setUid(user.getUid());
+        order.setUsername(user.getUsername());
         if(order.getPageNo() == null) order.setPageNo(1);
-        if(order.getPageSize() == null) order.setPageSize(5);
+        if(order.getPageSize() == null) order.setPageSize(3);
 
         long count = 0;
         if(order.getState() !=null && 5 == order.getState()) {

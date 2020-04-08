@@ -25,6 +25,24 @@ public class Order {
     private String fts;
     private String cjts;
     private double tprice;
+    private String useremail;
+    private String usetel;
+
+    public String getUsetel() {
+        return usetel;
+    }
+
+    public void setUsetel(String usetel) {
+        this.usetel = usetel;
+    }
+
+    public String getUseremail() {
+        return useremail;
+    }
+
+    public void setUseremail(String useremail) {
+        this.useremail = useremail;
+    }
 
     public double getTprice() {
         return tprice;

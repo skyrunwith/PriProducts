@@ -8,12 +8,14 @@
 	</insert>
 
 	<select id="findAll" resultType="com.priproducts.entity.Order" parameterType="com.priproducts.entity.Order">
-		select *
-		from orders o where 1 = 1
-		<if test="ordernumber != null and ordernumber !=''">and oid like #{ordernumber}</if>
-		<if test="x_name != null and x_name !=''">and x_name like #{x_name}</if>
-		<if test="uid != null and uid !=''">and uid like #{uid}</if>
-		<if test="state != null and state !=''">and state = #{state}</if>
+		select o.createtime,oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address,a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
+		o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,u.username username,u.useremail,beizhu,o.*,a.*,u.*
+		from address a,xiangqing g,orders o,kind c,user u
+		where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.xid
+		<if test="ordernumber != null and ordernumber !=''">and ordernumber like #{ordernumber}</if>
+		<if test="x_name != null and x_name !=''">and g.x_name like #{x_name}</if>
+		<if test="username != null and username !=''">and u.username like #{username}</if>
+		<if test="state != null">and o.state = #{state}</if>
 		<if test="startRow != null"> limit #{startRow},#{pageSize}</if>
 	</select>
 
@@ -25,29 +27,28 @@
 		<if test="state != null and state !=''">and state = #{state}</if>
 	</select>
 
-	<select id="findOne" resultType="com.priproducts.entity.Order" parameterType="java.lang.String">
-		select oid,a.name,phone,a.addr,g.x_name,o.number,g.x_price,o.number*g.x_price tprice,g.xid,
-		o.createtime,g.x_img,state,zts,fts,cjts,c.kname,tts,u.username username,u.useremail,beizhu
+	<select id="findOneByOrderNumber" resultType="com.priproducts.entity.Order" parameterType="java.lang.String">
+		select oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address, a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
+		o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,u.username username,u.useremail,beizhu,o.*,a.*,u.*
 		from address a,xiangqing g,orders o,kind c,user u
 		where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.xid and ordernumber = #{oid}
 	</select>
 
 
 	<select id="findByUid" resultType="com.priproducts.entity.Order" parameterType="com.priproducts.entity.Order">
-		select oid,a.username,telephone,a.address,gname,o.numbers,g.price,o.numbers*g.price tprice,g.gid,
-		o.cts,g.img,ostatus,zts,fts,cjts,cname,tstatus,tts,times,tips
-		from address_info a,goods_info g,Orders o,class_info c
-		where o.aid = a.aid and o.gid = g.gid and o.uid = #{uid} and o.dstatus = 0 and c.cid = g.cid
-		<if test="gname != null and gname != ''">and g.gname like #{gname}</if>
+		select oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address, a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
+		o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,beizhu,o.*,a.*
+		from address a,xiangqing g,orders o,kind c
+		where o.aid = a.id and o.xid = g.xid and o.uid = #{uid} and o.state = 0 and c.kid = g.xid
 		<if test="oid != null and oid != ''">and oid like #{oid}</if>
-		<if test="ostatus != null">and o.ostatus = #{ostatus}</if>
-		<if test="ostatus != null and ostatus == 5">or o.ostatus = 6 or o.ostatus = 7</if>
-		<if test="ostatus != null and ostatus == 0">order by o.cts desc</if>
-		<if test="ostatus != null and ostatus == 1">order by o.zts desc</if>
-		<if test="ostatus != null and ostatus == 2">order by o.fts desc</if>
-		<if test="ostatus != null and ostatus == 3">order by o.cjts desc</if>
-		<if test="ostatus != null and ostatus == 4">order by o.cjts desc</if>
-		<if test="ostatus != null and ostatus == 5">order by o.tts desc</if>
+		<if test="state != null">and o.state = #{state}</if>
+		<if test="state != null and state == 5">or o.state = 6 or o.state = 7</if>
+		<if test="state != null and state == 0">order by o.cts desc</if>
+		<if test="state != null and state == 1">order by o.zts desc</if>
+		<if test="state != null and state == 2">order by o.fts desc</if>
+		<if test="state != null and state == 3">order by o.cjts desc</if>
+		<if test="state != null and state == 4">order by o.cjts desc</if>
+		<if test="state != null and state == 5">order by o.tts desc</if>
 		<if test="startRow != null">limit #{startRow},#{pageSize}</if>
 	
 	</select>
@@ -60,7 +61,7 @@
 		<if test="tts != null and tts != ''">tts = #{tts},</if>
 		<if test="fts != null and zts != ''">fts = #{fts},</if>
 		<if test="cjts != null and zts != ''">cjts = #{cjts},</if>
-		<if test="beizhu != null and tips != ''">beizhu = #{beizhu},</if>
+		<if test="beizhu != null and beizhu != ''">beizhu = #{beizhu},</if>
 		</trim>
 		where oid = #{oid} or ordernumber = #{ordernumber}
 			

@@ -176,7 +176,7 @@
             <!--一个框内容加边距-->
             <div class="shieldt">
                 <!--一个框内容-->
-                <div class="linkt">
+                <div class="linkt" onclick="toXiangqing('/shouye/${item.xid}')">
                     <!--图片-->
                     <div class="ht">
                         <img class="immg" src="${item.simg}">

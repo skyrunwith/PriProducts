@@ -18,12 +18,6 @@
 <div class="grzxbj">
     <div class="selfinfo center">
         <div class="lfnav fl">
-            <div class="ddzx">订单中心</div>
-            <div class="subddzx">
-                <ul>
-                    <li><a href="/shouye/dingdanzhongxin" >我的订单</a></li>
-                </ul>
-            </div>
             <div class="ddzx">个人中心</div>
             <div class="subddzx">
                 <ul>
@@ -31,14 +25,30 @@
                     <li><a href="add_address.jsp">收货地址</a></li>
                 </ul>
             </div>
+            <div class="ddzx">订单中心</div>
+            <div class="subddzx">
+                <ul>
+                    <li>
+                        <a href="/shouye/dingdanzhongxin" >我的订单</a>
+<%--                        <ul>--%>
+<%--                            <li><a href="/shouye/dingdanzhongxin?state=0" >待付款</a></li>--%>
+<%--                            <li><a href="/shouye/dingdanzhongxin?state=1" >待发货</a></li>--%>
+<%--                            <li><a href="/shouye/dingdanzhongxin?state=2" >待收货</a></li>--%>
+<%--                            <li><a href="/shouye/dingdanzhongxin?state=3" >待评价</a></li>--%>
+<%--                            <li><a href="/shouye/dingdanzhongxin?state=4" >已完成</a></li>--%>
+<%--                            <li><a href="/shouye/dingdanzhongxin?state=5" >退款/售后</a></li>--%>
+<%--                        </ul>--%>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="rtcont fr">
             <div class="grzlbt ml40">我的资料</div>
-            <div class="subgrzl ml40"><span>用户名</span><span>张三</span><span><a href="">编辑</a></span></div>
-            <div class="subgrzl ml40"><span>手机号</span><span>15669097417</span><span><a href="">编辑</a></span></div>
+            <div class="subgrzl ml40"><span>用户名</span><span>${user.username}</span><span><a href="">编辑</a></span></div>
+            <div class="subgrzl ml40"><span>手机号</span><span>${user.usetel}</span><span><a href="">编辑</a></span></div>
             <div class="subgrzl ml40"><span>登录密码</span><span>************</span><span><a href="">编辑</a></span></div>
-            <div class="subgrzl ml40"><span>电子邮箱</span><span>123456@qq.com</span><span><a href="">编辑</a></span></div>
-           <div class="subgrzl ml40"><span>收货地址</span><span>浙江省杭州市江干区19号大街571号</span><span><a href="">编辑</a></span></div>
+            <div class="subgrzl ml40"><span>电子邮箱</span><span>${user.useremail}</span><span><a href="">编辑</a></span></div>
+           <div class="subgrzl ml40"><span>收货地址</span><span>${default_address.province}${default_address.city}${default_address.county}${default_address.addr}</span><span><a href="">编辑</a></span></div>
 
         </div>
         <div class="clear"></div>

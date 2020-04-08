@@ -111,7 +111,7 @@
 						<li><a href="/admin/order/list?state=0">&nbsp;待付款</a></li>
 						<li><a href="/admin/order/list?state=1">&nbsp;待发货</a></li>
 						<li><a href="/admin/order/list?state=2">&nbsp;待收货</a></li>
-						<li><a href="/admin/order/list?state=4">&nbsp;已完成</a></li>
+						<li><a href="/admin/order/list?state=3">&nbsp;已完成</a></li>
 						<li><a href="/admin/order/list?state=5">申请信息</a></li>
 						<li><a href="/admin/order/list?state=6">已退信息</a></li>
 

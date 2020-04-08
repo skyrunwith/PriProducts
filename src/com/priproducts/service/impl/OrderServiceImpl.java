@@ -105,8 +105,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Order findOne(String oid) {
-        return orderDao.findOne(oid);
+    public Order findOneByOrderNumber(String oid) {
+        return orderDao.findOneByOrderNumber(oid);
     }
 
     @Override

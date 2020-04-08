@@ -84,7 +84,7 @@
                                data-words="对不起，该类的一级种类已经被禁用，不能启用！"
                             ><span
                                     class="icons icons-use"></span>启用</a>
-                            <a class="icons-btn subformd" href="${ctx }/dianpu/delete" data-id="${item.sid}"
+                            <a class="icons-btn subformd" href="${ctx }/dianpu/del" data-id="${item.sid}"
                                 data-words="该分类还存在商品，删除失败！"
                             ><span
                                     class="icons icons-del"></span>删除</a>

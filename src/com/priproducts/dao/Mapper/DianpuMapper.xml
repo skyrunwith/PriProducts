@@ -10,8 +10,8 @@
 	<select id="findAllDianpu" resultType="com.priproducts.entity.Dianpu" parameterType="int">
 		SELECT
 		*
-		from  dianpu d
-		WHERE 1 = 1
+		from  dianpu d,xiangqing x
+		WHERE 1 = 1 and d.kid = x.xid
 		<if test="kid != null and kid != ''">
 		 and d.kid = #{kid}
 		</if>

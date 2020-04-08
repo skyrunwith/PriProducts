@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50729
 File Encoding         : 65001
 
-Date: 2020-04-06 13:27:13
+Date: 2020-04-08 22:21:55
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -41,31 +41,6 @@ INSERT INTO `address` VALUES ('2', '1', '李四', '12345678911', '广东', '广�
 INSERT INTO `address` VALUES ('3', '1', '王五', '12345821568', '福建省', '三明市', '大田县', null, '大田县90号', '0');
 INSERT INTO `address` VALUES ('14', '1', '6', '65', '65', '65', '65', null, '65', null);
 INSERT INTO `address` VALUES ('15', '11', '65', '65', '65', '65', '65', null, '656', null);
-
--- ----------------------------
--- Table structure for address_info
--- ----------------------------
-DROP TABLE IF EXISTS `address_info`;
-CREATE TABLE `address_info` (
-  `aid` int(11) NOT NULL AUTO_INCREMENT,
-  `uid` int(11) DEFAULT NULL,
-  `username` varchar(50) DEFAULT NULL,
-  `telephone` varchar(50) DEFAULT NULL,
-  `postcode` varchar(30) DEFAULT NULL,
-  `address` varchar(300) DEFAULT NULL,
-  PRIMARY KEY (`aid`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of address_info
--- ----------------------------
-INSERT INTO `address_info` VALUES ('2', '5', '张或', '15168459935', '6665555', '四川省成都市郫县宏观');
-INSERT INTO `address_info` VALUES ('4', '5', '戈阿斯', '15168450321', '2222222', '四川省士大夫');
-INSERT INTO `address_info` VALUES ('5', '5', '史蒂芬', '13926518647', '7777777', '四川省成都市郫县宏观');
-INSERT INTO `address_info` VALUES ('6', '5', '张或', '15168453254', '999999', '四川省士大夫');
-INSERT INTO `address_info` VALUES ('7', '5', '李邦彦', '15168453564', '000000', '四川省成都市郫县宏观');
-INSERT INTO `address_info` VALUES ('9', '3', '湛录', '3699874133', '888888', '四川省成都市高新区');
-INSERT INTO `address_info` VALUES ('10', '7', 'xiaoyu', '1234567', '635000', '四川成都');
 
 -- ----------------------------
 -- Table structure for admin
@@ -3375,7 +3350,7 @@ CREATE TABLE `cmg` (
 -- ----------------------------
 -- Records of cmg
 -- ----------------------------
-INSERT INTO `cmg` VALUES ('1', 'admin', 'admin', '2020-04-04 21:48:34');
+INSERT INTO `cmg` VALUES ('1', 'admin', 'admin', '2020-04-08 22:20:52');
 
 -- ----------------------------
 -- Table structure for dianpu
@@ -3392,7 +3367,7 @@ CREATE TABLE `dianpu` (
   `status` int(255) NOT NULL,
   `time` datetime NOT NULL,
   PRIMARY KEY (`sid`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of dianpu
@@ -3407,7 +3382,7 @@ INSERT INTO `dianpu` VALUES ('7', '黄茶', '19级', '丽江', '13090902345', '5
 INSERT INTO `dianpu` VALUES ('8', '毛峰', '20级', '开江', '12909098978', '5', '/upimg/毛峰.jpg', '1', '2019-10-04 10:30:24');
 INSERT INTO `dianpu` VALUES ('9', '蚕豆', '12级', '大竹', '13090906785', '6', '/upimg/candou.jpg', '1', '2020-01-14 12:30:37');
 INSERT INTO `dianpu` VALUES ('10', '大豆', '13级', '隆昌', '18387909456', '6', '/upimg/dadou.jpg', '1', '2020-01-05 17:30:49');
-INSERT INTO `dianpu` VALUES ('13', '32', '32', '323', '32', '0', '/upimgs/ad/5d280fa5c7.jpg', '0', '2020-04-01 21:33:59');
+INSERT INTO `dianpu` VALUES ('14', 'ces', '32', '323', '32', '2', '/upimgs/ad/d3b3f25d45.jpg', '0', '2020-04-08 22:03:55');
 
 -- ----------------------------
 -- Table structure for kind
@@ -3468,36 +3443,21 @@ CREATE TABLE `orders` (
   `xid` int(11) DEFAULT NULL,
   `aid` int(11) DEFAULT NULL,
   PRIMARY KEY (`oid`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of orders
 -- ----------------------------
-INSERT INTO `orders` VALUES ('25', '15706145880751', '1888.00', '1', '2019-10-09 17:49:48', '2020-03-27 18:17:11', '1', '四川成都青羊', '0', '无', '0', '水果', '西瓜', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('26', '15706150326071', '2188.00', '1', '2019-10-09 17:57:13', '2020-03-27 18:17:13', '1', '四川成都青羊', '0', '无', '0', '茶叶', '碧螺春', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('28', '15706231895541', '3800.00', '1', '2019-10-09 20:13:10', '2020-03-27 18:17:17', '1', '四川成都青羊', '0', '无', '0', '水果', '菠萝', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('29', '15706306904211', '2890.00', '0', '2019-10-09 22:18:10', '2020-03-27 18:17:21', '1', '四川成都青羊', '0', '无', '0', '水果', '猕猴桃', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('30', '15706779742571', '13330.00', '1', '2019-10-10 11:26:14', '2020-03-27 18:17:24', '1', '四川成都青羊', '0', '无', '0', '粮油作物', '绿豆', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('31', '15710351969121', '32000.00', '0', '2019-10-14 14:39:57', '2020-03-27 18:17:27', '1', '四川成都青羊', '0', '无', '0', '蔬菜', '白萝卜', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('32', '15843523508941', '3800.00', '0', '2020-03-16 17:52:30', '2020-03-27 18:17:29', '1', '四川成都青羊', '0', '无', '0', '蔬菜', '菠菜', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('33', '15843527776681', '3800.00', '1', '2020-03-16 17:59:37', '2020-03-27 18:17:32', '1', '四川成都青羊', '0', '无', '0', '蔬菜', '芹菜', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('34', '15843585768971', '2780.00', '0', '2020-03-16 19:36:16', '2020-03-27 18:17:35', '1', '四川成都青羊', '0', '无', '0', '水果', '哈密瓜', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('35', '15843586142241', '2840.00', '0', '2020-03-16 19:36:54', '2020-03-27 18:17:39', '1', '四川成都青羊', '0', '无', '0', '水果', '波罗蜜', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('36', '15843588709021', '2820.00', '0', '2020-03-16 19:41:10', '2020-03-27 18:17:42', '1', '四川成都青羊', '0', '无', '0', '水果', '香蕉', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('37', '15843590617161', '2850.00', '0', '2020-03-16 19:44:21', '2020-03-27 18:17:44', '1', '四川成都青羊', '0', '无', '0', '粮油作物', '小米', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('38', '15843596014751', '2806.00', '0', '2020-03-16 19:53:21', '2020-03-27 18:17:47', '1', '四川成都青羊', '0', '无', '0', '粮油作物', '燕麦', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('39', '15843596561621', '1589.00', '0', '2020-03-16 19:54:16', '2020-03-27 18:17:51', '1', '四川成都青羊', '0', '无', '0', '蔬菜', '藕', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('40', '15843640874131', '15450.00', '0', '2020-03-16 21:08:07', '2020-03-27 18:17:54', '1', '四川成都青羊', '0', '无', '0', '蔬菜', '土豆', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('41', '15847558649341', '3030.00', '0', '2020-03-21 09:57:44', '2020-03-27 18:18:00', '1', '四川成都青羊', '0', '无', '0', '蔬菜', '西红柿', null, null, null, null, null, null, null, null);
-INSERT INTO `orders` VALUES ('54', '5943885652383492', '2.00', '1', '2020-04-04 20:44:27', '2020-04-04 21:16:41', null, null, '0', null, '1', null, '测试', '2020-04-04 21:16:40', '2020-04-04 21:16:41', '2020-04-04 21:16:41', '2020-04-04 21:16:41', '/upimg/xigua.jpg', '1', '3', '1');
-INSERT INTO `orders` VALUES ('55', '3867633919303683', '2.00', '0', '2020-04-04 21:18:41', '2020-04-04 21:18:41', null, null, '0', null, '1', null, '测试', null, null, null, null, '/upimg/xigua.jpg', '1', '3', '1');
-INSERT INTO `orders` VALUES ('56', '8275578322686425', '2.00', '0', '2020-04-04 21:22:57', '2020-04-04 21:22:57', null, null, '0', null, '1', null, '测试', null, null, null, null, '/upimg/xigua.jpg', '1', '3', '1');
-INSERT INTO `orders` VALUES ('57', '2703466409363479', '2.00', '1', '2020-04-04 21:25:55', '2020-04-04 21:26:06', null, null, '0', null, '1', null, '测试', '2020-04-04 21:26:06', '2020-04-04 21:26:06', '2020-04-04 21:26:06', '2020-04-04 21:26:06', '/upimg/xigua.jpg', '1', '3', '1');
-INSERT INTO `orders` VALUES ('58', '5954329408726733', '646.00', '1', '2020-04-04 21:32:37', '2020-04-04 21:32:39', null, null, '0', null, '323', null, '测试', '2020-04-04 21:32:39', '2020-04-04 21:32:39', '2020-04-04 21:32:39', '2020-04-04 21:32:39', '/upimg/xigua.jpg', '1', '3', '1');
-INSERT INTO `orders` VALUES ('59', '4833334183354089', '2.00', '0', '2020-04-04 22:29:05', '2020-04-04 22:29:09', null, null, '0', null, '1', null, '测试', null, null, null, null, '/upimg/xigua.jpg', '11', '3', null);
-INSERT INTO `orders` VALUES ('60', '2403433145999354', '1312.00', '0', '2020-04-04 22:31:08', '2020-04-04 22:31:12', null, null, '0', null, '656', null, '测试', null, null, null, null, '/upimg/xigua.jpg', '11', '3', null);
-INSERT INTO `orders` VALUES ('61', '6861071337823476', '1312.00', '0', '2020-04-04 22:31:35', '2020-04-04 22:31:35', null, null, '0', null, '656', null, '测试', null, null, null, null, '/upimg/xigua.jpg', '11', '3', null);
+INSERT INTO `orders` VALUES ('54', '5943885652383492', '2.00', '6', '2020-04-04 20:44:27', '2020-04-08 21:02:39', null, null, '0', '43', '1', null, '测试', '2020-04-08 21:02:39', '2020-04-08 21:02:39', '2020-04-08 21:02:39', '2020-04-08 21:02:39', '/upimg/xigua.jpg', '1', '3', '1');
+INSERT INTO `orders` VALUES ('55', '3867633919303683', '2.00', '6', '2020-04-04 21:18:41', '2020-04-08 21:48:41', null, null, '0', 'ces', '1', null, '测试', '2020-04-08 21:48:41', '2020-04-08 21:48:41', '2020-04-08 21:48:41', '2020-04-08 21:48:41', '/upimg/xigua.jpg', '1', '3', '1');
+INSERT INTO `orders` VALUES ('56', '8275578322686425', '2.00', '6', '2020-04-04 21:22:57', '2020-04-08 21:52:56', null, null, '0', 'ces', '1', null, '测试', '2020-04-08 21:52:56', '2020-04-08 21:52:56', '2020-04-08 21:52:56', '2020-04-08 21:52:56', '/upimg/xigua.jpg', '1', '3', '1');
+INSERT INTO `orders` VALUES ('57', '2703466409363479', '2.00', '6', '2020-04-04 21:25:55', '2020-04-08 21:47:51', null, null, '0', null, '1', null, '测试', '2020-04-08 21:47:51', '2020-04-08 21:47:51', '2020-04-08 21:47:51', '2020-04-08 21:47:51', '/upimg/xigua.jpg', '1', '3', '1');
+INSERT INTO `orders` VALUES ('58', '5954329408726733', '646.00', '6', '2020-04-04 21:32:37', '2020-04-08 21:48:06', null, null, '0', '32', '323', null, '测试', '2020-04-08 21:48:06', '2020-04-08 21:48:06', '2020-04-08 21:48:06', '2020-04-08 21:48:06', '/upimg/xigua.jpg', '1', '3', '1');
+INSERT INTO `orders` VALUES ('59', '4833334183354089', '2.00', '0', '2020-04-04 22:29:05', '2020-04-07 21:41:33', null, null, '0', null, '1', null, '测试', '2020-04-07 21:41:33', '2020-04-07 21:41:33', '2020-04-07 21:41:33', '2020-04-07 21:41:33', '/upimg/xigua.jpg', '11', '3', '1');
+INSERT INTO `orders` VALUES ('60', '2403433145999354', '1312.00', '0', '2020-04-04 22:31:08', '2020-04-07 21:42:16', null, null, '0', null, '656', null, '测试', '2020-04-07 21:42:16', '2020-04-07 21:42:16', '2020-04-07 21:42:16', '2020-04-07 21:42:16', '/upimg/xigua.jpg', '11', '3', '1');
+INSERT INTO `orders` VALUES ('61', '6861071337823476', '1312.00', '0', '2020-04-04 22:31:35', '2020-04-07 21:42:17', null, null, '0', null, '656', null, '测试', '2020-04-07 21:42:17', '2020-04-07 21:42:17', '2020-04-07 21:42:17', '2020-04-07 21:42:17', '/upimg/xigua.jpg', '11', '3', '1');
 INSERT INTO `orders` VALUES ('62', '7587192184778679', '12.00', '1', '2020-04-04 22:32:04', '2020-04-04 22:33:56', null, null, '0', null, '6', null, '测试', '2020-04-04 22:33:56', '2020-04-04 22:33:56', '2020-04-04 22:33:56', '2020-04-04 22:33:56', '/upimg/xigua.jpg', '11', '3', null);
+INSERT INTO `orders` VALUES ('63', '4471845447872028', '12.00', '6', '2020-04-08 22:21:09', '2020-04-08 22:21:25', null, null, '0', 'ces', '6', null, '测试', '2020-04-08 22:21:25', '2020-04-08 22:21:25', '2020-04-08 22:21:25', '2020-04-08 22:21:25', '/upimg/xigua.jpg', '1', '3', '1');
 
 -- ----------------------------
 -- Table structure for shopcar
@@ -3510,7 +3470,7 @@ CREATE TABLE `shopcar` (
   `number` int(11) DEFAULT NULL,
   `cts` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`sid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of shopcar
@@ -3579,6 +3539,6 @@ CREATE TABLE `xiangqing` (
 -- ----------------------------
 -- Records of xiangqing
 -- ----------------------------
-INSERT INTO `xiangqing` VALUES ('1', '皖西白鹅', '禽畜肉蛋', 'img/鹅1.jpg', 'img/鹅2.jpg', '/images/鹅.jpg', '统货', '100', '半圈养半散养', '5', '10000', '1', '2020-04-02 20:37:51', '2019-12-03 19:11:13', '肉鹅:8.7/斤', '小鹅:8/只', '鹅苗:28/只', '下蛋鹅:160/个', '0');
-INSERT INTO `xiangqing` VALUES ('2', '麒麟西瓜', '水果', 'img/鹅1.jpg', 'img/鹅2.jpg', '/upimg/xigua.jpg', '通货', '100', '山西', '0.5', '20000', '1', '2020-04-01 22:33:22', '2019-12-02 20:14:39', '肉鹅:8.7/斤', '小鹅:8/只', '鹅苗:28/只', '下蛋鹅:160/个', '0');
-INSERT INTO `xiangqing` VALUES ('3', '测试', '蔬菜', null, null, '/upimg/xigua.jpg', '通货', '100', '散养', '2', '9660', '1', '2020-04-03 20:18:25', '2020-04-03 20:18:25', null, null, null, null, '0');
+INSERT INTO `xiangqing` VALUES ('1', '皖西白鹅', '禽畜肉蛋', 'img/鹅1.jpg', 'img/鹅2.jpg', '/images/鹅.jpg', '统货', '100', '半圈养半散养', '5', '10000', '1', '2020-04-08 22:20:40', '2019-12-03 19:11:13', '肉鹅:8.7/斤', '小鹅:8/只', '鹅苗:28/只', '下蛋鹅:160/个', '7');
+INSERT INTO `xiangqing` VALUES ('2', '麒麟西瓜', '水果', 'img/鹅1.jpg', 'img/鹅2.jpg', '/upimg/xigua.jpg', '通货', '100', '山西', '0.5', '20000', '1', '2020-04-08 22:20:55', '2019-12-02 20:14:39', '肉鹅:8.7/斤', '小鹅:8/只', '鹅苗:28/只', '下蛋鹅:160/个', '2');
+INSERT INTO `xiangqing` VALUES ('3', '测试', '蔬菜', null, null, '/upimg/xigua.jpg', '通货', '100', '散养', '2', '9983', '1', '2020-04-08 22:20:39', '2020-04-03 20:18:25', null, null, null, null, '0');

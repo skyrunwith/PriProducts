@@ -1,6 +1,7 @@
 package com.priproducts.controller.admin;
 
 import com.priproducts.entity.Admin;
+import com.priproducts.entity.Kind;
 import com.priproducts.entity.Page;
 import com.priproducts.entity.User;
 import com.priproducts.service.UserService;
@@ -121,6 +122,12 @@ public class AdminUserController {
 		for (String uid : idsarr) {
 			userService.delete(uid);
 		}
+		return userList(user, model);
+	}
+
+	@RequestMapping("del")
+	public String del(Admin user, Model model){
+		userService.delete(user.getUid() + "");
 		return userList(user, model);
 	}
 }

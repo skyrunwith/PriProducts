@@ -18,7 +18,7 @@ $(document).ready(function(){
 		if(tips == null || tips == ''){
 			alert("请先填写备注");
 		}else{
-			$.post("${ctx}/order/tips",{tips:tips,oid:'${order.oid}'});
+			$.post("${ctx}/order/tips",{beizhu:tips,oid:'${order.oid}'});
 			alert("添加成功");
 		}
 	});
@@ -44,40 +44,40 @@ $(document).ready(function(){
 					</tr>
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">订单号:</td>
-						<td><span>${order.oid }</span></td>
+						<td><span>${order.ordernumber }</span></td>
 					</tr>
-					<c:if test="${order.ostatus eq 0 }">
+					<c:if test="${order.state eq 0 }">
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">订单状态:</td>
 							<td><span>待付款</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">创建时间:</td>
-							<td><span>${order.cts }</span></td>
+							<td><span>${order.createtime }</span></td>
 						</tr>
 					</c:if>
-					<c:if test="${order.status eq 1 }">
+					<c:if test="${order.state eq 1 }">
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">订单状态:</td>
 							<td><span>待发货</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">创建时间:</td>
-							<td><span>${order.cts }</span></td>
+							<td><span>${order.createtime }</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">付款时间:</td>
 							<td><span>${order.zts }</span></td>
 						</tr>
 					</c:if>
-					<c:if test="${order.ostatus eq 2 }">
+					<c:if test="${order.state eq 2 }">
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">订单状态:</td>
 							<td><span>待收货</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">创建时间:</td>
-							<td><span>${order.cts }</span></td>
+							<td><span>${order.createtime }</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">付款时间:</td>
@@ -88,14 +88,14 @@ $(document).ready(function(){
 							<td><span>${order.fts }</span></td>
 						</tr>
 					</c:if>
-					<c:if test="${order.ostatus eq 3 }">
+					<c:if test="${order.state eq 3 }">
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">订单状态:</td>
 							<td><span>待评价</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">创建时间:</td>
-							<td><span>${order.cts }</span></td>
+							<td><span>${order.createtime }</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">付款时间:</td>
@@ -110,14 +110,14 @@ $(document).ready(function(){
 							<td><span>${order.cjts }</span></td>
 						</tr>
 					</c:if>
-					<c:if test="${order.ostatus eq 4 }">
+					<c:if test="${order.state eq 4 }">
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">订单状态:</td>
 							<td><span>已完成</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">创建时间:</td>
-							<td><span>${order.cts }</span></td>
+							<td><span>${order.createtime }</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">付款时间:</td>
@@ -132,14 +132,14 @@ $(document).ready(function(){
 							<td><span>${order.cjts }</span></td>
 						</tr>
 					</c:if>
-					<c:if test="${order.ostatus eq 5 }">
+					<c:if test="${order.state eq 5 }">
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">订单状态:</td>
 							<td><span>退款中</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">创建时间:</td>
-							<td><span>${order.cts }</span></td>
+							<td><span>${order.createtime }</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">付款时间:</td>
@@ -150,14 +150,14 @@ $(document).ready(function(){
 							<td><span>${order.tts }</span></td>
 						</tr>
 					</c:if>
-					<c:if test="${order.ostatus eq 6 }">
+					<c:if test="${order.state eq 6 }">
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">订单状态:</td>
 							<td><span>退货退款中</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">创建时间:</td>
-							<td><span>${order.cts }</span></td>
+							<td><span>${order.createtime }</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">付款时间:</td>
@@ -176,14 +176,14 @@ $(document).ready(function(){
 							<td><span>${order.tts }</span></td>
 						</tr>
 					</c:if>
-					<c:if test="${order.ostatus eq 7 }">
+					<c:if test="${order.state eq 7 }">
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">订单状态:</td>
 							<td><span>已完成退货退款</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">创建时间:</td>
-							<td><span>${order.cts }</span></td>
+							<td><span>${order.createtime }</span></td>
 						</tr>
 						<tr style="line-height: 30px;">
 							<td style="width: 70px;">付款时间:</td>
@@ -204,18 +204,18 @@ $(document).ready(function(){
 					</c:if>
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">备注:</td>
-						<td><textarea name="tips" class="border">${order.tips }</textarea>&nbsp;&nbsp;<a href="#" class="tips">添加备注</a></td>
+						<td><textarea name="beizhu" class="border">${order.beizhu }</textarea>&nbsp;&nbsp;<a href="#" class="tips">添加备注</a></td>
 					</tr>
 					<tr>
 						<td colspan="2"><h4>用户信息</h4></td>
 					</tr>
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">用户名:</td>
-						<td><span>${order.uusername }</span></td>
+						<td><span>${order.username }</span></td>
 					</tr>
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">邮箱:</td>
-						<td><span>${order.email }</span></td>
+						<td><span>${order.useremail }</span></td>
 					</tr>
 					<tr>
 						<td colspan="2"><h4>收货人信息</h4></td>
@@ -226,7 +226,7 @@ $(document).ready(function(){
 					</tr>
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">电话:</td>
-						<td><span>${order.telephone }</span></td>
+						<td><span>${order.usetel }</span></td>
 					</tr>
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">地址:</td>
@@ -237,7 +237,7 @@ $(document).ready(function(){
 					</tr>
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">商品名:</td>
-						<td><span>${order.gname }</span></td>
+						<td><span>${order.x_name }</span></td>
 					</tr>
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">图片:</td>
@@ -247,7 +247,7 @@ $(document).ready(function(){
 					</tr>
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">分类:</td>
-						<td><span>${order.cname }</span></td>
+						<td><span>${order.kname }</span></td>
 					</tr>
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">单价:</td>
@@ -255,7 +255,7 @@ $(document).ready(function(){
 					</tr>
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">数量:</td>
-						<td><span>${order.numbers }</span></td>
+						<td><span>${order.number }</span></td>
 					</tr>
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">合计:</td>
@@ -264,7 +264,7 @@ $(document).ready(function(){
 					<tr style="line-height: 50px;">
 						<td style="width: 70px;"></td>
 						<td>
-							<button class="canclebtn" type="button" data-href="${ctx }/order/list?ostatus=${order.ostatus}">返回</button>
+							<button class="canclebtn" type="button" data-href="${ctx }/order/list?state=${order.state}">返回</button>
 						</td>
 					</tr>
 				</table>

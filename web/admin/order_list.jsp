@@ -35,12 +35,9 @@ $(document).ready(function(){
 							<option value="0" <c:if test="${order.state eq 0 }">selected=""</c:if>>待付款</option>
 							<option value="1" <c:if test="${order.state eq 1 }">selected=""</c:if>>待发货</option>
 							<option value="2"<c:if test="${order.state eq 2 }">selected=""</c:if>>待收货</option>
-							<option value="3"<c:if test="${order.state eq 3 }">selected=""</c:if>>待评价</option>
-							<option value="4"<c:if test="${order.state eq 4 }">selected=""</c:if>>已完成</option>
+							<option value="3"<c:if test="${order.state eq 3 }">selected=""</c:if>>已完成</option>
 							<option value="5"<c:if test="${order.state eq 5 }">selected=""</c:if>>退款中</option>
 							<option value="6"<c:if test="${order.state eq 6 }">selected=""</c:if>>退货退款中</option>
-							<option value="7"<c:if test="${order.state eq 7 }">selected=""</c:if>>已完成退货退款</option>
-							<option value="-1"<c:if test="${order.state eq -1 }">selected=""</c:if>>已失效</option>
 						</select>
 				<button class="combtn" type="submit">搜索</button>
 				<button class="canclebtn" type="cancel">清空</button>
@@ -104,28 +101,25 @@ $(document).ready(function(){
 							<c:forEach items="${order_list }" var="item">
 								<tr>
 									<td class="checkBox"><input name="" type="checkbox" value="${item.oid }" class="checkitem" /></td>
-									<td>${item.oid }</td>
+									<td>${item.ordernumber }</td>
 									<td>${item.username }</td>
 									<td>${item.kname }</td>
 									<td>${item.x_name }</td>
 									<td>${item.number }</td>
 									<td>${item.paynumber }</td>
-									<td>${item.beizhu }</td>
+									<td>${item.createtime }</td>
 									<td>
 										<c:if test="${item.state eq 0}">待付款</c:if>
 										<c:if test="${item.state eq 1}">待发货</c:if>
 										<c:if test="${item.state eq 2}">待收货</c:if>
-										<c:if test="${item.state eq 3}">待评价</c:if>
-										<c:if test="${item.state eq 4}">已完成</c:if>
+										<c:if test="${item.state eq 3}">已完成</c:if>
 										<c:if test="${item.state eq 5}">退款中</c:if>
-										<c:if test="${item.state eq 6}">退货退款中</c:if>
-										<c:if test="${item.state eq 7}">已完成退款</c:if>
-										<c:if test="${item.state eq -1}">已失效</c:if>
+										<c:if test="${item.state eq 6}">已退信息</c:if>
 									</td>
 									<td><textarea class="border" readonly="readonly">${item.beizhu }</textarea></td>
 									<td>
-									<a class="icons-btn" href="${ctx }/order/showmore?oid=${item.oid}" >查看详情</a>&nbsp;&nbsp;
-									<a class="icons-btn fahuo" href="${ctx }/order/fahuo?oid=${item.oid}" >发货</a>
+									<a class="icons-btn" href="${ctx }/order/showmore?oid=${item.ordernumber}" >查看详情</a>&nbsp;&nbsp;
+									<a class="icons-btn fahuo" href="${ctx }/order/fahuo?ordernumber=${item.ordernumber}" >发货</a>
 									</td>
 								</tr>
 							</c:forEach>
@@ -135,28 +129,25 @@ $(document).ready(function(){
 							<c:forEach items="${order_list }" var="item">
 								<tr>
 									<td class="checkBox"><input name="" type="checkbox" value="${item.oid }" class="checkitem" /></td>
-									<td>${item.oid }</td>
+									<td>${item.ordernumber }</td>
 									<td>${item.username }</td>
 									<td>${item.kname }</td>
 									<td>${item.x_name }</td>
 									<td>${item.number }</td>
 									<td>${item.paynumber }</td>
-									<td>${item.beizhu }</td>
+									<td>${item.createtime }</td>
 									<td>
 										<c:if test="${item.state eq 0}">待付款</c:if>
 										<c:if test="${item.state eq 1}">待发货</c:if>
 										<c:if test="${item.state eq 2}">待收货</c:if>
-										<c:if test="${item.state eq 3}">待评价</c:if>
-										<c:if test="${item.state eq 4}">已完成</c:if>
+										<c:if test="${item.state eq 3}">已完成</c:if>
 										<c:if test="${item.state eq 5}">退款中</c:if>
-										<c:if test="${item.state eq 6}">退货退款中</c:if>
-										<c:if test="${item.state eq 7}">已完成退款</c:if>
-										<c:if test="${item.state eq -1}">已失效</c:if>
+										<c:if test="${item.state eq 6}">已退信息</c:if>
 									</td>
 									<td><textarea class="border" readonly="readonly">${item.beizhu }</textarea></td>
 									<td>
-									<a class="icons-btn" href="${ctx }/order/showmore?oid=${item.oid}" >查看详情</a>&nbsp;&nbsp;
-									<a class="icons-btn" href="${ctx }/order/tuikuan?oid=${item.oid}" >退款</a>
+									<a class="icons-btn" href="${ctx }/order/showmore?oid=${item.ordernumber}" >查看详情</a>&nbsp;&nbsp;
+									<a class="icons-btn" href="${ctx }/order/tuikuan?ordernumber=${item.ordernumber}" >退款</a>
 									</td>
 								</tr>
 							</c:forEach>
@@ -166,28 +157,25 @@ $(document).ready(function(){
 							<c:forEach items="${order_list }" var="item">
 								<tr>
 									<td class="checkBox"><input name="" type="checkbox" value="${item.oid }" class="checkitem" /></td>
-									<td>${item.oid }</td>
+									<td>${item.ordernumber }</td>
 									<td>${item.username }</td>
 									<td>${item.kname }</td>
 									<td>${item.x_name }</td>
 									<td>${item.number }</td>
 									<td>${item.paynumber }</td>
-									<td>${item.beizhu }</td>
+									<td>${item.createtime }</td>
 									<td>
 										<c:if test="${item.state eq 0}">待付款</c:if>
 										<c:if test="${item.state eq 1}">待发货</c:if>
 										<c:if test="${item.state eq 2}">待收货</c:if>
-										<c:if test="${item.state eq 3}">待评价</c:if>
-										<c:if test="${item.state eq 4}">已完成</c:if>
+										<c:if test="${item.state eq 3}">已完成</c:if>
 										<c:if test="${item.state eq 5}">退款中</c:if>
-										<c:if test="${item.state eq 6}">退货退款中</c:if>
-										<c:if test="${item.state eq 7}">已完成退款</c:if>
-										<c:if test="${item.state eq -1}">已失效</c:if>
+										<c:if test="${item.state eq 6}">已退信息</c:if>
 									</td>
 									<td><textarea class="border" readonly="readonly">${item.beizhu }</textarea></td>
 									<td>
-									<a class="icons-btn" href="${ctx }/order/showmore?oid=${item.oid}" >查看详情</a>&nbsp;&nbsp;
-									<a class="icons-btn" href="${ctx }/order/tuikuan?oid=${item.oid}" >退款</a>
+									<a class="icons-btn" href="${ctx }/order/showmore?oid=${item.ordernumber}" >查看详情</a>&nbsp;&nbsp;
+<%--									<a class="icons-btn" href="${ctx }/order/tuikuan?oid=${item.oid}" >退款</a>--%>
 									</td>
 								</tr>
 							</c:forEach>
@@ -197,26 +185,23 @@ $(document).ready(function(){
 							<c:forEach items="${order_list }" var="item">
 								<tr>
 									<td class="checkBox"><input name="" type="checkbox" value="${item.oid }" class="checkitem" /></td>
-									<td>${item.oid }</td>
+									<td>${item.ordernumber }</td>
 									<td>${item.username }</td>
 									<td>${item.kname }</td>
 									<td>${item.x_name }</td>
 									<td>${item.number }</td>
 									<td>${item.paynumber }</td>
-									<td>${item.beizhu }</td>
-										<td>
+									<td>${item.createtime }</td>
+									<td>
 										<c:if test="${item.state eq 0}">待付款</c:if>
 										<c:if test="${item.state eq 1}">待发货</c:if>
 										<c:if test="${item.state eq 2}">待收货</c:if>
-										<c:if test="${item.state eq 3}">待评价</c:if>
-										<c:if test="${item.state eq 4}">已完成</c:if>
+										<c:if test="${item.state eq 3}">已完成</c:if>
 										<c:if test="${item.state eq 5}">退款中</c:if>
-										<c:if test="${item.state eq 6}">退货退款中</c:if>
-										<c:if test="${item.state eq 7}">已完成退款</c:if>
-										<c:if test="${item.state eq -1}">已失效</c:if>
+										<c:if test="${item.state eq 6}">已退信息</c:if>
 									</td>
 									<td><textarea class="border" readonly="readonly">${item.beizhu }</textarea></td>
-									<td><a class="icons-btn" href="${ctx }/order/showmore?oid=${item.oid}" >查看详情</a></td>
+									<td><a class="icons-btn" href="${ctx }/order/showmore?oid=${item.ordernumber}" >查看详情</a></td>
 								</tr>
 							</c:forEach>
 						</c:otherwise>

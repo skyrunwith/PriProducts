@@ -25,7 +25,7 @@ public class OrderUtils {
 			@Override
 			public void run() {
 				
-				Order o = oService.findOne(order.getOrdernumber());
+				Order o = oService.findOneByOrderNumber(order.getOrdernumber());
 				if(Sys.Ostatus.DFK.equals(o.getState())) {
 					order.setState(Sys.Ostatus.YSX);
 					oService.update(order);
