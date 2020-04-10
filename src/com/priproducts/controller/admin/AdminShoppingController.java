@@ -127,7 +127,7 @@ public class AdminShoppingController {
 			xiangqingService.update(xiangqing);
 
 		}
-		return "redirect:/admin/order_list?ostatus="+Sys.Ostatus.TKCG;
+		return "redirect:/admin/order/list?state="+Sys.Ostatus.TKCG;
 	}
 
 

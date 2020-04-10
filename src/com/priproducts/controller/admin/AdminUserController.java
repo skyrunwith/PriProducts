@@ -87,6 +87,7 @@ public class AdminUserController {
 		return "admin/user_update";
 	}
 
+
 	@RequestMapping("updated")
 	public String updated(Admin user, Model model) {
 		userService.updateAdmin(user);

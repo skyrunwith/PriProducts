@@ -11,7 +11,7 @@
 		SELECT
 		*
 		from  dianpu d,xiangqing x
-		WHERE 1 = 1 and d.kid = x.xid
+		WHERE 1 = 1 and d.kid = x.kid
 		<if test="kid != null and kid != ''">
 		 and d.kid = #{kid}
 		</if>
