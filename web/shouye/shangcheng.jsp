@@ -203,7 +203,7 @@
                                 </div>
                                 <!--电话-->
                                 <div class="text-overflow">
-                                    联系电话：${stel}
+                                    联系电话：${item.stel}
                                 </div>
                             </div>
                         </div>

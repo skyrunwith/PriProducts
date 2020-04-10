@@ -11,7 +11,7 @@ public interface DianpuDao {
 
     Long count(Dianpu dianpu);
 
-    List<Order> findAll(Dianpu dianpu);
+    List<Dianpu> findAll(Dianpu dianpu);
 
     public void add(Dianpu dianpu);
     public List<Dianpu> queryList(Dianpu dianpu);
@@ -21,4 +21,6 @@ public interface DianpuDao {
     public Long queryCount(Dianpu dianpu);
     public List<Dianpu> queryAll();
     public void banStatus(Dianpu dianpu);
+
+    Dianpu findByName(String sname);
 }

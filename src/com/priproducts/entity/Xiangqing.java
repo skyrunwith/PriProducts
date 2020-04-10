@@ -7,6 +7,24 @@ public class Xiangqing {
     private String x_img; //图片
     private String x_img_small1;
     private String x_img_small2;
+    private Integer sid;
+    private String sname;
+
+    public String getSname() {
+        return sname;
+    }
+
+    public void setSname(String sname) {
+        this.sname = sname;
+    }
+
+    public void setSid(Integer sid) {
+        this.sid = sid;
+    }
+
+    public Integer getSid() {
+        return sid;
+    }
 
     private String x_leixing; //类型
     private String x_qishou; //起售

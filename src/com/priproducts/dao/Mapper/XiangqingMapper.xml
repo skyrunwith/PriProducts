@@ -3,8 +3,8 @@
 <mapper namespace="com.priproducts.dao.XiangqingDao">
 		
 	<select id="findById" resultType="com.priproducts.entity.Xiangqing" parameterType="int">
-		select * 
-		from xiangqing where xid = #{xid}
+		select *, d.sname
+		from xiangqing x, dianpu d where x.xid = #{xid} and x.sid=d.sid;
 	</select>
 
 	<select id="findAllXinagqing" resultType="com.priproducts.entity.Xiangqing" parameterType="String">
@@ -45,10 +45,10 @@
 
 	<insert id="add" parameterType="com.priproducts.entity.Xiangqing">
 		insert into xiangqing (x_name,x_price,x_number,x_time,x_creattime,x_img,kname,kid, x_leixing, x_qishou,x_huanjing,status
-
+		,sid
 		)
 		values(#{x_name},#{x_price},#{x_number},#{x_time},#{x_creattime},#{x_img},#{kname}, #{kid}, #{x_leixing},#{x_qishou},
-		#{x_huanjing},#{status})
+		#{x_huanjing},#{status},#{sid})
 	</insert>
 
 	<update id="update" parameterType="com.priproducts.entity.Xiangqing">
@@ -63,6 +63,8 @@
 			<if test="x_time != null">x_time = #{x_time},</if>
 			<if test="kid != null">kid = #{kid},</if>
 			<if test="kname != null">kname = #{kname},</if>
+			<if test="sid != null">sid = #{sid}</if>
+
 		</trim>
 		where xid = #{xid}
 	</update>

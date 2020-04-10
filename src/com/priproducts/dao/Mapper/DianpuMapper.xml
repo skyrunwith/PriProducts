@@ -11,7 +11,7 @@
 		SELECT
 		*
 		from  dianpu d,xiangqing x
-		WHERE 1 = 1 and d.kid = x.kid
+		WHERE 1 = 1 and d.sid = x.sid
 		<if test="kid != null and kid != ''">
 		 and d.kid = #{kid}
 		</if>
@@ -46,6 +46,11 @@
 		select *
 		from dianpu
 	</select>
+	<select id="findByName" resultType="com.priproducts.entity.Dianpu" parameterType="java.lang.String">
+		select *
+		from dianpu where sname = #{sname}
+	</select>
+
 
 	<select id="count" resultType="java.lang.Long" parameterType="com.priproducts.entity.Dianpu">
 		select count(d.sid)

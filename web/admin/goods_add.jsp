@@ -16,7 +16,7 @@ body {
 		<div class="pageTitle"></div>
 		<div style="border: 1px solid #bfd9e1; padding: 20px 20px;">
 			<h3>------添加商品------</h3>
-			<form action="${ctx }/xiangqing/added" method="post" enctype="multipart/form-data">
+			<form action="${ctx }/xiangqing/added" id="addForm" method="post" enctype="multipart/form-data">
 				<table style="width: 600px;">
 					<tr style="line-height: 30px;">
 						<td style="width: 70px;">商品名称:</td>
@@ -66,7 +66,14 @@ body {
 							</c:forEach>
 						</td>
 					</tr>
-					
+					<tr style="line-height: 30px;">
+						<td style="width:70px;">店铺名称:</td>
+						<td><input type="text" name="dianpuName" id="dianpuName" class="border"
+								   required="required" style="width: 250px;">
+							<input type="text" name="sid" id="sid" hidden>
+						</td>
+					</tr>
+
 					
 					<tr style="line-height: 30px;">
 						<td style="width:70px;">库存:</td>
@@ -78,7 +85,7 @@ body {
 					<tr style="line-height: 50px;">
 						<td style="width: 70px;"></td>
 						<td>
-							<button class="combtn" type="submit">提交</button>
+							<button class="combtn" type="button" onclick="add()">提交</button>
 							<button class="canclebtn" type="button" onclick="javascript:history.go(-1);">返回</button>
 						</td>
 						<td></td>
@@ -89,5 +96,19 @@ body {
 	</div>
 </body>
 
- 
+<script type="text/javascript">
+	function add(){
+		$.post("/admin/dianpu/findByName",{sname: $('#dianpuName').val()}, function (res) {
+			res = JSON.parse(res);
+			if(res.code == 0) {
+				$('#dianpuName').val(res.data.sname);
+				$('#sid').val(res.data.sid);
+				console.log($('#addForm').serialize())
+				$('#addForm').submit();
+			}else {
+				alert(res.msg);
+			}
+		});
+	}
+</script>
 </html>

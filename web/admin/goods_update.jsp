@@ -49,7 +49,14 @@ body {
 								>${item.kname }
 							</c:forEach>
 						</td>
+					</tr>
 
+					<tr style="line-height: 30px;">
+						<td style="width:70px;">店铺名称:</td>
+						<td><input type="text" name="dianpuName" id="dianpuName" value="${goods.sname}" class="border" disabled
+								   required="required" style="width: 250px;">
+							<input type="text" name="sid" id="sid" value="${goods.sid}" hidden disabled>
+						</td>
 					</tr>
 					
 					

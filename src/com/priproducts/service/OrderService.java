@@ -13,6 +13,9 @@ public interface OrderService {
     public List<Order> findAll(Order order);
     public List<Order> findByUid(Order order);
     public void update(Order order);
-    public Order findOneByOrderNumber(String oid);
+    public Order findOneByOrderNumber(String ordernumber);
     public long count(Order order);
+
+    public Order findOneById(String oid);
+
 }

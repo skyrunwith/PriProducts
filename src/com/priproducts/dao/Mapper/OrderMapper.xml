@@ -31,9 +31,15 @@
 		select oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address, a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
 		o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,u.username username,u.useremail,beizhu,o.*,a.*,u.*
 		from address a,xiangqing g,orders o,kind c,user u
-		where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.xid and oid = #{oid} or ordernumber = #{ordernumber}
+		where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.xid and ordernumber = #{ordernumber}
 	</select>
 
+	<select id="findOneById" resultType="com.priproducts.entity.Order" parameterType="java.lang.String">
+		select oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address, a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
+		o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,u.username username,u.useremail,beizhu,o.*,a.*,u.*
+		from address a,xiangqing g,orders o,kind c,user u
+		where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.xid and oid = #{oid}
+	</select>
 
 	<select id="findByUid" resultType="com.priproducts.entity.Order" parameterType="com.priproducts.entity.Order">
 		select oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address, a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,

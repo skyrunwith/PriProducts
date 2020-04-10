@@ -1,8 +1,5 @@
 package com.priproducts.controller.admin;
-import com.priproducts.entity.Dianpu;
-import com.priproducts.entity.Kind;
-import com.priproducts.entity.Order;
-import com.priproducts.entity.Page;
+import com.priproducts.entity.*;
 import com.priproducts.service.DianpuService;
 import com.priproducts.service.KindService;
 import com.priproducts.service.OrderService;
@@ -17,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -51,7 +49,7 @@ public class AdminDianpuController {
 		
 		dianpu.setStartRow(page.getStartRow());
 		
-		List<Order> dianpu_list = dianpuService.findAll(dianpu);
+		List<Dianpu> dianpu_list = dianpuService.findAll(dianpu);
 
 		
 		model.addAttribute("page", page);
@@ -59,6 +57,16 @@ public class AdminDianpuController {
 		model.addAttribute("dianpu_list", dianpu_list);
 		
 		return "admin/dianpu_list";
+	}
+
+	@RequestMapping("/findByName")
+	@ResponseBody
+	public ApiResponse findByName(String sname){
+		Dianpu dianpu = dianpuService.findByName(sname);
+		if(dianpu != null){
+			return new ApiResponse(0, dianpu, "");
+		}
+		return new ApiResponse(-1,"", "店铺不存在");
 	}
 
 	@RequestMapping("add")

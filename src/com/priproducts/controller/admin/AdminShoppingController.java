@@ -121,7 +121,7 @@ public class AdminShoppingController {
 			o.setTts(DateUtils.DateTimeToString(new Date()));
 			orderService.update(o);
 
-			Order o2 = orderService.findOneByOrderNumber(o.getOid()+"");
+			Order o2 = orderService.findOneById(o.getOid()+"");
 			Xiangqing xiangqing = xiangqingService.findById(o2.getXid());
 			xiangqing.setX_number(xiangqing.getX_number()+o2.getNumber());
 			xiangqingService.update(xiangqing);

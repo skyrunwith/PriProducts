@@ -12,6 +12,8 @@ public class Dianpu {
     private String time; //创建时间
     private Integer xid;
 
+
+
     public Integer getXid() {
         return xid;
     }

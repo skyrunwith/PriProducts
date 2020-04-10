@@ -31,7 +31,7 @@ public class DianpuServiceImpl implements DianpuService {
     }
 
     @Override
-    public List<Order> findAll(Dianpu dianpu) {
+    public List<Dianpu> findAll(Dianpu dianpu) {
         return dianpuDao.findAll(dianpu);
     }
 
@@ -73,5 +73,10 @@ public class DianpuServiceImpl implements DianpuService {
     @Override
     public void banStatus(Dianpu dianpu) {
         dianpuDao.banStatus(dianpu);
+    }
+
+    @Override
+    public Dianpu findByName(String sname) {
+        return dianpuDao.findByName(sname);
     }
 }

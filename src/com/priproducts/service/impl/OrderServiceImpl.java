@@ -114,5 +114,10 @@ public class OrderServiceImpl implements OrderService {
         return orderDao.count(order);
     }
 
+    @Override
+    public Order findOneById(String oid) {
+        return orderDao.findOneById(oid);
+    }
+
 }
 
