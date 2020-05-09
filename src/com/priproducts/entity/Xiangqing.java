@@ -35,7 +35,7 @@ public class Xiangqing {
     private String x_time; //创建时间
     private String x_creattime; //上架时间
 
-    private int kid;
+    private Integer kid;
 
     private String title1;
     private String title2;
@@ -62,11 +62,11 @@ public class Xiangqing {
         this.x_creattime = x_creattime;
     }
 
-    public int getKid() {
+    public Integer getKid() {
         return kid;
     }
 
-    public void setKid(int kid) {
+    public void setKid(Integer kid) {
         this.kid = kid;
     }
 

@@ -44,8 +44,8 @@ public class XiangqingServiceImpl implements XiangqingService {
     }
 
     @Override
-    public void delete(String gid) {
-        xiangqingDao.delete(gid);
+    public void delete(String xid) {
+        xiangqingDao.delete(xid);
     }
 
     @Override

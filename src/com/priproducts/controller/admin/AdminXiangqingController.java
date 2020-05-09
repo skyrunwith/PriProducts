@@ -167,7 +167,7 @@ public class AdminXiangqingController {
 		for (String gid : idArr) {
 			Xiangqing g = xiangqingService.findById(Integer.parseInt(gid));
 			UploadFile.deleteFile(request, g.getX_img());
-			xiangqingService.delete(g.getKid()+"");
+			xiangqingService.delete(g.getXid()+"");
 		}
 		return list(xiangqing, model);
 

@@ -11,7 +11,7 @@
         select o.createtime,oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address,a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
         o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,u.username username,u.useremail,beizhu,o.*,a.*,u.*
         from address a,xiangqing g,orders o,kind c,user u
-        where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.kid
+        where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and (c.kid = g.kid or c.kname =g.kname)
         <if test="ordernumber != null and ordernumber !=''">and ordernumber like #{ordernumber}</if>
         <if test="x_name != null and x_name !=''">and g.x_name like #{x_name}</if>
         <if test="username != null and username !=''">and u.username like #{username}</if>
@@ -31,21 +31,21 @@
 		select oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address, a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
 		o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,u.username username,u.useremail,beizhu,o.*,a.*,u.*
 		from address a,xiangqing g,orders o,kind c,user u
-		where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.xid and ordernumber = #{ordernumber}
+		where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.kid and ordernumber = #{ordernumber}
 	</select>
 
     <select id="findOneById" resultType="com.priproducts.entity.Order" parameterType="java.lang.String">
 		select oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address, a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
 		o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,u.username username,u.useremail,beizhu,o.*,a.*,u.*
 		from address a,xiangqing g,orders o,kind c,user u
-		where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.xid and oid = #{oid}
+		where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.kid and oid = #{oid}
 	</select>
 
     <select id="findByUid" resultType="com.priproducts.entity.Order" parameterType="com.priproducts.entity.Order">
         select oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address, a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
         o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,beizhu,o.*,a.*
         from address a,xiangqing g,orders o,kind c
-        where o.aid = a.id and o.xid = g.xid and o.uid = #{uid} and o.state = 0 and c.kid = g.xid
+        where o.aid = a.id and o.xid = g.xid and o.uid = #{uid} and o.state = 0 and c.kid = g.kid
         <if test="oid != null and oid != ''">and oid like #{oid}</if>
         <if test="state != null">and o.state = #{state}</if>
         <if test="state != null and state == 5">or o.state = 6 or o.state = 7</if>
