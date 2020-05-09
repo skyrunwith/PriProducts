@@ -31,7 +31,7 @@
         </div>
 
         <!--头部导航-->
-        <div class="other-search">
+       <!-- <div class="other-search">
             <a href="#">肉类</a>
             <a href="#">活禽</a>
             <a href="#">核果仁果类</a>
@@ -43,7 +43,7 @@
             <a href="#">谷类作物</a>
             <a href="#">油料作物</a>
             <a href="#" class="more-other">更多<i class="fa fa-angle-right"></i></a>
-        </div>
+        </div>-->
     </div>
 
 </div>
@@ -74,44 +74,44 @@
                         <div class="cell-box">
                             <h1>肉类</h1>
                             <div class="a-box">
-                                <a href="#">牛副产品</a><span>|</span>
-                                <a href="#">猪副产品</a><span>|</span>
-                                <a href="#">牛肉</a><span>|</span>
-                                <a href="#">猪肉</a><span>|</span>
-                                <a href="#" class="orange">羊肉</a>
-                                <a href="#">鸡副产品</a><span>|</span>
-                                <a href="#">鸭副产品</a><span>|</span>
-                                <a href="#">鸡肉</a><span>|</span>
-                                <a href="#">鸭肉</a><span>|</span>
-                                <a href="#">兔肉</a><span>|</span>
-                                <a href="#">鹅肉</a><span>|</span>
-                                <a href="#">鸽肉</a>
+                                <a href="/shouye/shangcheng">牛副产品</a><span>|</span>
+                                <a href="/shouye/shangcheng">猪副产品</a><span>|</span>
+                                <a href="/shouye/shangcheng">牛肉</a><span>|</span>
+                                <a href="/shouye/shangcheng">猪肉</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">羊肉</a>
+                                <a href="/shouye/shangcheng">鸡副产品</a><span>|</span>
+                                <a href="/shouye/shangcheng">鸭副产品</a><span>|</span>
+                                <a href="/shouye/shangcheng">鸡肉</a><span>|</span>
+                                <a href="/shouye/shangcheng">鸭肉</a><span>|</span>
+                                <a href="/shouye/shangcheng">兔肉</a><span>|</span>
+                                <a href="/shouye/shangcheng">鹅肉</a><span>|</span>
+                                <a href="/shouye/shangcheng">鸽肉</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>活禽</h1>
                             <div class="a-box">
-                                <a href="#">鸡</a><span>|</span>
-                                <a href="#">鸭</a><span>|</span>
-                                <a href="#">鹅</a><span>|</span>
-                                <a href="#">鸽子</a><span>|</span>
-                                <a href="#" class="orange">山鸡</a><span>|</span>
-                                <a href="#">野鸭</a><span>|</span>
-                                <a href="#">竹鸡</a><span>|</span>
+                                <a href="/shouye/shangcheng">鸡</a><span>|</span>
+                                <a href="/shouye/shangcheng">鸭</a><span>|</span>
+                                <a href="/shouye/shangcheng">鹅</a><span>|</span>
+                                <a href="/shouye/shangcheng">鸽子</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">山鸡</a><span>|</span>
+                                <a href="/shouye/shangcheng">野鸭</a><span>|</span>
+                                <a href="/shouye/shangcheng">竹鸡</a><span>|</span>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>活畜</h1>
                             <div class="a-box">
-                                <a href="#">羊</a><span>|</span>
-                                <a href="#">牛</a><span>|</span>
-                                <a href="#">猪</a><span>|</span>
-                                <a href="#">狗</a><span>|</span>
-                                <a href="#" class="orange">兔子</a><span>|</span>
-                                <a href="#">马</a><span>|</span>
-                                <a href="#">驴</a><span>|</span>
+                                <a href="/shouye/shangcheng">羊</a><span>|</span>
+                                <a href="/shouye/shangcheng">牛</a><span>|</span>
+                                <a href="/shouye/shangcheng">猪</a><span>|</span>
+                                <a href="/shouye/shangcheng">狗</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">兔子</a><span>|</span>
+                                <a href="/shouye/shangcheng">马</a><span>|</span>
+                                <a href="/shouye/shangcheng">驴</a><span>|</span>
 
                             </div>
                         </div>
@@ -120,22 +120,22 @@
                         <div class="cell-box">
                             <h1>禽畜苗</h1>
                             <div class="a-box">
-                                <a href="#">鸡苗</a><span>|</span>
-                                <a href="#">猪苗</a><span>|</span>
-                                <a href="#">鹅苗</a><span>|</span>
-                                <a href="#">鸭苗</a><span>|</span>
-                                <a href="#" class="orange">斑鸠苗</a>
+                                <a href="/shouye/shangcheng">鸡苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">猪苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">鹅苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">鸭苗</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">斑鸠苗</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>蛋类</h1>
                             <div class="a-box">
-                                <a href="#">鸡蛋</a><span>|</span>
-                                <a href="#">鸭蛋</a><span>|</span>
-                                <a href="#">鹅蛋</a><span>|</span>
-                                <a href="#">皮蛋</a><span>|</span>
-                                <a href="#" class="orange">鸽子蛋</a>
+                                <a href="/shouye/shangcheng">鸡蛋</a><span>|</span>
+                                <a href="/shouye/shangcheng">鸭蛋</a><span>|</span>
+                                <a href="/shouye/shangcheng">鹅蛋</a><span>|</span>
+                                <a href="/shouye/shangcheng">皮蛋</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">鸽子蛋</a>
 
                             </div>
                         </div>
@@ -148,51 +148,51 @@
                         <div class="cell-box">
                             <h1>核果仁果类</h1>
                             <div class="a-box">
-                                <a href="#">苹果</a><span>|</span>
-                                <a href="#">樱桃</a><span>|</span>
-                                <a href="#">梨</a><span>|</span>
-                                <a href="#">鲜桃</a><span>|</span>
-                                <a href="#" class="orange">李子</a>
-                                <a href="#">山楂</a><span>|</span>
-                                <a href="#">毛桃</a><span>|</span>
-                                <a href="#">枇杷</a><span>|</span>
-                                <a href="#">人参果</a><span>|</span>
-                                <a href="#">石榴</a><span>|</span>
-                                <a href="#">黄桃</a>
-                                <a href="#">蜜桃</a><span>|</span>
-                                <a href="#">罗汉果</a><span>|</span>
-                                <a href="#">杏</a><span>|</span>
-                                <a href="#">蟠桃</a><span>|</span>
-                                <a href="#">拐枣</a>
+                                <a href="/shouye/shangcheng">苹果</a><span>|</span>
+                                <a href="/shouye/shangcheng">樱桃</a><span>|</span>
+                                <a href="/shouye/shangcheng">梨</a><span>|</span>
+                                <a href="/shouye/shangcheng">鲜桃</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">李子</a>
+                                <a href="/shouye/shangcheng">山楂</a><span>|</span>
+                                <a href="/shouye/shangcheng">毛桃</a><span>|</span>
+                                <a href="/shouye/shangcheng">枇杷</a><span>|</span>
+                                <a href="/shouye/shangcheng">人参果</a><span>|</span>
+                                <a href="/shouye/shangcheng">石榴</a><span>|</span>
+                                <a href="/shouye/shangcheng">黄桃</a>
+                                <a href="/shouye/shangcheng">蜜桃</a><span>|</span>
+                                <a href="/shouye/shangcheng">罗汉果</a><span>|</span>
+                                <a href="/shouye/shangcheng">杏</a><span>|</span>
+                                <a href="/shouye/shangcheng">蟠桃</a><span>|</span>
+                                <a href="/shouye/shangcheng">大枣</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>柑橘类</h1>
                             <div class="a-box">
-                                <a href="#">柑橘</a><span>|</span>
-                                <a href="#">橙子</a><span>|</span>
-                                <a href="#">柠檬</a><span>|</span>
-                                <a href="#">金桔</a>
+                                <a href="/shouye/shangcheng">柑橘</a><span>|</span>
+                                <a href="/shouye/shangcheng">橙子</a><span>|</span>
+                                <a href="/shouye/shangcheng">柠檬</a><span>|</span>
+                                <a href="/shouye/shangcheng">金桔</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>热带水果类</h1>
                             <div class="a-box">
-                                <a href="#">柑橘</a><span>|</span>
-                                <a href="#">榴莲</a><span>|</span>
-                                <a href="#">芒果</a><span>|</span>
-                                <a href="#">波罗蜜</a><span>|</span>
-                                <a href="#" class="orange">香蕉</a>
-                                <a href="#">火龙果</a><span>|</span>
-                                <a href="#">龙眼</a><span>|</span>
-                                <a href="#">椰子</a><span>|</span>
-                                <a href="#">菠萝</a><span>|</span>
-                                <a href="#">山竹</a><span>|</span>
-                                <a href="#">荔枝</a>
-                                <a href="#">石榴</a><span>|</span>
-                                <a href="#">杨桃</a>
+                                <a href="/shouye/shangcheng">柑橘</a><span>|</span>
+                                <a href="/shouye/shangcheng">榴莲</a><span>|</span>
+                                <a href="/shouye/shangcheng">芒果</a><span>|</span>
+                                <a href="/shouye/shangcheng">波罗蜜</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">香蕉</a>
+                                <a href="/shouye/shangcheng">火龙果</a><span>|</span>
+                                <a href="/shouye/shangcheng">龙眼</a><span>|</span>
+                                <a href="/shouye/shangcheng">椰子</a><span>|</span>
+                                <a href="/shouye/shangcheng">菠萝</a><span>|</span>
+                                <a href="/shouye/shangcheng">山竹</a><span>|</span>
+                                <a href="/shouye/shangcheng">荔枝</a>
+                                <a href="/shouye/shangcheng">石榴</a><span>|</span>
+                                <a href="/shouye/shangcheng">杨桃</a>
 
                             </div>
                         </div>
@@ -201,34 +201,34 @@
                         <div class="cell-box">
                             <h1>浆果类</h1>
                             <div class="a-box">
-                                <a href="#">草莓</a><span>|</span>
-                                <a href="#">葡萄</a><span>|</span>
-                                <a href="#">百香果</a><span>|</span>
-                                <a href="#">猕猴桃</a><span>|</span>
-                                <a href="#" class="orange">圣女果</a>
-                                <a href="#">柿子</a><span>|</span>
-                                <a href="#">无花果</a><span>|</span>
-                                <a href="#">蓝莓</a><span>|</span>
-                                <a href="#">牛奶果 </a><span>|</span>
-                                <a href="#">灯笼果</a><span>|</span>
-                                <a href="#">黑莓</a>
-                                <a href="#">酸角</a><span>|</span>
-                                <a href="#">桃金娘</a><span>|</span>
-                                <a href="#">树葡萄</a>
+                                <a href="/shouye/shangcheng">草莓</a><span>|</span>
+                                <a href="/shouye/shangcheng">葡萄</a><span>|</span>
+                                <a href="/shouye/shangcheng">百香果</a><span>|</span>
+                                <a href="/shouye/shangcheng">猕猴桃</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">圣女果</a>
+                                <a href="/shouye/shangcheng">柿子</a><span>|</span>
+                                <a href="/shouye/shangcheng">无花果</a><span>|</span>
+                                <a href="/shouye/shangcheng">蓝莓</a><span>|</span>
+                                <a href="/shouye/shangcheng">牛奶果 </a><span>|</span>
+                                <a href="/shouye/shangcheng">灯笼果</a><span>|</span>
+                                <a href="/shouye/shangcheng">黑莓</a>
+                                <a href="/shouye/shangcheng">酸角</a><span>|</span>
+                                <a href="/shouye/shangcheng">桃金娘</a><span>|</span>
+                                <a href="/shouye/shangcheng">树葡萄</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>瓜果类</h1>
                             <div class="a-box">
-                                <a href="#">西瓜</a><span>|</span>
-                                <a href="#">哈密瓜</a><span>|</span>
-                                <a href="#">甜瓜</a><span>|</span>
-                                <a href="#">八月瓜</a><span>|</span>
-                                <a href="#" class="orange">火山果</a>
-                                <a href="#">打瓜</a><span>|</span>
-                                <a href="#">九月瓜</a><span>|</span>
-                                <a href="#">地稍瓜</a>
+                                <a href="/shouye/shangcheng">西瓜</a><span>|</span>
+                                <a href="/shouye/shangcheng">哈密瓜</a><span>|</span>
+                                <a href="/shouye/shangcheng">甜瓜</a><span>|</span>
+                                <a href="/shouye/shangcheng">八月瓜</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">火山果</a>
+                                <a href="/shouye/shangcheng">打瓜</a><span>|</span>
+                                <a href="/shouye/shangcheng">九月瓜</a><span>|</span>
+                                <a href="/shouye/shangcheng">地稍瓜</a>
 
                             </div>
                         </div>
@@ -242,44 +242,44 @@
                         <div class="cell-box">
                             <h1>坚果</h1>
                             <div class="a-box">
-                                <a href="#">核桃</a><span>|</span>
-                                <a href="#">瓜子</a><span>|</span>
-                                <a href="#">板栗</a><span>|</span>
-                                <a href="#">开心果</a><span>|</span>
-                                <a href="#" class="orange">巴旦木</a>
-                                <a href="#">松子</a><span>|</span>
-                                <a href="#">腰果</a><span>|</span>
-                                <a href="#">杏仁</a><span>|</span>
-                                <a href="#">风流果</a><span>|</span>
-                                <a href="#">沙漠果</a><span>|</span>
-                                <a href="#">橡子仁</a>
-                                <a href="#">檎子</a><span>|</span>
-                                <a href="#">夏威夷果</a>
+                                <a href="/shouye/shangcheng">核桃</a><span>|</span>
+                                <a href="/shouye/shangcheng">瓜子</a><span>|</span>
+                                <a href="/shouye/shangcheng">板栗</a><span>|</span>
+                                <a href="/shouye/shangcheng">开心果</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">巴旦木</a>
+                                <a href="/shouye/shangcheng">松子</a><span>|</span>
+                                <a href="/shouye/shangcheng">腰果</a><span>|</span>
+                                <a href="/shouye/shangcheng">杏仁</a><span>|</span>
+                                <a href="/shouye/shangcheng">风流果</a><span>|</span>
+                                <a href="/shouye/shangcheng">沙漠果</a><span>|</span>
+                                <a href="/shouye/shangcheng">橡子仁</a>
+                                <a href="/shouye/shangcheng">檎子</a><span>|</span>
+                                <a href="/shouye/shangcheng">夏威夷果</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>干果</h1>
                             <div class="a-box">
-                                <a href="#">红枣</a><span>|</span>
-                                <a href="#">柿饼</a><span>|</span>
-                                <a href="#">葡萄干</a><span>|</span>
-                                <a href="#">蜜饯果脯</a><span>|</span>
-                                <a href="#" class="orange">桂圆干</a>
-                                <a href="#">地瓜干</a><span>|</span>
-                                <a href="#">莲子</a><span>|</span>
-                                <a href="#">银杏干果</a><span>|</span>
-                                <a href="#">山楂</a><span>|</span>
-                                <a href="#">干姜片</a>
+                                <a href="/shouye/shangcheng">红枣</a><span>|</span>
+                                <a href="/shouye/shangcheng">柿饼</a><span>|</span>
+                                <a href="/shouye/shangcheng">葡萄干</a><span>|</span>
+                                <a href="/shouye/shangcheng">蜜饯果脯</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">桂圆干</a>
+                                <a href="/shouye/shangcheng">地瓜干</a><span>|</span>
+                                <a href="/shouye/shangcheng">莲子</a><span>|</span>
+                                <a href="/shouye/shangcheng">银杏干果</a><span>|</span>
+                                <a href="/shouye/shangcheng">山楂</a><span>|</span>
+                                <a href="/shouye/shangcheng">干姜片</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>水产加工</h1>
                             <div class="a-box">
-                                <a href="#">水产干货</a><span>|</span>
-                                <a href="#">冷冻水产品</a><span>|</span>
-                                <a href="#">腌制水产品</a>
+                                <a href="/shouye/shangcheng">水产干货</a><span>|</span>
+                                <a href="/shouye/shangcheng">冷冻水产品</a><span>|</span>
+                                <a href="/shouye/shangcheng">腌制水产品</a>
 
                             </div>
                         </div>
@@ -288,38 +288,38 @@
                         <div class="cell-box">
                             <h1>休闲速食品</h1>
                             <div class="a-box">
-                                <a href="#">休闲零食</a><span>|</span>
-                                <a href="#">饼干糕点</a><span>|</span>
-                                <a href="#">肉类零食</a><span>|</span>
-                                <a href="#">糖果</a><span>|</span>
-                                <a href="#" class="orange">罐头</a>
-                                <a href="#">自制果汁</a>
+                                <a href="/shouye/shangcheng">休闲零食</a><span>|</span>
+                                <a href="/shouye/shangcheng">饼干糕点</a><span>|</span>
+                                <a href="/shouye/shangcheng">肉类零食</a><span>|</span>
+                                <a href="/shouye/shangcheng">糖果</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">罐头</a>
+                                <a href="/shouye/shangcheng">自制果汁</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>肉制品加工</h1>
                             <div class="a-box">
-                                <a href="#">腊制品</a><span>|</span>
-                                <a href="#">卤制品</a><span>|</span>
-                                <a href="#">腊肉</a><span>|</span>
-                                <a href="#">板鸭</a><span>|</span>
-                                <a href="#" class="orange">香肠</a>
-                                <a href="#">火腿</a><span>|</span>
-                                <a href="#">肉卷</a><span>|</span>
+                                <a href="/shouye/shangcheng">腊制品</a><span>|</span>
+                                <a href="/shouye/shangcheng">卤制品</a><span>|</span>
+                                <a href="/shouye/shangcheng">腊肉</a><span>|</span>
+                                <a href="/shouye/shangcheng">板鸭</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">香肠</a>
+                                <a href="/shouye/shangcheng">火腿</a><span>|</span>
+                                <a href="/shouye/shangcheng">肉卷</a><span>|</span>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>茶叶</h1>
                             <div class="a-box">
-                                <a href="#">花茶</a><span>|</span>
-                                <a href="#">绿茶</a><span>|</span>
-                                <a href="#">红茶</a><span>|</span>
-                                <a href="#">乌龙茶</a><span>|</span>
-                                <a href="#" class="orange">白茶</a>
-                                <a href="#">毛尖</a><span>|</span>
-                                <a href="#">黄茶</a><span>|</span>
+                                <a href="/shouye/shangcheng">花茶</a><span>|</span>
+                                <a href="/shouye/shangcheng">绿茶</a><span>|</span>
+                                <a href="/shouye/shangcheng">红茶</a><span>|</span>
+                                <a href="/shouye/shangcheng">乌龙茶</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">白茶</a>
+                                <a href="/shouye/shangcheng">毛尖</a><span>|</span>
+                                <a href="/shouye/shangcheng">黄茶</a><span>|</span>
 
                             </div>
                         </div>
@@ -332,45 +332,45 @@
                         <div class="cell-box">
                             <h1>根茎菜类</h1>
                             <div class="a-box">
-                                <a href="#">红薯</a><span>|</span>
-                                <a href="#">山药</a><span>|</span>
-                                <a href="#">土豆</a><span>|</span>
-                                <a href="#">竹笋</a><span>|</span>
-                                <a href="#" class="orange">魔芋</a>
-                                <a href="#">萝卜</a><span>|</span>
-                                <a href="#">芋头</a><span>|</span>
-                                <a href="#">胡萝卜</a><span>|</span>
-                                <a href="#">葛根</a><span>|</span>
-                                <a href="#">紫薯</a><span>|</span>
-                                <a href="#">芦笋</a>
+                                <a href="/shouye/shangcheng">红薯</a><span>|</span>
+                                <a href="/shouye/shangcheng">山药</a><span>|</span>
+                                <a href="/shouye/shangcheng">土豆</a><span>|</span>
+                                <a href="/shouye/shangcheng">竹笋</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">魔芋</a>
+                                <a href="/shouye/shangcheng">萝卜</a><span>|</span>
+                                <a href="/shouye/shangcheng">芋头</a><span>|</span>
+                                <a href="/shouye/shangcheng">胡萝卜</a><span>|</span>
+                                <a href="/shouye/shangcheng">葛根</a><span>|</span>
+                                <a href="/shouye/shangcheng">紫薯</a><span>|</span>
+                                <a href="/shouye/shangcheng">芦笋</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>葱姜蒜类</h1>
                             <div class="a-box">
-                                <a href="#">生姜</a><span>|</span>
-                                <a href="#">大蒜</a><span>|</span>
-                                <a href="#">大葱</a><span>|</span>
-                                <a href="#">蒜苔</a><span>|</span>
-                                <a href="#" class="orange">韭菜</a>
-                                <a href="#">蒜苗</a><span>|</span>
-                                <a href="#">洋葱</a><span>|</span>
-                                <a href="#">小葱</a><span>|</span>
-                                <a href="#">韭黄</a><span>|</span>
-                                <a href="#">风姜</a><span>|</span>
-                                <a href="#">葱仔</a>
+                                <a href="/shouye/shangcheng">生姜</a><span>|</span>
+                                <a href="/shouye/shangcheng">大蒜</a><span>|</span>
+                                <a href="/shouye/shangcheng">大葱</a><span>|</span>
+                                <a href="/shouye/shangcheng">蒜苔</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">韭菜</a>
+                                <a href="/shouye/shangcheng">蒜苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">洋葱</a><span>|</span>
+                                <a href="/shouye/shangcheng">小葱</a><span>|</span>
+                                <a href="/shouye/shangcheng">韭黄</a><span>|</span>
+                                <a href="/shouye/shangcheng">风姜</a><span>|</span>
+                                <a href="/shouye/shangcheng">葱仔</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>茄果菜类</h1>
                             <div class="a-box">
-                                <a href="#">辣椒</a><span>|</span>
-                                <a href="#">西红柿</a><span>|</span>
-                                <a href="#">鲜玉米</a><span>|</span>
-                                <a href="#">茄子</a><span>|</span>
-                                <a href="#" class="orange">秋葵</a>
+                                <a href="/shouye/shangcheng">辣椒</a><span>|</span>
+                                <a href="/shouye/shangcheng">西红柿</a><span>|</span>
+                                <a href="/shouye/shangcheng">鲜玉米</a><span>|</span>
+                                <a href="/shouye/shangcheng">茄子</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">秋葵</a>
 
                             </div>
                         </div>
@@ -379,50 +379,50 @@
                         <div class="cell-box">
                             <h1>叶菜类</h1>
                             <div class="a-box">
-                                <a href="#">白菜</a><span>|</span>
-                                <a href="#">芹菜</a><span>|</span>
-                                <a href="#">莴笋</a><span>|</span>
-                                <a href="#">菠菜</a><span>|</span>
-                                <a href="#" class="orange">香菜</a>
-                                <a href="#">菜苔</a><span>|</span>
-                                <a href="#">生菜</a><span>|</span>
-                                <a href="#">小白菜</a><span>|</span>
-                                <a href="#">娃娃菜</a><span>|</span>
-                                <a href="#">芥菜</a><span>|</span>
-                                <a href="#">儿菜</a>
-                                <a href="#">空心菜</a><span>|</span>
-                                <a href="#">油菜</a><span>|</span>
-                                <a href="#">黄新菜</a><span>|</span>
-                                <a href="#">甜菜</a><span>|</span>
-                                <a href="#">萝卜菜</a>
-                                <a href="#">豆瓣菜</a><span>|</span>
+                                <a href="/shouye/shangcheng">白菜</a><span>|</span>
+                                <a href="/shouye/shangcheng">芹菜</a><span>|</span>
+                                <a href="/shouye/shangcheng">莴笋</a><span>|</span>
+                                <a href="/shouye/shangcheng">菠菜</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">香菜</a>
+                                <a href="/shouye/shangcheng">菜苔</a><span>|</span>
+                                <a href="/shouye/shangcheng">生菜</a><span>|</span>
+                                <a href="/shouye/shangcheng">小白菜</a><span>|</span>
+                                <a href="/shouye/shangcheng">娃娃菜</a><span>|</span>
+                                <a href="/shouye/shangcheng">芥菜</a><span>|</span>
+                                <a href="/shouye/shangcheng">儿菜</a>
+                                <a href="/shouye/shangcheng">空心菜</a><span>|</span>
+                                <a href="/shouye/shangcheng">油菜</a><span>|</span>
+                                <a href="/shouye/shangcheng">黄新菜</a><span>|</span>
+                                <a href="/shouye/shangcheng">甜菜</a><span>|</span>
+                                <a href="/shouye/shangcheng">萝卜菜</a>
+                                <a href="/shouye/shangcheng">豆瓣菜</a><span>|</span>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>食用菌类</h1>
                             <div class="a-box">
-                                <a href="#">香菇</a><span>|</span>
-                                <a href="#">木耳</a><span>|</span>
-                                <a href="#">平菇</a><span>|</span>
-                                <a href="#">金针菇</a><span>|</span>
-                                <a href="#" class="orange">蘑菇</a>
-                                <a href="#">红菇</a><span>|</span>
-                                <a href="#">猴头菇</a><span>|</span>
-                                <a href="#">松菇</a><span>|</span>
+                                <a href="/shouye/shangcheng">香菇</a><span>|</span>
+                                <a href="/shouye/shangcheng">木耳</a><span>|</span>
+                                <a href="/shouye/shangcheng">平菇</a><span>|</span>
+                                <a href="/shouye/shangcheng">金针菇</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">蘑菇</a>
+                                <a href="/shouye/shangcheng">红菇</a><span>|</span>
+                                <a href="/shouye/shangcheng">猴头菇</a><span>|</span>
+                                <a href="/shouye/shangcheng">松菇</a><span>|</span>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>瓜菜类</h1>
                             <div class="a-box">
-                                <a href="#">黄瓜</a><span>|</span>
-                                <a href="#">南瓜</a><span>|</span>
-                                <a href="#">冬瓜</a><span>|</span>
-                                <a href="#">苦瓜</a><span>|</span>
-                                <a href="#" class="orange">丝瓜</a>
-                                <a href="#">菜瓜</a><span>|</span>
-                                <a href="#">丝瓜 </a><span>|</span>
+                                <a href="/shouye/shangcheng">黄瓜</a><span>|</span>
+                                <a href="/shouye/shangcheng">南瓜</a><span>|</span>
+                                <a href="/shouye/shangcheng">冬瓜</a><span>|</span>
+                                <a href="/shouye/shangcheng">苦瓜</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">丝瓜</a>
+                                <a href="/shouye/shangcheng">菜瓜</a><span>|</span>
+                                <a href="/shouye/shangcheng">丝瓜 </a><span>|</span>
 
                             </div>
                         </div>
@@ -435,44 +435,44 @@
                         <div class="cell-box">
                             <h1>淡水鱼类 </h1>
                             <div class="a-box">
-                                <a href="#">草鱼</a><span>|</span>
-                                <a href="#">鲫鱼</a><span>|</span>
-                                <a href="#">黄鳝</a><span>|</span>
-                                <a href="#">泥鳅</a><span>|</span>
-                                <a href="#" class="orange">鲈鱼</a>
-                                <a href="#">罗非鱼</a><span>|</span>
-                                <a href="#">鲟鱼</a><span>|</span>
-                                <a href="#">鳗鱼</a><span>|</span>
-                                <a href="#">银鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">草鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">鲫鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">黄鳝</a><span>|</span>
+                                <a href="/shouye/shangcheng">泥鳅</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">鲈鱼</a>
+                                <a href="/shouye/shangcheng">罗非鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">鲟鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">鳗鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">银鱼</a><span>|</span>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>虾类 </h1>
                             <div class="a-box">
-                                <a href="#">海虾</a><span>|</span>
-                                <a href="#">小龙虾</a><span>|</span>
-                                <a href="#">龙虾</a><span>|</span>
-                                <a href="#">青虾</a><span>|</span>
-                                <a href="#" class="orange">淡水虾 </a>
-                                <a href="#">皮皮虾</a><span>|</span>
-                                <a href="#">米虾</a><span>|</span>
+                                <a href="/shouye/shangcheng">海虾</a><span>|</span>
+                                <a href="/shouye/shangcheng">小龙虾</a><span>|</span>
+                                <a href="/shouye/shangcheng">龙虾</a><span>|</span>
+                                <a href="/shouye/shangcheng">青虾</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">淡水虾 </a>
+                                <a href="/shouye/shangcheng">皮皮虾</a><span>|</span>
+                                <a href="/shouye/shangcheng">米虾</a><span>|</span>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>海水鱼类</h1>
                             <div class="a-box">
-                                <a href="#">带鱼</a><span>|</span>
-                                <a href="#">黄花鱼</a><span>|</span>
-                                <a href="#">三文鱼</a><span>|</span>
-                                <a href="#">刀鱼</a><span>|</span>
-                                <a href="#" class="orange">金枪鱼</a>
-                                <a href="#">马哈鱼</a><span>|</span>
-                                <a href="#">梭鱼</a><span>|</span>
-                                <a href="#">鲑鱼</a><span>|</span>
-                                <a href="#">黑石斑</a><span>|</span>
-                                <a href="#">跳跳鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">带鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">黄花鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">三文鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">刀鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">金枪鱼</a>
+                                <a href="/shouye/shangcheng">马哈鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">梭鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">鲑鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">黑石斑</a><span>|</span>
+                                <a href="/shouye/shangcheng">跳跳鱼</a><span>|</span>
 
                             </div>
                         </div>
@@ -481,34 +481,34 @@
                         <div class="cell-box">
                             <h1>贝类</h1>
                             <div class="a-box">
-                                <a href="#">海鲜贝类</a><span>|</span>
-                                <a href="#">鲍鱼</a><span>|</span>
-                                <a href="#">扇贝</a><span>|</span>
-                                <a href="#">河蚌</a><span>|</span>
-                                <a href="#" class="orange">珍珠贝</a>
+                                <a href="/shouye/shangcheng">海鲜贝类</a><span>|</span>
+                                <a href="/shouye/shangcheng">鲍鱼</a><span>|</span>
+                                <a href="/shouye/shangcheng">扇贝</a><span>|</span>
+                                <a href="/shouye/shangcheng">河蚌</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">珍珠贝</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>蟹类</h1>
                             <div class="a-box">
-                                <a href="#">大闸蟹</a><span>|</span>
-                                <a href="#">海蟹</a><span>|</span>
-                                <a href="#">鲍鱼 </a><span>|</span>
-                                <a href="#">梭子蟹</a><span>|</span>
-                                <a href="#" class="orange">青蟹</a>
-                                <a href="#">石蟹</a><span>|</span>
-                                <a href="#">招潮蟹</a><span>|</span>
+                                <a href="/shouye/shangcheng">大闸蟹</a><span>|</span>
+                                <a href="/shouye/shangcheng">海蟹</a><span>|</span>
+                                <a href="/shouye/shangcheng">鲍鱼 </a><span>|</span>
+                                <a href="/shouye/shangcheng">梭子蟹</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">青蟹</a>
+                                <a href="/shouye/shangcheng">石蟹</a><span>|</span>
+                                <a href="/shouye/shangcheng">招潮蟹</a><span>|</span>
 
                             </div>
                             <div class="cell-box">
                                 <h1>水产种苗</h1>
                                 <div class="a-box">
-                                    <a href="#">鱼苗</a><span>|</span>
-                                    <a href="#">虾苗</a><span>|</span>
-                                    <a href="#">甲鱼苗</a><span>|</span>
-                                    <a href="#">黄鳝苗</a><span>|</span>
-                                    <a href="#" class="orange">蟹苗</a>
+                                    <a href="/shouye/shangcheng">鱼苗</a><span>|</span>
+                                    <a href="/shouye/shangcheng">虾苗</a><span>|</span>
+                                    <a href="/shouye/shangcheng">甲鱼苗</a><span>|</span>
+                                    <a href="/shouye/shangcheng">黄鳝苗</a><span>|</span>
+                                    <a href="/shouye/shangcheng" class="orange">蟹苗</a>
 
                                 </div>
                             </div>
@@ -522,51 +522,51 @@
                         <div class="cell-box">
                             <h1>水果种苗</h1>
                             <div class="a-box">
-                                <a href="#">柑橘苗</a><span>|</span>
-                                <a href="#">桃树苗</a><span>|</span>
-                                <a href="#">樱桃苗</a><span>|</span>
-                                <a href="#">李子树苗</a><span>|</span>
-                                <a href="#" class="orange">苹果树苗</a>
-                                <a href="#">梨树苗</a><span>|</span>
-                                <a href="#">枣树苗</a><span>|</span>
-                                <a href="#">石榴树苗</a><span>|</span>
-                                <a href="#">草莓苗</a><span>|</span>
-                                <a href="#">杨梅树苗</a><span>|</span>
-                                <a href="#">杏树苗</a>
-                                <a href="#">金桔苗</a><span>|</span>
-                                <a href="#">荔枝苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">柑橘苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">桃树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">樱桃苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">李子树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">苹果树苗</a>
+                                <a href="/shouye/shangcheng">梨树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">枣树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">石榴树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">草莓苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">杨梅树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">杏树苗</a>
+                                <a href="/shouye/shangcheng">金桔苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">荔枝苗</a><span>|</span>
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>蔬菜种子</h1>
                             <div class="a-box">
-                                <a href="#">辣椒种子</a><span>|</span>
-                                <a href="#">南瓜种子</a><span>|</span>
-                                <a href="#">豆角种子</a><span>|</span>
-                                <a href="#">黄瓜种子</a><span>|</span>
-                                <a href="#" class="orange">西红柿种子</a>
-                                <a href="#">白菜种子</a><span>|</span>
-                                <a href="#">韭菜种子</a><span>|</span>
-                                <a href="#">苦瓜种子</a><span>|</span>
-                                <a href="#">冬瓜种子</a><span>|</span>
-                                <a href="#">萝卜种子</a><span>|</span>
-                                <a href="#">茄子种子</a>
-                                <a href="#">毛豆种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">辣椒种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">南瓜种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">豆角种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">黄瓜种子</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">西红柿种子</a>
+                                <a href="/shouye/shangcheng">白菜种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">韭菜种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">苦瓜种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">冬瓜种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">萝卜种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">茄子种子</a>
+                                <a href="/shouye/shangcheng">毛豆种子</a><span>|</span>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>苗床小苗</h1>
                             <div class="a-box">
-                                <a href="#">油茶树苗</a><span>|</span>
-                                <a href="#">核桃苗</a><span>|</span>
-                                <a href="#">板栗树苗</a><span>|</span>
-                                <a href="#">茶树苗</a><span>|</span>
-                                <a href="#" class="orange">竹苗</a>
-                                <a href="#">杨树苗</a><span>|</span>
-                                <a href="#">银杏树苗</a><span>|</span>
-                                <a href="#">柏树苗</a><span>|</span>
-                                <a href="#">枫树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">油茶树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">核桃苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">板栗树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">茶树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">竹苗</a>
+                                <a href="/shouye/shangcheng">杨树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">银杏树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">柏树苗</a><span>|</span>
+                                <a href="/shouye/shangcheng">枫树苗</a><span>|</span>
 
                             </div>
                         </div>
@@ -575,18 +575,18 @@
                         <div class="cell-box">
                             <h1>粮油类种子</h1>
                             <div class="a-box">
-                                <a href="#">玉米种子</a><span>|</span>
-                                <a href="#">花生种子</a><span>|</span>
-                                <a href="#">水稻种子</a><span>|</span>
-                                <a href="#">高粱种子</a><span>|</span>
-                                <a href="#" class="orange">黄豆种子</a>
-                                <a href="#">芝麻种子</a><span>|</span>
-                                <a href="#">大麦种子</a><span>|</span>
-                                <a href="#">小米种子</a><span>|</span>
-                                <a href="#">绿豆种子</a><span>|</span>
-                                <a href="#">小麦种子</a><span>|</span>
-                                <a href="#">青豆种子</a>
-                                <a href="#">油茶籽种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">玉米种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">花生种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">水稻种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">高粱种子</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">黄豆种子</a>
+                                <a href="/shouye/shangcheng">芝麻种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">大麦种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">小米种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">绿豆种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">小麦种子</a><span>|</span>
+                                <a href="/shouye/shangcheng">青豆种子</a>
+                                <a href="/shouye/shangcheng">油茶籽种子</a><span>|</span>
 
                             </div>
                         </div>
@@ -600,48 +600,48 @@
                         <div class="cell-box">
                             <h1>农业机械设备</h1>
                             <div class="a-box">
-                                <a href="#">饲料机械</a><span>|</span>
-                                <a href="#">农用拖拉机</a><span>|</span>
-                                <a href="#">植保机械</a><span>|</span>
-                                <a href="#">农机配件</a><span>|</span>
-                                <a href="#" class="orange">肥料机械</a>
-                                <a href="#">榨油机械</a><span>|</span>
-                                <a href="#">水产捕捞机械</a><span>|</span>
-                                <a href="#">施肥机械</a><span>|</span>
-                                <a href="#">干燥机械</a><span>|</span>
-                                <a href="#">林业机械</a><span>|</span>
-                                <a href="#">食用菌机械</a>
-                                <a href="#">磨粉磨浆机械</a><span>|</span>
-                                <a href="#">清洗机械</a><span>|</span>
-                                <a href="#">干燥机械</a><span>|</span>
+                                <a href="/shouye/shangcheng">饲料机械</a><span>|</span>
+                                <a href="/shouye/shangcheng">农用拖拉机</a><span>|</span>
+                                <a href="/shouye/shangcheng">植保机械</a><span>|</span>
+                                <a href="/shouye/shangcheng">农机配件</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">肥料机械</a>
+                                <a href="/shouye/shangcheng">榨油机械</a><span>|</span>
+                                <a href="/shouye/shangcheng">水产捕捞机械</a><span>|</span>
+                                <a href="/shouye/shangcheng">施肥机械</a><span>|</span>
+                                <a href="/shouye/shangcheng">干燥机械</a><span>|</span>
+                                <a href="/shouye/shangcheng">林业机械</a><span>|</span>
+                                <a href="/shouye/shangcheng">食用菌机械</a>
+                                <a href="/shouye/shangcheng">磨粉磨浆机械</a><span>|</span>
+                                <a href="/shouye/shangcheng">清洗机械</a><span>|</span>
+                                <a href="/shouye/shangcheng">干燥机械</a><span>|</span>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>农用物资</h1>
                             <div class="a-box">
-                                <a href="#">塑料膜</a><span>|</span>
-                                <a href="#">花盆容器</a><span>|</span>
-                                <a href="#">碳</a><span>|</span>
-                                <a href="#">木材</a><span>|</span>
-                                <a href="#" class="orange">剪刀类</a>
-                                <a href="#">蜂具</a><span>|</span>
-                                <a href="#">板凳</a><span>|</span>
-                                <a href="#">石灰</a><span>|</span>
-                                <a href="#">电筒</a><span>|</span>
-                                <a href="#">锯子</a><span>|</span>
-                                <a href="#">镐头类</a>
+                                <a href="/shouye/shangcheng">塑料膜</a><span>|</span>
+                                <a href="/shouye/shangcheng">花盆容器</a><span>|</span>
+                                <a href="/shouye/shangcheng">碳</a><span>|</span>
+                                <a href="/shouye/shangcheng">木材</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">剪刀类</a>
+                                <a href="/shouye/shangcheng">蜂具</a><span>|</span>
+                                <a href="/shouye/shangcheng">板凳</a><span>|</span>
+                                <a href="/shouye/shangcheng">石灰</a><span>|</span>
+                                <a href="/shouye/shangcheng">电筒</a><span>|</span>
+                                <a href="/shouye/shangcheng">锯子</a><span>|</span>
+                                <a href="/shouye/shangcheng">镐头类</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>农药类</h1>
                             <div class="a-box">
-                                <a href="#">杀菌类</a><span>|</span>
-                                <a href="#">杀虫剂</a><span>|</span>
-                                <a href="#">植物生长调节剂</a><span>|</span>
-                                <a href="#">除草剂</a><span>|</span>
-                                <a href="#" class="orange">灭鼠剂</a>
+                                <a href="/shouye/shangcheng">杀菌类</a><span>|</span>
+                                <a href="/shouye/shangcheng">杀虫剂</a><span>|</span>
+                                <a href="/shouye/shangcheng">植物生长调节剂</a><span>|</span>
+                                <a href="/shouye/shangcheng">除草剂</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">灭鼠剂</a>
 
                             </div>
                         </div>
@@ -650,9 +650,9 @@
                         <div class="cell-box">
                             <h1>大棚及温室</h1>
                             <div class="a-box">
-                                <a href="#">大棚设备</a><span>|</span>
-                                <a href="#">成套大棚</a><span>|</span>
-                                <a href="#">控温通风设备</a><span>|</span>
+                                <a href="/shouye/shangcheng">大棚设备</a><span>|</span>
+                                <a href="/shouye/shangcheng">成套大棚</a><span>|</span>
+                                <a href="/shouye/shangcheng">控温通风设备</a><span>|</span>
 
                             </div>
                         </div>
@@ -667,59 +667,59 @@
                         <div class="cell-box">
                             <h1>谷类作物</h1>
                             <div class="a-box">
-                                <a href="#">大米</a><span>|</span>
-                                <a href="#">玉米类</a><span>|</span>
-                                <a href="#">稻谷</a><span>|</span>
-                                <a href="#">小麦</a><span>|</span>
-                                <a href="#" class="orange">小米</a>
-                                <a href="#">高粱</a><span>|</span>
-                                <a href="#">糯米</a><span>|</span>
-                                <a href="#">荞麦</a><span>|</span>
-                                <a href="#">黑米</a><span>|</span>
-                                <a href="#">燕麦</a><span>|</span>
-                                <a href="#">大麦</a>
-                                <a href="#">青稞</a><span>|</span>
-                                <a href="#">旱稻</a><span>|</span>
-                                <a href="#">紫米</a><span>|</span>
-                                <a href="#">五谷米</a><span>|</span>
-                                <a href="#">麋子</a>
+                                <a href="/shouye/shangcheng">大米</a><span>|</span>
+                                <a href="/shouye/shangcheng">玉米类</a><span>|</span>
+                                <a href="/shouye/shangcheng">稻谷</a><span>|</span>
+                                <a href="/shouye/shangcheng">小麦</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">小米</a>
+                                <a href="/shouye/shangcheng">高粱</a><span>|</span>
+                                <a href="/shouye/shangcheng">糯米</a><span>|</span>
+                                <a href="/shouye/shangcheng">荞麦</a><span>|</span>
+                                <a href="/shouye/shangcheng">黑米</a><span>|</span>
+                                <a href="/shouye/shangcheng">燕麦</a><span>|</span>
+                                <a href="/shouye/shangcheng">大麦</a>
+                                <a href="/shouye/shangcheng">青稞</a><span>|</span>
+                                <a href="/shouye/shangcheng">旱稻</a><span>|</span>
+                                <a href="/shouye/shangcheng">紫米</a><span>|</span>
+                                <a href="/shouye/shangcheng">五谷米</a><span>|</span>
+                                <a href="/shouye/shangcheng">麋子</a>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>油料作物</h1>
                             <div class="a-box">
-                                <a href="#">花生</a><span>|</span>
-                                <a href="#">菜籽</a><span>|</span>
-                                <a href="#">茶籽</a><span>|</span>
-                                <a href="#">葵花籽</a><span>|</span>
-                                <a href="#" class="orange">芝麻</a>
-                                <a href="#">亚麻籽</a><span>|</span>
-                                <a href="#">桐梓</a><span>|</span>
-                                <a href="#">棉籽</a><span>|</span>
-                                <a href="#">紫米</a><span>|</span>
-                                <a href="#">胡麻籽</a><span>|</span>
-                                <a href="#">红花籽</a>
-                                <a href="#">油渣果</a><span>|</span>
-                                <a href="#">油棕籽</a><span>|</span>
+                                <a href="/shouye/shangcheng">花生</a><span>|</span>
+                                <a href="/shouye/shangcheng">菜籽</a><span>|</span>
+                                <a href="/shouye/shangcheng">茶籽</a><span>|</span>
+                                <a href="/shouye/shangcheng">葵花籽</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">芝麻</a>
+                                <a href="/shouye/shangcheng">亚麻籽</a><span>|</span>
+                                <a href="/shouye/shangcheng">桐梓</a><span>|</span>
+                                <a href="/shouye/shangcheng">棉籽</a><span>|</span>
+                                <a href="/shouye/shangcheng">紫米</a><span>|</span>
+                                <a href="/shouye/shangcheng">胡麻籽</a><span>|</span>
+                                <a href="/shouye/shangcheng">红花籽</a>
+                                <a href="/shouye/shangcheng">油渣果</a><span>|</span>
+                                <a href="/shouye/shangcheng">油棕籽</a><span>|</span>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>香辛料</h1>
                             <div class="a-box">
-                                <a href="#">干辣椒</a><span>|</span>
-                                <a href="#">花椒</a><span>|</span>
-                                <a href="#">陈皮</a><span>|</span>
-                                <a href="#">胡椒</a><span>|</span>
-                                <a href="#" class="orange">桂皮</a>
-                                <a href="#">草果</a><span>|</span>
-                                <a href="#">茴香</a><span>|</span>
-                                <a href="#">孜然</a><span>|</span>
-                                <a href="#">花椒粉</a><span>|</span>
-                                <a href="#">八角粉</a><span>|</span>
-                                <a href="#">桂皮粉</a>
-                                <a href="#">洋葱粉</a><span>|</span>
+                                <a href="/shouye/shangcheng">干辣椒</a><span>|</span>
+                                <a href="/shouye/shangcheng">花椒</a><span>|</span>
+                                <a href="/shouye/shangcheng">陈皮</a><span>|</span>
+                                <a href="/shouye/shangcheng">胡椒</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">桂皮</a>
+                                <a href="/shouye/shangcheng">草果</a><span>|</span>
+                                <a href="/shouye/shangcheng">茴香</a><span>|</span>
+                                <a href="/shouye/shangcheng">孜然</a><span>|</span>
+                                <a href="/shouye/shangcheng">花椒粉</a><span>|</span>
+                                <a href="/shouye/shangcheng">八角粉</a><span>|</span>
+                                <a href="/shouye/shangcheng">桂皮粉</a>
+                                <a href="/shouye/shangcheng">洋葱粉</a><span>|</span>
 
                             </div>
                         </div>
@@ -728,46 +728,46 @@
                         <div class="cell-box">
                             <h1>豆类作物</h1>
                             <div class="a-box">
-                                <a href="#">大豆</a><span>|</span>
-                                <a href="#">红豆</a><span>|</span>
-                                <a href="#">黑豆</a><span>|</span>
-                                <a href="#">绿豆</a><span>|</span>
-                                <a href="#" class="orange">干豌豆</a>
-                                <a href="#">花豆</a><span>|</span>
-                                <a href="#">蚕豆</a><span>|</span>
-                                <a href="#">豇豆</a><span>|</span>
+                                <a href="/shouye/shangcheng">大豆</a><span>|</span>
+                                <a href="/shouye/shangcheng">红豆</a><span>|</span>
+                                <a href="/shouye/shangcheng">黑豆</a><span>|</span>
+                                <a href="/shouye/shangcheng">绿豆</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">干豌豆</a>
+                                <a href="/shouye/shangcheng">花豆</a><span>|</span>
+                                <a href="/shouye/shangcheng">蚕豆</a><span>|</span>
+                                <a href="/shouye/shangcheng">豇豆</a><span>|</span>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>调味品</h1>
                             <div class="a-box">
-                                <a href="#">糖</a><span>|</span>
-                                <a href="#">调味酱</a><span>|</span>
-                                <a href="#">盐</a><span>|</span>
-                                <a href="#">火锅料</a><span>|</span>
-                                <a href="#" class="orange">汤料</a>
-                                <a href="#">醋</a><span>|</span>
-                                <a href="#">酱油</a><span>|</span>
-                                <a href="#">剁椒</a><span>|</span>
-                                <a href="#">泡椒</a><span>|</span>
-                                <a href="#">卤料</a><span>|</span>
-                                <a href="#">鸡精</a>
-                                <a href="#">调味油</a><span>|</span>
-                                <a href="#">调味汁</a><span>|</span>
+                                <a href="/shouye/shangcheng">糖</a><span>|</span>
+                                <a href="/shouye/shangcheng">调味酱</a><span>|</span>
+                                <a href="/shouye/shangcheng">盐</a><span>|</span>
+                                <a href="/shouye/shangcheng">火锅料</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">汤料</a>
+                                <a href="/shouye/shangcheng">醋</a><span>|</span>
+                                <a href="/shouye/shangcheng">酱油</a><span>|</span>
+                                <a href="/shouye/shangcheng">剁椒</a><span>|</span>
+                                <a href="/shouye/shangcheng">泡椒</a><span>|</span>
+                                <a href="/shouye/shangcheng">卤料</a><span>|</span>
+                                <a href="/shouye/shangcheng">鸡精</a>
+                                <a href="/shouye/shangcheng">调味油</a><span>|</span>
+                                <a href="/shouye/shangcheng">调味汁</a><span>|</span>
 
                             </div>
                         </div>
                         <div class="cell-box">
                             <h1>食用油</h1>
                             <div class="a-box">
-                                <a href="#">豆油</a><span>|</span>
-                                <a href="#">花生油</a><span>|</span>
-                                <a href="#">菜籽油</a><span>|</span>
-                                <a href="#">芝麻油</a><span>|</span>
-                                <a href="#" class="orange">色拉油</a>
-                                <a href="#">橄榄油</a><span>|</span>
-                                <a href="#">芝麻油</a><span>|</span>
+                                <a href="/shouye/shangcheng">豆油</a><span>|</span>
+                                <a href="/shouye/shangcheng">花生油</a><span>|</span>
+                                <a href="/shouye/shangcheng">菜籽油</a><span>|</span>
+                                <a href="/shouye/shangcheng">芝麻油</a><span>|</span>
+                                <a href="/shouye/shangcheng" class="orange">色拉油</a>
+                                <a href="/shouye/shangcheng">橄榄油</a><span>|</span>
+                                <a href="/shouye/shangcheng">芝麻油</a><span>|</span>
 
                             </div>
                         </div>
@@ -798,9 +798,9 @@
             <!--content-->
             <div class="content">
                 <ul class="imgBox">
-                    <li><a href="#"><img src="img/LB1.jpg"></a></li>
-                    <li><a href="#"><img src="img/LB2.jpg"></a></li>
-                    <li><a href="#"><img src="img/LB3.jpg"></a></li>
+                    <li><a href="#"><img src="img/shuicai1.jpg"></a></li>
+                    <li><a href="#"><img src="img/shuiguo1.jpg"></a></li>
+                    <li><a href="#"><img src="img/jidan1.jpg"></a></li>
                     <li><a href="#"><img src="img/LB4.jpg"></a></li>
                     <li><a href="#"><img src="img/LB5.jpg"></a></li>
                 </ul>
@@ -870,58 +870,59 @@
                     <li id="li-2" class="li-nav">规则</li>
                     <li id="li-3" class="li-nav">论坛</li>
                     <li id="li-4" class="li-nav">安全</li>
-                    <li style="border-right: none" id="li-5" class="li-nav">公益</li>
+                    <li style="border-right: none" id="li-5" class="li-nav">加入</li>
                 </ul>
                 <div id="box-1" style="display: block" class="hiddenBox">
 
-                    <a href="#">开放多样性</a>
-                    <a href="#">---------</a>
-                    <a href="#">---------</a>
-                    <a href="#">---------</a>
+                    <a href="#">
+                        本网站非常重视用户的隐私和个人信息保护，您在使用
+                      我们网站时，您需要向我们提供您本人真实的信息，我们
+                      会通过《隐私政策》为你的隐私和个人信息完全保护！
+                    </a>
                 </div>
                 <div id="box-2" class="hiddenBox">
 
-                    <a href="#">[重要] 规范</a>
-                    <a href="#">[重要] 虚假交易新规&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                    <a href="#">[重要] 新增认证规则</a>
+                    <a href="#">[重要] 为避免不必要的损失，严禁私下交易，除本网站推荐卖家，违者后果自负！</a><br>
+                    <a href="#">[重要] 用户使用过程中禁止违规操作！</a><br>
+                    <a href="#">[重要] 商家存在违规操作，经检举终止合作！</a>
 
                 </div>
                 <div id="box-3" class="hiddenBox">
-                    <a href="#">[优化] ---------</a>
-                    <a href="#">[热点] ---------</a>
-                    <a href="#">[话题] ---------</a>
-                    <a href="#">[聚焦] ---------</a>
+                    <a href="http://finance.sina.com.cn/realstock/company/sz000061/nc.shtml?from=BaiduAladin">[股票] 农产品股票行情</a><br>
+                    <a href="http://guba.eastmoney.com/list,000061.html?from=BaiduAladdin">[贴吧] 农产品贴吧</a>
+                    <a href="http://www.yhcko.com/keywordlist/%E5%86%9C%E4%BA%A7%E5%93%81">[话题] 农产品话题</a>
+                    <a href="http://www.vegnet.com.cn/tech/detail/992347">[聚焦] 农产品聚焦</a>
                 </div>
                 <div id="box-4" class="hiddenBox">
 
-                    <a href="#">个人重要信息要管牢！</a>
-                    <a href="#">---------</a>
-                    <a href="#">---------！</a>
-                    <a href="#">---------</a>
+                    <a href="#">
+                        您有义务保护好自己的账号信息，如果您泄漏了账号信
+                     息，您可能丢失个人识别信息，并且可能出现对您不利的后
+                     果。因此，无论任何原因危机您的账户安全，您应该及时通
+                     过客服与我们联系！
+                    </a>
                 </div>
                 <div id="box-5" class="hiddenBox">
-                    <a href="#">[优化] ---------</a>
-                    <a href="#">[热点] ---------</a>
-                    <a href="#">[话题] ---------</a>
-                    <a href="#">[聚焦] ---------</a>
+                    <a href="./join.jsp">[方法] 校园招聘</a><br>
+                    <a href="./join.jsp">[方法] 社会招聘</a>
                 </div>
             </div>
 
             <!--login-->
             <div class="user-info">
                 <div class="login">
-                    <a class="login-btn" href="login.jsp"><i class="fa fa-user fa-user-loc"></i>登陆</a>&nbsp;&nbsp;&nbsp;
-                    <a class="login-btn free" href="register.jsp">免费注册</a>
+                    <!--<a class="login-btn" href="login.jsp"><i class="fa fa-user fa-user-loc"></i>登陆</a>&nbsp;&nbsp;&nbsp;-->
+                    <a class="login-btn free" href="hezhuo.jsp">免费咨询</a>
                 </div>
             </div>
             <!--service-->
             <div class="service">
-                <h3>在线客服</h3>
+                <!--<h3>在线客服</h3>-->
 
-                <div class="service-cell">
-                    <h5 class="service-i"><img src="img/....png" /></h5>
-                    <h6>请期待</h6>
-                </div>
+               <!-- <div class="service-cell">-->
+                    <h5 class="service-i"><img src="img/den.png" /></h5>
+                    <h6 class="service-zi">欢迎登录潇惠网</h6>
+               <!-- </div>-->
             </div>
 
 
@@ -936,41 +937,41 @@
     <div class="sub-nav-cell">
         <h3 class="orange">主题市场</h3>
         <ul class="sub-nav-box">
-            <li><a href="#">禽畜</a></li>
-            <li><a href="#">水果</a></li>
-            <li><a href="#">蔬菜</a></li>
-            <li><a href="#">水产</a></li>
-            <li><a href="#">种苗</a></li>
-            <li><a href="#">农械</a></li>
-            <li><a href="#">粮油</a></li>
-            <li><a href="#">粮面</a></li>
+            <li><a href="/shouye/shangcheng">禽畜</a></li>
+            <li><a href="/shouye/shangcheng">水果</a></li>
+            <li><a href="/shouye/shangcheng">蔬菜</a></li>
+            <li><a href="/shouye/shangcheng">水产</a></li>
+            <li><a href="/shouye/shangcheng">种苗</a></li>
+            <li><a href="/shouye/shangcheng">农械</a></li>
+            <li><a href="/shouye/shangcheng">粮油</a></li>
+            <li><a href="/shouye/shangcheng">粮面</a></li>
 
         </ul>
     </div>
     <div class="sub-nav-cell">
         <h3 class="green-sp">特色采购</h3>
         <ul class="sub-nav-box sp">
-            <li><a href="#">金桔树苗</a></li>
-            <li><a href="#">美人李子</a></li>
-            <li><a href="#">车厘子</a></li>
-            <li><a href="#">锦绣黄桃</a></li>
-            <li><a href="#">李子苗</a></li>
-            <li><a href="#">车厘子</a></li>
-            <li><a href="#">锦绣黄桃</a></li>
-            <li><a href="#">李子苗</a></li>
+            <li><a href="/shouye/shangcheng">金桔树苗</a></li>
+            <li><a href="/shouye/shangcheng">美人李子</a></li>
+            <li><a href="/shouye/shangcheng">车厘子</a></li>
+            <li><a href="/shouye/shangcheng">锦绣黄桃</a></li>
+            <li><a href="/shouye/shangcheng">李子苗</a></li>
+            <li><a href="/shouye/shangcheng">车厘子</a></li>
+            <li><a href="/shouye/shangcheng">锦绣黄桃</a></li>
+            <li><a href="/shouye/shangcheng">李子苗</a></li>
         </ul>
     </div>
     <div class="sub-nav-cell">
         <h3 class="red-now">当前热点</h3>
         <ul class="sub-nav-box now">
-            <li><a href="#">金桔树苗</a></li>
-            <li><a href="#">美人李子</a></li>
-            <li><a href="#">车厘子</a></li>
-            <li><a href="#">锦绣黄桃</a></li>
-            <li><a href="#">李子苗</a></li>
-            <li><a href="#">车厘子</a></li>
-            <li><a href="#">锦绣黄桃</a></li>
-            <li><a href="#">李子苗</a></li>
+            <li><a href="/shouye/shangcheng">金桔树苗</a></li>
+            <li><a href="/shouye/shangcheng">美人李子</a></li>
+            <li><a href="/shouye/shangcheng">车厘子</a></li>
+            <li><a href="/shouye/shangcheng">锦绣黄桃</a></li>
+            <li><a href="/shouye/shangcheng">李子苗</a></li>
+            <li><a href="/shouye/shangcheng">车厘子</a></li>
+            <li><a href="/shouye/shangcheng">锦绣黄桃</a></li>
+            <li><a href="/shouye/shangcheng">李子苗</a></li>
 
 
         </ul>
@@ -978,13 +979,13 @@
     <div class="sub-nav-cell">
         <h3 class="blue-more">更多农贸</h3>
         <ul class="sub-nav-box more">
-            <li><a href="#">烘干机</a></li>
-            <li><a href="#">枇杷苗</a></li>
-            <li><a href="#">鱼饵</a></li>
-            <li><a href="#">甜瓜种子</a></li>
-            <li><a href="#">烘干机</a></li>
-            <li><a href="#">枇杷苗</a></li>
-            <li><a href="#">鱼饵</a></li>
+            <li><a href="/shouye/shangcheng">烘干机</a></li>
+            <li><a href="/shouye/shangcheng">枇杷苗</a></li>
+            <li><a href="/shouye/shangcheng">鱼饵</a></li>
+            <li><a href="/shouye/shangcheng">甜瓜种子</a></li>
+            <li><a href="/shouye/shangcheng">烘干机</a></li>
+            <li><a href="/shouye/shangcheng">枇杷苗</a></li>
+            <li><a href="/shouye/shangcheng">鱼饵</a></li>
 
         </ul>
     </div>
@@ -1011,212 +1012,12 @@
                     <a href="/shouye/${item.xid}">
                     <img src="${item.x_img}" style="width: 100%; height: 130px;"/>
                     </a>
-                    <h1>${item.x_name}</h1>
-                    <span>${item.x_price}</span>
-                </div>
-                <div class="inner-right">
-                    <div style="height: 100px">
-                        <img src="${item.x_img_small1}" />
-                        <img src="${item.x_img_small2}" />
-                    </div>
-                    <table class="tab-inner">
-                        <tr><td><a href="#">${item.title1}</a></td>
-                            <td><a href="#">${item.title2}</a></td>
-                        </tr>
-                        <tr><td><a href="#">${item.title3}</a></td>
-                            <td><a href="#">${item.title4}</a></td>
-                        </tr>
-                    </table>
+                    <h1>商品名称：${item.x_name}</h1>
+                    <span style="">商品价格 ：${item.x_price}/元</span>
                 </div>
             </div>
         </div>
         </c:forEach>
-<%--        <div class="product-box">--%>
-<%--            <div class="inner-info">--%>
-<%--                <div>--%>
-<%--                    <span class="line-f40">|</span>--%>
-<%--                    <span class="text-title">樱桃</span>--%>
-<%--                    <span class="share-weitao">--%>
-<%--            <span class="line-f40">+</span>--%>
-<%--            <a href="#">添加到购物车</a>--%>
-<%--          </span>--%>
-<%--                </div>--%>
-<%--                <div class="inner-left">--%>
-<%--                    <img src="img/樱桃.jpg" />--%>
-<%--                    <h1><a href="#">乌克樱桃</a></h1>--%>
-<%--                    <span>10元/斤(200斤起售)</span>--%>
-<%--                </div>--%>
-<%--                <div class="inner-right">--%>
-<%--                    <div style="height: 100px">--%>
-<%--                        <img src="img/樱桃1.jpg" />--%>
-<%--                        <img src="img/樱桃2.jpg" />--%>
-<%--                    </div>--%>
-<%--                    <table class="tab-inner">--%>
-<%--                        <tr><td><a href="#">大连樱:135/斤</a></td>--%>
-<%--                            <td><a href="#">冠县樱:20/斤</a></td>--%>
-<%--                        </tr>--%>
-<%--                        <tr><td><a href="#">小樱桃:10/斤</a></td>--%>
-<%--                            <td><a href="#">攀枝花:199/件</a></td>--%>
-<%--                        </tr>--%>
-<%--                    </table>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <div class="product-box">--%>
-<%--            <div class="inner-info">--%>
-<%--                <div>--%>
-<%--                    <span class="line-f40">|</span>--%>
-<%--                    <span class="text-title">大枣</span>--%>
-<%--                    <span class="share-weitao">--%>
-<%--            <span class="line-f40">+</span>--%>
-<%--            <a href="#">添加到购物车</a>--%>
-<%--          </span>--%>
-<%--                </div>--%>
-<%--                <div class="inner-left">--%>
-<%--                    <img src="img/枣.jpg" />--%>
-<%--                    <h1><a href="#">大青枣</a></h1>--%>
-<%--                    <span>5元/斤(200斤起售)</span>--%>
-<%--                </div>--%>
-<%--                <div class="inner-right">--%>
-<%--                    <div style="height: 100px">--%>
-<%--                        <img src="img/枣1.jpg" />--%>
-<%--                        <img src="img/枣2.jpg" />--%>
-<%--                    </div>--%>
-<%--                    <table class="tab-inner">--%>
-<%--                        <tr><td><a href="#">东枣:2/斤</a></td>--%>
-<%--                            <td><a href="#">大青枣:3/斤</a></td>--%>
-<%--                        </tr>--%>
-<%--                        <tr><td><a href="#">枣片:10/袋</a></td>--%>
-<%--                            <td><a href="#">新疆肉枣:15/斤</a></td>--%>
-<%--                        </tr>--%>
-<%--                    </table>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <div class="product-box">--%>
-<%--            <div class="inner-info">--%>
-<%--                <div>--%>
-<%--                    <span class="line-f40">|</span>--%>
-<%--                    <span class="text-title">肉虾</span>--%>
-<%--                    <span class="share-weitao">--%>
-<%--            <span class="line-f40">+</span>--%>
-<%--            <a href="#">添加到购物车</a>--%>
-<%--          </span>--%>
-<%--                </div>--%>
-<%--                <div class="inner-left">--%>
-<%--                    <img src="img/虾.jpg" />--%>
-<%--                    <h1><a href="#">龙虾</a></h1>--%>
-<%--                    <span>20元/斤(100斤起售)</span>--%>
-<%--                </div>--%>
-<%--                <div class="inner-right">--%>
-<%--                    <div style="height: 100px">--%>
-<%--                        <img src="img/虾1.jpg" />--%>
-<%--                        <img src="img/虾2.jpg" />--%>
-<%--                    </div>--%>
-<%--                    <table class="tab-inner">--%>
-<%--                        <tr><td><a href="#">活龙虾:15/斤</a></td>--%>
-<%--                            <td><a href="#">红虾:19/斤</a></td>--%>
-<%--                        </tr>--%>
-<%--                        <tr><td><a href="#">冻虾:14/斤</a></td>--%>
-<%--                            <td><a href="#">皮皮虾:10/斤</a></td>--%>
-<%--                        </tr>--%>
-<%--                    </table>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <div class="product-box">--%>
-<%--            <div class="inner-info">--%>
-<%--                <div>--%>
-<%--                    <span class="line-f40">|</span>--%>
-<%--                    <span class="text-title">淡水鱼</span>--%>
-<%--                    <span class="share-weitao">--%>
-<%--            <span class="line-f40">+</span>--%>
-<%--            <a href="#">添加到购物车</a>--%>
-<%--          </span>--%>
-<%--                </div>--%>
-<%--                <div class="inner-left">--%>
-<%--                    <img src="img/鱼.jpg" />--%>
-<%--                    <h1><a href="#">青鱼</a></h1>--%>
-<%--                    <span>5元/斤(100斤起售)</span>--%>
-<%--                </div>--%>
-<%--                <div class="inner-right">--%>
-<%--                    <div style="height: 100px">--%>
-<%--                        <img src="img/鱼1.jpg" />--%>
-<%--                        <img src="img/鱼2.jpg" />--%>
-<%--                    </div>--%>
-<%--                    <table class="tab-inner">--%>
-<%--                        <tr><td><a href="#">草鱼:4/斤</a></td>--%>
-<%--                            <td><a href="#">花鲢鱼:8/斤</a></td>--%>
-<%--                        </tr>--%>
-<%--                        <tr><td><a href="#">鱼苗:0.5/个</a></td>--%>
-<%--                            <td><a href="#">鲫鱼:10/斤</a></td>--%>
-<%--                        </tr>--%>
-<%--                    </table>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <div class="product-box">--%>
-<%--            <div class="inner-info">--%>
-<%--                <div>--%>
-<%--                    <span class="line-f40">|</span>--%>
-<%--                    <span class="text-title">作物肥料</span>--%>
-<%--                    <span class="share-weitao">--%>
-<%--            <span class="line-f40">+</span>--%>
-<%--            <a href="#">添加到购物车</a>--%>
-<%--          </span>--%>
-<%--                </div>--%>
-<%--                <div class="inner-left">--%>
-<%--                    <img src="img/肥料.jpg" />--%>
-<%--                    <h1><a href="#">肥料</a></h1>--%>
-<%--                    <span>30元/袋(10吨起售)</span>--%>
-<%--                </div>--%>
-<%--                <div class="inner-right">--%>
-<%--                    <div style="height: 100px">--%>
-<%--                        <img src="img/肥料1.jpg" />--%>
-<%--                        <img src="img/肥料2.jpg" />--%>
-<%--                    </div>--%>
-<%--                    <table class="tab-inner">--%>
-<%--                        <tr><td><a href="#">河北料:2400/吨</a></td>--%>
-<%--                            <td><a href="#">多肽料:1500/吨</a></td>--%>
-<%--                        </tr>--%>
-<%--                        <tr><td><a href="#">发酵料:200/吨</a></td>--%>
-<%--                            <td><a href="#">黄腐料:130/袋</a></td>--%>
-<%--                        </tr>--%>
-<%--                    </table>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <div class="product-box">--%>
-<%--            <div class="inner-info">--%>
-<%--                <div>--%>
-<%--                    <span class="line-f40">|</span>--%>
-<%--                    <span class="text-title">农贸机器</span>--%>
-<%--                    <span class="share-weitao">--%>
-<%--            <span class="line-f40">+</span>--%>
-<%--            <a href="#">添加到购物车</a>--%>
-<%--          </span>--%>
-<%--                </div>--%>
-<%--                <div class="inner-left">--%>
-<%--                    <img src="img/机器.jpg" />--%>
-<%--                    <h1><a href="#">施肥机</a></h1>--%>
-<%--                    <span>300元/台(100件起售)</span>--%>
-<%--                </div>--%>
-<%--                <div class="inner-right">--%>
-<%--                    <div style="height: 100px">--%>
-<%--                        <img src="img/机器1.jpg" />--%>
-<%--                        <img src="img/机器2.jpg" />--%>
-<%--                    </div>--%>
-<%--                    <table class="tab-inner">--%>
-<%--                        <tr><td><a href="#">果树机:100/件</a></td>--%>
-<%--                            <td><a href="#">鱼塘机:270/件</a></td>--%>
-<%--                        </tr>--%>
-<%--                        <tr><td><a href="#">功能机:1300/件</a></td>--%>
-<%--                            <td><a href="#">电动机:200/个</a></td>--%>
-<%--                        </tr>--%>
-<%--                    </table>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
 
     </div>
     <div class="main-right">
@@ -1247,13 +1048,10 @@
 
                 </div>
                 <p class="text-show">
-          <span class="orange">[精彩专题]&nbsp;<a href="#">
-薄荷种子有哪些常见品种？育苗方法有哪些？</a></span><br>
-                    <span class="orange">[精彩专题]&nbsp;<a href="#">
-火龙果苗什么品种最好？育苗方法有哪些？</a></span><br>
-                    <span class="orange">[精彩专题]&nbsp;<a href="#">
-芒果苗什么品种好？育苗方法有哪些？！</a></span>
-
+          <span class="orange">[精彩专题]&nbsp;
+              <a href="http://www.qhrb.com.cn/2020/0410/271953.shtml">谷物进口仅占消费量2% 粮食产业链公司多举措保供应</a></span><br>
+                    <span class="orange">[精彩专题]&nbsp;<a href="http://www.qhrb.com.cn/2020/0404/271721.shtml">农业农村部：近期国际粮价上涨主因恐慌性消费 不存在短缺问题</a></span><br>
+                    <span class="orange">[精彩专题]&nbsp;<a href="https://www.cnhnb.com/xt/article-52136.html">泽普县花生地膜覆盖高效栽培技术</a></span>
                 </p>
                 <!--just-look-->
                 <div class="just-look">
@@ -1264,24 +1062,16 @@
 
                 <!--just-text-->
                 <ul class="jst-text">
-                    <li><em class="orange">1</em><a href="">猪肉较春节前涨7.6%，当前猪肉价格行情如何？ </a><span></span></li>
-                    <li><em class="orange">2</em><a href="">
-                        全国菜价涨7.2%是怎么回事？是否会持续上涨？ </a><span></span></li>
-                    <li><em class="orange">3</em><a href="">现在猪肉价格多少钱一斤？2020年2月25日猪肉... </a><span></span></li>
-                    <li><em>4</em><a href="">现在市场牛肉多少钱一斤？2020最新牛肉价格走... </a><span></span></li>
-
-                    <li><em class="orange">5</em><a href="">猪肉较春节前涨7.6%，当前猪肉价格行情如何？ </a><span></span></li>
-                    <li><em class="orange">6</em><a href="">
-                        全国菜价涨7.2%是怎么回事？是否会持续上涨？ </a><span></span></li>
-                    <li><em class="orange">7</em><a href="">现在猪肉价格多少钱一斤？2020年2月25日猪肉... </a><span></span></li>
-                    <li><em>8</em><a href="">现在市场牛肉多少钱一斤？2020最新牛肉价格走... </a><span></span></li>
-
-                    <li><em class="orange">9</em><a href="">猪肉较春节前涨7.6%，当前猪肉价格行情如何？ </a><span></span></li>
-                    <li><em class="orange">10</em><a href="">
-                        全国菜价涨7.2%是怎么回事？是否会持续上涨？ </a><span></span></li>
-                    <li><em class="orange">11</em><a href="">现在猪肉价格多少钱一斤？2020年2月25日猪肉... </a><span></span></li>
-                    <li><em>12</em><a href="">现在市场牛肉多少钱一斤？2020最新牛肉价格走... </a><span></span></li>
-                </ul>
+                    <li><em class="orange">1</em><a href="http://www.qhrb.com.cn/2020/0313/270611.shtml">农业部：加强高标准农田、农田水利、农业机械化等现代农业基础设施建设 </a><span></span></li>
+                    <li><em class="orange">2</em><a href="http://www.qhrb.com.cn/2020/0330/271432.shtml">多国限制粮食出口 农产品价格“波浪滔天”的涨势会出现吗？</a><span></span></li>
+                    <li><em class="orange">3</em><a href="http://www.qhrb.com.cn/2020/0327/271371.shtml">阿根廷豆农囤货待价而沽 新冠冲击国际农产品供应链</a><span></span></li>
+                    <li><em>4</em><a href="http://www.qhrb.com.cn/2020/0325/271258.shtml">农业农村部派出工作组督导重大病虫害防控</a><span></span></li>
+                    <li><em class="orange">5</em><a href="http://www.qhrb.com.cn/2019/1220/267229.shtml">4万吨中央储备冻猪肉刚“发货” 又有4万吨在路上！</a><span></span></li>
+                    <li><em class="orange">6</em><a href="http://www.qhrb.com.cn/2019/1024/264372.shtml">豆类期货反弹渐入佳境 </a><span></span></li>
+                    <li><em class="orange">7</em><a href="http://www.qhrb.com.cn/2019/1018/264051.shtml">四季度生猪产能下降局面将改善 果菜价格明显回落</a><span></span></li>
+                    <li><em>8</em><a href="http://www.qhrb.com.cn/2019/0911/262432.shtml">农业农村部副部长于康震：猪肉自给率目标保持在95%左右</a><span></span></li>
+                    <li><em class="orange">9</em><a href="http://www.qhrb.com.cn/2019/0905/261982.shtml">中央财政加码支持生猪供应 养殖户这么看最强盈利“猪周期”</a><span></span></li>
+                    </ul>
             </div>
 
             <!--circle-big-->

@@ -184,6 +184,9 @@ ul{
 .a-list{
 	overflow: auto;
 	max-height: 300px;
+	font-family: cursive;
+	font-size: initial;
+	font-weight: 600;
 }
 .a-item{
 	padding:5px 10px;

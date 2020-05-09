@@ -295,7 +295,7 @@ ul{
 /*shangcheng*/
 .min{
     width: 1520px;
-    height: 1800px;
+    height: auto;
     margin-top: 24px
 }
 #o1{
@@ -325,7 +325,7 @@ ul{
     margin-right: 200px;
 }
 .contentt{
-    height: 1000px;
+    height: auto;
     width: 1520px;
     margin: 0 auto;
     box-sizing: border-box;

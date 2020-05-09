@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <script type="text/javascript">
-    window.location="admin/login.jsp";
+    window.location="admin/cmg/loginIn";
   </script>
 </head>
 <body>

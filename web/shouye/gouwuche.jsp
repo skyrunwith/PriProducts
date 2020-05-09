@@ -37,7 +37,7 @@
             <div class="sub_top fl">
                 <input type="checkbox" value="quanxuan" id="selectAll" class="quanxuan" />全选
             </div>
-            <div class="sub_top fl">商品名称</div>
+            <div class="sub_top fl">商品信息</div>
             <div class="sub_top fl">单价</div>
             <div class="sub_top fl">数量</div>
             <div class="sub_top fl">小计</div>
@@ -49,7 +49,7 @@
             <div class="sub_content fl ">
                 <input type="checkbox" name="ids" value="${item.sid}" class="quanxuan" data-uid="${item.uid}" data-xid="${item.xid }" />
             </div>
-            <div class="sub_content fl"><img src="${item.cimg}" style="width: 70px; height: 70px"></div>
+            <div class="sub_content fl"><img src="${item.cimg}" style="width: 70px; height: 70px;padding-left: 100px;"></div>
             <div class="sub_content fl ft20"> ${item.kname}</div>
             <div class="sub_content fl " id="price_${item.cprice}">${item.cprice} 元</div>
             <div class="sub_content fl">

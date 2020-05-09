@@ -45,7 +45,7 @@
             </div>
             <div class="add-form-group ">
                 <label for="phone">手机:</label>
-                <input type="number" id="phone" name="phone" value="${address.phone}"/>
+                <input type="text" id="phone" name="phone" value="${address.phone}"/>
             </div>
             <div class="add-form-group inline-block">
                 <label for="province">省份:</label>

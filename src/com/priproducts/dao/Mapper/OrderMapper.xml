@@ -2,75 +2,75 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.priproducts.dao.OrderDao">
 
-	<insert id="insert" parameterType="com.priproducts.entity.Order">
+    <insert id="insert" parameterType="com.priproducts.entity.Order">
 		insert into orders (uid,aid,xid,number,createtime,state,beizhu,ordernumber,x_name,img, paynumber)
 		values(#{uid},#{aid},#{xid},#{number},#{createtime},#{state},#{beizhu}, #{ordernumber},#{x_name},#{img}, #{paynumber})
 	</insert>
 
-	<select id="findAll" resultType="com.priproducts.entity.Order" parameterType="com.priproducts.entity.Order">
-		select o.createtime,oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address,a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
-		o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,u.username username,u.useremail,beizhu,o.*,a.*,u.*
-		from address a,xiangqing g,orders o,kind c,user u
-		where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.xid
-		<if test="ordernumber != null and ordernumber !=''">and ordernumber like #{ordernumber}</if>
-		<if test="x_name != null and x_name !=''">and g.x_name like #{x_name}</if>
-		<if test="username != null and username !=''">and u.username like #{username}</if>
-		<if test="state != null">and o.state = #{state}</if>
-		<if test="startRow != null"> limit #{startRow},#{pageSize}</if>
-	</select>
+    <select id="findAll" resultType="com.priproducts.entity.Order" parameterType="com.priproducts.entity.Order">
+        select o.createtime,oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address,a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
+        o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,u.username username,u.useremail,beizhu,o.*,a.*,u.*
+        from address a,xiangqing g,orders o,kind c,user u
+        where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.kid
+        <if test="ordernumber != null and ordernumber !=''">and ordernumber like #{ordernumber}</if>
+        <if test="x_name != null and x_name !=''">and g.x_name like #{x_name}</if>
+        <if test="username != null and username !=''">and u.username like #{username}</if>
+        <if test="state != null">and o.state = #{state}</if>
+        <if test="startRow != null"> </if>
+    </select>
 
-	<select id="count" resultType="java.lang.Long" parameterType="com.priproducts.entity.Order">
-		select count(o.oid)
-		from orders o where 1 = 1
-		<if test="ordernumber != null and ordernumber !=''">and ordernumber like #{ordernumber}</if>
-		<if test="x_name != null and x_name !=''">and x_name like #{x_name}</if>
-		<if test="state != null and state !=''">and state = #{state}</if>
-	</select>
+    <select id="count" resultType="java.lang.Long" parameterType="com.priproducts.entity.Order">
+        select count(o.oid)
+        from orders o where 1 = 1
+        <if test="ordernumber != null and ordernumber !=''">and ordernumber like #{ordernumber}</if>
+        <if test="x_name != null and x_name !=''">and x_name like #{x_name}</if>
+        <if test="state != null and state !=''">and state = #{state}</if>
+    </select>
 
-	<select id="findOneByOrderNumber" resultType="com.priproducts.entity.Order" parameterType="java.lang.String">
+    <select id="findOneByOrderNumber" resultType="com.priproducts.entity.Order" parameterType="java.lang.String">
 		select oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address, a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
 		o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,u.username username,u.useremail,beizhu,o.*,a.*,u.*
 		from address a,xiangqing g,orders o,kind c,user u
 		where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.xid and ordernumber = #{ordernumber}
 	</select>
 
-	<select id="findOneById" resultType="com.priproducts.entity.Order" parameterType="java.lang.String">
+    <select id="findOneById" resultType="com.priproducts.entity.Order" parameterType="java.lang.String">
 		select oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address, a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
 		o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,u.username username,u.useremail,beizhu,o.*,a.*,u.*
 		from address a,xiangqing g,orders o,kind c,user u
 		where o.aid = a.id and o.xid = g.xid and o.uid = u.uid and c.kid = g.xid and oid = #{oid}
 	</select>
 
-	<select id="findByUid" resultType="com.priproducts.entity.Order" parameterType="com.priproducts.entity.Order">
-		select oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address, a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
-		o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,beizhu,o.*,a.*
-		from address a,xiangqing g,orders o,kind c
-		where o.aid = a.id and o.xid = g.xid and o.uid = #{uid} and o.state = 0 and c.kid = g.xid
-		<if test="oid != null and oid != ''">and oid like #{oid}</if>
-		<if test="state != null">and o.state = #{state}</if>
-		<if test="state != null and state == 5">or o.state = 6 or o.state = 7</if>
-		<if test="state != null and state == 0">order by o.cts desc</if>
-		<if test="state != null and state == 1">order by o.zts desc</if>
-		<if test="state != null and state == 2">order by o.fts desc</if>
-		<if test="state != null and state == 3">order by o.cjts desc</if>
-		<if test="state != null and state == 4">order by o.cjts desc</if>
-		<if test="state != null and state == 5">order by o.tts desc</if>
-		<if test="startRow != null">limit #{startRow},#{pageSize}</if>
-	
-	</select>
-	
-	<update id="update" parameterType="com.priproducts.entity.Order">
-		update orders
-		<trim prefix="set" suffixOverrides=",">
-		<if test="state != null">state = #{state},</if>
-		<if test="zts != null and zts != ''">zts = #{zts},</if>
-		<if test="tts != null and tts != ''">tts = #{tts},</if>
-		<if test="fts != null and zts != ''">fts = #{fts},</if>
-		<if test="cjts != null and zts != ''">cjts = #{cjts},</if>
-		<if test="beizhu != null and beizhu != ''">beizhu = #{beizhu},</if>
-		</trim>
-		where oid = #{oid} or ordernumber = #{ordernumber}
-			
-	</update>
-	
+    <select id="findByUid" resultType="com.priproducts.entity.Order" parameterType="com.priproducts.entity.Order">
+        select oid,ordernumber,a.name,phone,CONCAT(a.province, a.city, a.county, a.addr) address, a.addr,g.x_name,o.number,g.x_price price,o.number*g.x_price tprice,g.xid,
+        o.createtime,g.x_img img,state,zts,fts,cjts,c.kname,tts,beizhu,o.*,a.*
+        from address a,xiangqing g,orders o,kind c
+        where o.aid = a.id and o.xid = g.xid and o.uid = #{uid} and o.state = 0 and c.kid = g.xid
+        <if test="oid != null and oid != ''">and oid like #{oid}</if>
+        <if test="state != null">and o.state = #{state}</if>
+        <if test="state != null and state == 5">or o.state = 6 or o.state = 7</if>
+        <if test="state != null and state == 0">order by o.cts desc</if>
+        <if test="state != null and state == 1">order by o.zts desc</if>
+        <if test="state != null and state == 2">order by o.fts desc</if>
+        <if test="state != null and state == 3">order by o.cjts desc</if>
+        <if test="state != null and state == 4">order by o.cjts desc</if>
+        <if test="state != null and state == 5">order by o.tts desc</if>
+        <if test="startRow != null"></if>
+
+    </select>
+
+    <update id="update" parameterType="com.priproducts.entity.Order">
+        update orders
+        <trim prefix="set" suffixOverrides=",">
+            <if test="state != null">state = #{state},</if>
+            <if test="zts != null and zts != ''">zts = #{zts},</if>
+            <if test="tts != null and tts != ''">tts = #{tts},</if>
+            <if test="fts != null and zts != ''">fts = #{fts},</if>
+            <if test="cjts != null and zts != ''">cjts = #{cjts},</if>
+            <if test="beizhu != null and beizhu != ''">beizhu = #{beizhu},</if>
+        </trim>
+        where oid = #{oid} or ordernumber = #{ordernumber}
+
+    </update>
+
 </mapper>

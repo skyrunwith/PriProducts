@@ -50,7 +50,7 @@ $(document).ready(function(){
 					<input type="hidden" name="state" value="${order.state }">
 					<input type="hidden" name="pageNo" value="${order.pageNo }">
 					<input type="hidden" name="ids">
-					<button class="icons-btn piliang" data-action="${ctx }/order/plfahuo" type="submit"><span class="icons icons-use"></span>批量发货</button> 
+					<!--<button class="icons-btn piliang" data-action="${ctx }/order/plfahuo" type="submit"><span class="icons icons-use"></span>批量发货</button> -->
 				</form>
 			</div>
 		</c:if>
@@ -70,7 +70,7 @@ $(document).ready(function(){
 					<input type="hidden" name="state" value="${order.state }">
 					<input type="hidden" name="pageNo" value="${order.pageNo }">
 					<input type="hidden" name="ids">
-					<button class="icons-btn piliang" data-action="${ctx }/order/pltuikuan" type="submit"><span class="icons icons-use"></span>批量退货退款</button> 
+					<!--<button class="icons-btn piliang" data-action="${ctx }/order/pltuikuan" type="submit"><span class="icons icons-use"></span>批量退货退款</button> -->
 				</form>
 			</div>
 		</c:if>

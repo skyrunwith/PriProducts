@@ -149,13 +149,7 @@
 
 <!--内容-->
 <div class="min">
-    <!--搜索框-->
-    <div class="scroll" style="width: 1520px;height: 50px;margin-left: 450px;">
-        <div class="search-box-scroll" style="width: 600px;height: 28px">
-            <input class="search-in-scroll" type="text" placeholder="    搜水果试试"/>
-            <input type="button" class="search-but-scroll" value="搜索">
-        </div>
-    </div>
+
     <!--选择按钮-->
     <div class="anniu">
         <c:forEach var="item" items="${sessionScope.kindList}">

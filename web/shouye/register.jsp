@@ -25,7 +25,7 @@
 
                 <div class="username">确认密码:&nbsp;&nbsp;<input class="shurukuang" type="password" id="repassword" name="repassword" placeholder="请确认你的密码"/><span>两次密码要输入一致</span></div>
                 <div class="username">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:&nbsp;&nbsp;<input class="shurukuang" type="email" name="useremail" placeholder="请填写您的邮箱"/><span>请填写您的邮箱</span></div>
-                <div class="username">联系电话:&nbsp;&nbsp;<input class="shurukuang" type="text" name="usetel" placeholder="请填写您联系电话"/><span>请填写您联系电话</span></div>
+                <div class="username">联系电话:&nbsp;&nbsp;<input class="shurukuang" type="text" name="usetel" placeholder="请填写您联系电话" pattern="\d{11}"/><span>请填写您联系电话</span></div>
                 <div class="username">家庭地址:&nbsp;&nbsp;<input class="shurukuang" type="text" name="useraddre" placeholder="请填写您现居住地"/><span>请填写您现居住地</span></div>
                 <div class="username">
                     <div class="left fl">验&nbsp;&nbsp;证&nbsp;&nbsp;码:&nbsp;&nbsp;<input class="yanzhengma"  id = "yanzhengma" type="text" name="yanzhengma" placeholder="请输入验证码"/></div>

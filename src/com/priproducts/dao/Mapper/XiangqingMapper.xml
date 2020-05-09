@@ -18,7 +18,7 @@
 		SELECT
 		*
 		from  xiangqing
-		WHERE 1 = 1 ORDER BY x_creattime desc LIMIT 8;
+		WHERE 1 = 1 ORDER BY x_creattime desc LIMIT 9;
 	</select>
 
 	<select id="queryCount" resultType="java.lang.Long" parameterType="com.priproducts.entity.Xiangqing">

@@ -65,7 +65,7 @@ body {
 				<input type="hidden" name="username" value="${user.username }">
 				<input type="hidden" name="pageNo" value="${user.pageNo }">
 				<input type="hidden" name="ids">
-				<a class="icons-btn" href="/admin/user/add"><span class="icons icons-add"></span>添加</a>
+				<!--<a class="icons-btn" href="/admin/user/add"><span class="icons icons-add"></span>添加</a>-->
 
 				<button class="icons-btn piliang" data-action="${ctx }/user/pluse" type="submit"><span class="icons icons-use"></span>批量启用</button>
 				<button class="icons-btn piliangb" data-action="${ctx }/user/plnouse" type="submit"><span class="icons icons-no-use"></span>批量禁用</button> 
@@ -101,8 +101,9 @@ body {
 							<td>${item.useremail }</td>
 							<td>${item.useraddre }</td>
 
-							<td><a class="icons-btn" href="${ctx }/user/update?uid=${item.uid}"><span 
-									class="icons icons-edit"></span>修改</a> 
+							<td>
+								<!--<a class="icons-btn" href="${ctx }/user/update?uid=${item.uid}"><span
+									class="icons icons-edit"></span>修改</a> -->
 								<c:if test="${item.status != 1 }">
 									<a class="icons-btn subform" href="${ctx }/user/status" data-id="${item.uid}"><span
 										class="icons icons-use"></span>启用</a>

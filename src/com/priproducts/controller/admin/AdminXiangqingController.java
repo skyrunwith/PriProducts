@@ -131,8 +131,8 @@ public class AdminXiangqingController {
 
 	@RequestMapping("del")
 	public String del(Xiangqing xiangqing, Model model, HttpServletRequest request) {
-		Xiangqing g = xiangqingService.findById(xiangqing.getXid());
-		UploadFile.deleteFile(request, g.getX_img());
+		//Xiangqing g = xiangqingService.findById(xiangqing.getXid());
+		//UploadFile.deleteFile(request, g.getX_img());
 		xiangqingService.delete(xiangqing.getXid()+"");
 		return list(xiangqing, model);
 	}

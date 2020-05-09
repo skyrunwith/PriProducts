@@ -14,21 +14,21 @@
 
 <body>
 <div id="contentWrap">
-    <div class="pageTitle"></div>
+    <!--<div class="pageTitle"></div>-->
 
     <div class="pageColumn">
-        <form action="" method="post">
+      <!--  <form action="" method="post">
             店铺主营：
             <select class="border" name="sid"  >
-                <option value="">---</option>
+                <option value="">---</option>-->
 <%--                <c:forEach items="${dianpu}" var="kind">--%>
 <%--                    <option value="${dianpu.sname}"--%>
 <%--                </c:forEach>--%>
-            </select>
+         <!--   </select>
 
             <button class="combtn" type="submit">搜索</button>
             <button class="canclebtn" type="cancel">清空</button>
-        </form>
+        </form>-->
     </div>
 
     <div class="pageTitle">
@@ -51,8 +51,8 @@
             <th width="5%">店铺编号</th>
             <th width="10%">店铺主营</th>
             <th width="10%">店铺等级</th>
-            <th width="10%">店铺电话</th>
             <th width="10%">店铺地址</th>
+            <th width="10%">店铺电话</th>
             <th width="5%">状态</th>
             <th width="20%">创建时间</th>
             <th width="">操作</th>

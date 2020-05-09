@@ -48,7 +48,7 @@ body {
 					</tr>
 
 					<tr style="line-height: 30px;">
-						<td style="width:70px;">联系电话:</td>
+						<td style="width:70px;">收货地址:</td>
 						<td><input type="text" name="useraddre" class="border" value="${user.useraddre }"
 								   style="width: 250px;"></td>
 
